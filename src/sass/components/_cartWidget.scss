@@ -1,0 +1,22 @@
+#cartContainer {
+    background-color: $navSecondaryColor;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 2rem;
+    text-align: center;
+    width: 5rem;
+    height: 3rem;
+    color: white;
+    img {
+        width: 2rem;
+        margin-right: .6rem;
+    }
+    p {
+        background-color: rgb(228, 148, 0);
+        border-radius: 10rem;
+        height: min-content;
+        width: 1rem;
+        font-weight: bold;
+    }
+
+}

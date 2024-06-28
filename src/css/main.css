@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.navbar {
+  margin: 0;
+  padding: 0; }
+  .navbar .container-fluid {
+    background-color: #171D25; }
+    .navbar .container-fluid .navbar-toggler {
+      width: 3rem;
+      height: 2.5rem;
+      background-color: black;
+      color: white; }
+    .navbar .container-fluid .navLogo img {
+      width: 25rem; }
+    .navbar .container-fluid .collapse {
+      justify-content: space-between;
+      width: 20rem; }
+      .navbar .container-fluid .collapse .navbar-nav {
+        align-items: center; }
+        .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu {
+          background-color: black; }
+          .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu li:hover a {
+            background-color: #1e324b;
+            color: white; }
+        .navbar .container-fluid .collapse .navbar-nav li:not(:first-child) {
+          padding-left: 3rem; }
+        .navbar .container-fluid .collapse .navbar-nav li a {
+          color: white;
+          text-transform: uppercase; }
+          .navbar .container-fluid .collapse .navbar-nav li a:hover {
+            color: red;
+            font-weight: bold; }
+  .navbar .d-flex {
+    width: 20rem; }
+    .navbar .d-flex .form-control {
+      background-color: black;
+      text-transform: uppercase; }
+      .navbar .d-flex .form-control::placeholder {
+        color: white; }
+    .navbar .d-flex input {
+      box-shadow: none; }
+    .navbar .d-flex .btn {
+      background-color: #1e324b;
+      border: 1px solid white;
+      text-transform: uppercase;
+      color: white; }
+      .navbar .d-flex .btn:hover {
+        background-color: red;
+        font-weight: bold; }
+
+#cartContainer {
+  background-color: #1e324b;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 2rem;
+  text-align: center;
+  width: 5rem;
+  height: 3rem;
+  color: white; }
+  #cartContainer img {
+    width: 2rem;
+    margin-right: .6rem; }
+  #cartContainer p {
+    background-color: #e49400;
+    border-radius: 10rem;
+    height: min-content;
+    width: 1rem;
+    font-weight: bold; }

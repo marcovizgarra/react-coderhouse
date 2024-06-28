@@ -1,0 +1,81 @@
+.navbar {
+    margin: 0;
+    padding: 0;
+    .container-fluid {
+        background-color: $navBackground;
+        .navbar-toggler {
+            width: 3rem;
+            height: 2.5rem;
+            background-color: black;
+            color: white;
+        }
+
+        .navLogo {
+            img {
+                width: 25rem;
+            }
+        }
+
+        .collapse { // menu options
+            justify-content: space-between;
+            width: 20rem;
+            .navbar-nav {
+                align-items: center;
+                .dropdown {
+                    .dropdown-menu {
+                        background-color: black;
+                        li {
+                            &:hover {
+                                a {
+                                    background-color: $navSecondaryColor;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                li {
+                    &:not(:first-child) {
+                        padding-left: 3rem;
+                    }
+                    a {
+                        color: white;
+                        text-transform: uppercase;
+                        &:hover {
+                            color: red;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .d-flex { //from search
+        width: 20rem;
+        .form-control {
+            background-color: black;
+            text-transform: uppercase;
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        input {
+            box-shadow: none;
+        }
+
+        .btn {
+            background-color: $navSecondaryColor;
+            border: 1px solid white;
+            text-transform: uppercase;
+            color: white;
+            &:hover {
+                background-color: red;
+                font-weight: bold;
+            }
+        }
+    } 
+
+}
