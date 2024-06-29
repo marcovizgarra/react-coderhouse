@@ -25,11 +25,11 @@
                     .dropdown-menu {
                         background-color: black;
                         li {
-                            &:hover {
-                                a {
-                                    background-color: $navSecondaryColor;
-                                    color: white;
-                                }
+                            a {
+                                    &:hover {
+                                        background-color: $navSecondaryColor;
+                                        color: white;
+                                    }
                             }
                         }
                     }
@@ -42,6 +42,7 @@
                     a {
                         color: white;
                         text-transform: uppercase;
+                        font-size: large;
                         &:hover {
                             color: red;
                             font-weight: bold;

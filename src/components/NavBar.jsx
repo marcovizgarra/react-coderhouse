@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import CartWidget from './CartWidget.jsx';
 
-import navbar_logo from '../assets/img/navbar/God-of-War-Logo-PNG-Photos.png';
-import navCollapsedIcon from '../assets/img/navbar/bars-solid.svg';
-import navExpandIcon from '../assets/img/navbar/xmark-solid.svg';
+import navbar_logo from '/public/img/navbar/God-of-War-Logo-PNG-Photos.png';
+import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
+import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
 
 
 
