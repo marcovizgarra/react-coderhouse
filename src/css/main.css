@@ -17,22 +17,44 @@
     .navbar .container-fluid .navLogo img {
       width: 25rem; }
     .navbar .container-fluid .collapse {
-      justify-content: space-between;
-      width: 20rem; }
+      justify-content: space-between; }
       .navbar .container-fluid .collapse .navbar-nav {
         align-items: center; }
         .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu {
-          background-color: black; }
-          .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu li a:hover {
-            background-color: #1e324b;
-            color: white; }
-        .navbar .container-fluid .collapse .navbar-nav li:not(:first-child) {
-          padding-left: 3rem; }
-        .navbar .container-fluid .collapse .navbar-nav li a {
-          color: white;
-          text-transform: uppercase;
-          font-size: large; }
-          .navbar .container-fluid .collapse .navbar-nav li a:hover {
+          background-color: black;
+          width: 15rem; }
+          .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li {
+            height: 1.8rem; }
+            .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li a {
+              padding-left: 1rem;
+              font-weight: normal; }
+              .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li a:hover {
+                background: linear-gradient(to right, #a80000, #171d2500);
+                color: white; }
+        .navbar .container-fluid .collapse .navbar-nav .nav-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 6rem;
+          width: 6rem;
+          text-align: center; }
+          .navbar .container-fluid .collapse .navbar-nav .nav-item:not(:last-child) {
+            margin-right: 2rem; }
+          .navbar .container-fluid .collapse .navbar-nav .nav-item:hover:not(:last-child) {
+            background: linear-gradient(to top, #171d25c0, #171d25c0), url("/public/img/navbar/gow-icon.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .navbar .container-fluid .collapse .navbar-nav .nav-item a {
+            color: white;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0; }
+            .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
+              color: red;
+              font-weight: bold;
+              transition: .5s; }
+          .navbar .container-fluid .collapse .navbar-nav .nav-item .active {
             color: red;
             font-weight: bold; }
   .navbar .d-flex {
@@ -78,3 +100,19 @@
     height: min-content;
     width: 1rem;
     font-weight: bold; }
+
+.header-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #000000; }
+  .header-section img {
+    width: 1.5rem;
+    margin-right: .5rem; }
+  .header-section h4 {
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    padding: .5rem;
+    margin: 0; }

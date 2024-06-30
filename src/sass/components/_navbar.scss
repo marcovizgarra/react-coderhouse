@@ -18,16 +18,19 @@
 
         .collapse { // menu options
             justify-content: space-between;
-            width: 20rem;
             .navbar-nav {
                 align-items: center;
                 .dropdown {
                     .dropdown-menu {
                         background-color: black;
-                        li {
+                        width: 15rem;
+                        .dropdown-li {
+                            height: 1.8rem;
                             a {
+                                padding-left: 1rem;
+                                font-weight: normal;
                                     &:hover {
-                                        background-color: $navSecondaryColor;
+                                        background: linear-gradient(to right, #a80000, #171d2500);
                                         color: white;
                                     }
                             }
@@ -35,25 +38,43 @@
                     }
                 }
 
-                li {
-                    &:not(:first-child) {
-                        padding-left: 3rem;
+                .nav-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 6rem;
+                    width: 6rem;
+                    text-align: center;
+                    &:not(:last-child) {
+                        margin-right: 2rem;
+                    }
+                    &:hover:not(:last-child) {
+                        background: linear-gradient(to top, #171d25c0, #171d25c0), url('/public/img/navbar/gow-icon.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
                     }
                     a {
                         color: white;
                         text-transform: uppercase;
-                        font-size: large;
+                        padding: 0;
+                        margin: 0;
                         &:hover {
                             color: red;
                             font-weight: bold;
+                            transition: .5s;
                         }
+                    }
+                    .active {
+                        color: red;
+                        font-weight: bold;
                     }
                 }
             }
         }
     }
 
-    .d-flex { //from search
+    .d-flex { //form search
         width: 20rem;
         .form-control {
             background-color: black;

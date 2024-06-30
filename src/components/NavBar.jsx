@@ -1,17 +1,10 @@
 import { useState } from 'react';
 import CartWidget from './CartWidget.jsx';
+import InsertImg from './InsertImg.jsx'
 
 import navbar_logo from '/public/img/navbar/God-of-War-Logo-PNG-Photos.png';
 import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
 import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
-
-
-
-const SvgIns = ({svg}) => {
-    return (
-        <img src={svg} alt="icon" />
-    )
-}
 
 const NavBar = () => {
     const [collapsed, setCollapsed] = useState(true);
@@ -21,7 +14,7 @@ const NavBar = () => {
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapsed(!collapsed)}}>
-                        {collapsed ? (<SvgIns svg={navCollapsedIcon} />) : (<SvgIns svg={navExpandIcon} />)}
+                        {collapsed ? (<InsertImg img={navCollapsedIcon} />) : (<InsertImg img={navExpandIcon} />)}
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,7 +28,7 @@ const NavBar = () => {
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Juegos</a>
+                                <a className="nav-link" aria-current="page" href="#">Juegos</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Historia</a>
@@ -45,13 +38,12 @@ const NavBar = () => {
                                     Consolas
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Play Station 5</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Play Station 4</a></li>
-                                    <li><a className="dropdown-item" href="#">Play Station 3</a></li>
-                                    <li><a className="dropdown-item" href="#">Play Station 2</a></li>
-                                    <li><a className="dropdown-item" href="#">Play Station Portatil</a></li>
-                                    <li><a className="dropdown-item" href="#">Mobile</a></li>
+                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 5</a></li>
+                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 4</a></li>
+                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 3</a></li>
+                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 2</a></li>
+                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station Portatil</a></li>
+                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Mobile</a></li>
                                 </ul>
                             </li>
                             <li>
