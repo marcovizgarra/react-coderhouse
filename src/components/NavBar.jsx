@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import CartWidget from './CartWidget.jsx';
-import InsertImg from './InsertImg.jsx'
-
 import navbar_logo from '/public/img/navbar/God-of-War-Logo-PNG-Photos.png';
 import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
 import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
@@ -14,7 +12,7 @@ const NavBar = () => {
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapsed(!collapsed)}}>
-                        {collapsed ? (<InsertImg img={navCollapsedIcon} />) : (<InsertImg img={navExpandIcon} />)}
+                        {collapsed ? (<img src={navCollapsedIcon} alt='collapsedIcon'></img>) : (<img src={navExpandIcon} alt='expandIcon'></img>)}
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

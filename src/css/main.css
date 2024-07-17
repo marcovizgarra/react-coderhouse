@@ -116,3 +116,34 @@
     text-align: center;
     padding: .5rem;
     margin: 0; }
+
+.homePage {
+  width: 100vw;
+  height: 85.2vh;
+  background-image: url("/public/img/gow-wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.catalogue {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white; }
+  .catalogue h1 {
+    margin: .5rem;
+    font-size: xx-large;
+    text-transform: uppercase; }
+  .catalogue .gamesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .catalogue .gamesContainer .card {
+      color: white;
+      width: 22rem;
+      margin: 1rem;
+      border: 1px solid white; }
+      .catalogue .gamesContainer .card img {
+        width: 21.9rem;
+        height: 26rem; }
