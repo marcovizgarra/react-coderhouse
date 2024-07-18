@@ -22,7 +22,8 @@
         align-items: center; }
         .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu {
           background-color: black;
-          width: 15rem; }
+          width: 15rem;
+          border: 1px solid white; }
           .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li {
             height: 1.8rem; }
             .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li a {
