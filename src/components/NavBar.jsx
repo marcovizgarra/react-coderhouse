@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget.jsx';
 import navbar_logo from '/public/img/navbar/God-of-War-Logo-PNG-Photos.png';
 import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
@@ -23,10 +24,10 @@ const NavBar = () => {
 
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link className="nav-link" to={"/"}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Juegos</a>
+                                <Link className="nav-link" to={"/juegos"}>Juegos</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Historia</a>
@@ -36,12 +37,15 @@ const NavBar = () => {
                                     Consolas
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 5</a></li>
-                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 4</a></li>
-                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 3</a></li>
-                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station 2</a></li>
-                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Play Station Portatil</a></li>
-                                    <li className='dropdown-li'><a className="dropdown-item" href="#">Mobile</a></li>
+                                    <li className='dropdown-li'>
+                                            <Link to={"/juegos/PS5"} className="dropdown-item">Play Station 5</Link>
+                                    </li>
+                                    <li className='dropdown-li'>
+                                        <Link to={"/juegos/PS4"} className="dropdown-item">Play Station 4</Link>
+                                    </li>
+                                    <li className='dropdown-li'>
+                                        <Link to={"/juegos/PS3"} className="dropdown-item">Play Station 3</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li>

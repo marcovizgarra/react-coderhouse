@@ -1,22 +1,30 @@
 import { useEffect, useState } from "react"
+import { useParams } from 'react-router-dom';
 
 const Catalogue = () => {
-    const [videoGames, setVideoGames] = useState([]);
+    const [games, setGames] = useState([]);
+    const [filterGames, setFilterGames] = useState([])
+    const {platform} = useParams();
 
     useEffect(() => {
-        fetch("src/assets/img/games.json")
+        fetch("src/assets/games.json")
             .then(response => response.json())
             .then(data => {
-                setVideoGames(data)
+                setGames(data)
+                setFilterGames(data)
             })
-    }, []);
+    },[])
+
+    useEffect(() => {
+        setFilterGames(platform ? (games.filter(game => game.platform == platform)) : games)
+    }, [platform])
 
     return(
         <>
             <section className="catalogue bg-black">
                 <h1>Descubre la saga God of War</h1>
                 <div className="gamesContainer">
-                    {videoGames.map (game => (
+                    {filterGames.map (game => (
                         <div key={game.id} className="card bg-dark"> 
                         <img src={game.image} className="card-img-top" alt={game.title} />
                         <div className="card-body">
