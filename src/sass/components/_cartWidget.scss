@@ -1,10 +1,10 @@
-#cartContainer {
+#cart_widget_container {
     background-image: url('/public/img/cartWidget/cart-shopping-solid.svg');
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 47%;
-    background-color: $navSecondaryColor;
+    background-color: $nav_secondary_color;
     display: flex;
     justify-content: flex-end;
     border-radius: 2rem;

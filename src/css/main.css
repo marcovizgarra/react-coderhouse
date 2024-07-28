@@ -5,78 +5,44 @@
   padding: 0; }
 
 .navbar {
+  padding: 0;
   margin: 0;
-  padding: 0; }
+  height: 4rem; }
+  .navbar #cart_widget_container {
+    margin-right: 2.5rem; }
   .navbar .container-fluid {
-    background-color: #171D25; }
-    .navbar .container-fluid .navbar-toggler {
-      width: 3rem;
-      height: 2.5rem;
-      background-color: black;
-      color: white; }
-    .navbar .container-fluid .navLogo img {
-      width: 25rem; }
-    .navbar .container-fluid .collapse {
-      justify-content: space-between; }
-      .navbar .container-fluid .collapse .navbar-nav {
-        align-items: center; }
-        .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu {
-          background-color: black;
-          width: 15rem;
-          border: 1px solid white; }
-          .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li {
-            height: 1.8rem; }
-            .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li a {
-              padding-left: 1rem;
-              font-weight: normal; }
-              .navbar .container-fluid .collapse .navbar-nav .dropdown .dropdown-menu .dropdown-li a:hover {
-                background: linear-gradient(to right, #a80000, #171d2500);
-                color: white; }
-        .navbar .container-fluid .collapse .navbar-nav .nav-item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 6rem;
-          width: 6rem;
-          text-align: center; }
-          .navbar .container-fluid .collapse .navbar-nav .nav-item:not(:last-child) {
-            margin-right: 2rem; }
-          .navbar .container-fluid .collapse .navbar-nav .nav-item:hover:not(:last-child) {
-            background: linear-gradient(to top, #171d25c0, #171d25c0), url("/public/img/navbar/gow-icon.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center; }
-          .navbar .container-fluid .collapse .navbar-nav .nav-item a {
-            color: white;
-            text-transform: uppercase;
-            padding: 0;
-            margin: 0; }
-            .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
-              color: red;
-              font-weight: bold;
-              transition: .5s; }
-          .navbar .container-fluid .collapse .navbar-nav .nav-item .active {
-            color: red;
-            font-weight: bold; }
-  .navbar .d-flex {
-    width: 20rem; }
-    .navbar .d-flex .form-control {
-      background-color: black;
-      text-transform: uppercase; }
-      .navbar .d-flex .form-control::placeholder {
-        color: white; }
-    .navbar .d-flex input {
-      box-shadow: none; }
-    .navbar .d-flex .btn {
-      background-color: #1e324b;
-      border: 1px solid white;
-      text-transform: uppercase;
-      color: white; }
-      .navbar .d-flex .btn:hover {
-        background-color: red;
-        font-weight: bold; }
+    padding: 0;
+    margin: 0; }
+    .navbar .container-fluid .nav_logo {
+      width: 4rem;
+      margin-right: 2rem; }
+    .navbar .container-fluid .toggle_and_cart {
+      display: flex;
+      flex-direction: row; }
+      .navbar .container-fluid .toggle_and_cart #cart_widget_container {
+        margin-right: 1.5rem; }
+      .navbar .container-fluid .toggle_and_cart .navbar-toggler {
+        margin-right: 1rem;
+        box-shadow: none;
+        border-color: white; }
+    .navbar .container-fluid .collapse .navbar-nav .nav-item {
+      display: flex;
+      align-items: center;
+      font-size: large;
+      height: 4rem; }
+      .navbar .container-fluid .collapse .navbar-nav .nav-item:not(:first-child) {
+        margin-left: 1.5rem; }
+      .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+        margin: 0;
+        padding: 0;
+        height: 4rem;
+        line-height: 4rem; }
+      .navbar .container-fluid .collapse .navbar-nav .nav-item .active_link {
+        color: #FF3300;
+        font-weight: bold;
+        border-bottom: 3px solid #FF3300; }
 
-#cartContainer {
+#cart_widget_container {
   background-image: url("/public/img/cartWidget/cart-shopping-solid.svg");
   background-size: 2rem;
   background-repeat: no-repeat;
@@ -90,12 +56,12 @@
   width: 5rem;
   height: 3rem;
   color: white; }
-  #cartContainer:hover {
+  #cart_widget_container:hover {
     background-image: url("/public/img/cartWidget/cart-shopping-solid-yellow.svg"); }
-  #cartContainer img {
+  #cart_widget_container img {
     width: 2rem;
     margin-right: .6rem; }
-  #cartContainer p {
+  #cart_widget_container p {
     background-color: red;
     border-radius: 10rem;
     height: min-content;
@@ -106,7 +72,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #000000; }
+  background-color: #000000;
+  border-bottom: 1px solid #FF3300; }
   .header-section img {
     width: 1.5rem;
     margin-right: .5rem; }
@@ -117,13 +84,6 @@
     text-align: center;
     padding: .5rem;
     margin: 0; }
-
-.homePage {
-  width: 99.99vw;
-  height: 99.9vh;
-  background-image: url("/public/img/gow-wallpaper.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 .catalogue {
   display: flex;

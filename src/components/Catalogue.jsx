@@ -6,14 +6,27 @@ const Catalogue = () => {
     const [filterGames, setFilterGames] = useState([])
     const {platform} = useParams();
 
+    // useEffect(() => {
+    //     fetch("src/assets/games.json")
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setGames(data)
+    //             setFilterGames(data)
+    //         })
+    // },[])
+
     useEffect(() => {
-        fetch("src/assets/games.json")
-            .then(response => response.json())
-            .then(data => {
-                setGames(data)
-                setFilterGames(data)
-            })
-    },[])
+
+        const promesa = new Promise(resolve => {
+        setTimeout(() => {
+        resolve(categoria ? arrayProductos.filter(item => item.category == categoria) : arrayProductos)
+        }, 2000)
+        })
+                
+        promesa.then(response => {
+        setItems(response)
+        })
+        },[categoria])
 
     useEffect(() => {
         setFilterGames(platform ? (games.filter(game => game.platform == platform)) : games)

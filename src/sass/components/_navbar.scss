@@ -1,104 +1,54 @@
 .navbar {
-    margin: 0;
     padding: 0;
-    .container-fluid {
-        background-color: $navBackground;
-        .navbar-toggler {
-            width: 3rem;
-            height: 2.5rem;
-            background-color: black;
-            color: white;
-        }
-
-        .navLogo {
-            img {
-                width: 25rem;
-            }
-        }
-
-        .collapse { // menu options
-            justify-content: space-between;
-            .navbar-nav {
-                align-items: center;
-                .dropdown {
-                    .dropdown-menu {
-                        background-color: black;
-                        width: 15rem;
-                        border: 1px solid white;
-                        .dropdown-li {
-                            height: 1.8rem;
-                            a {
-                                padding-left: 1rem;
-                                font-weight: normal;
-                                    &:hover {
-                                        background: linear-gradient(to right, #a80000, #171d2500);
-                                        color: white;
-                                    }
-                            }
-                        }
-                    }
-                }
-
-                .nav-item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 6rem;
-                    width: 6rem;
-                    text-align: center;
-                    &:not(:last-child) {
-                        margin-right: 2rem;
-                    }
-                    &:hover:not(:last-child) {
-                        background: linear-gradient(to top, #171d25c0, #171d25c0), url('/public/img/navbar/gow-icon.png');
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-                    a {
-                        color: white;
-                        text-transform: uppercase;
-                        padding: 0;
-                        margin: 0;
-                        &:hover {
-                            color: red;
-                            font-weight: bold;
-                            transition: .5s;
-                        }
-                    }
-                    .active {
-                        color: red;
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
+    margin: 0;
+    height: 4rem;
+    #cart_widget_container {
+        margin-right: 2.5rem;
     }
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+        .nav_logo {
+            width: 4rem;
+            margin-right: 2rem;
+        }
 
-    .d-flex { //form search
-        width: 20rem;
-        .form-control {
-            background-color: black;
-            text-transform: uppercase;
-            &::placeholder {
-                color: white;
+        .toggle_and_cart {
+            display: flex;
+            flex-direction: row;
+            #cart_widget_container {
+                margin-right: 1.5rem;
+            }
+            .navbar-toggler {
+                margin-right: 1rem;
+                box-shadow: none;
+                border-color: white;
             }
         }
-
-        input {
-            box-shadow: none;
-        }
-
-        .btn {
-            background-color: $navSecondaryColor;
-            border: 1px solid white;
-            text-transform: uppercase;
-            color: white;
-            &:hover {
-                background-color: red;
-                font-weight: bold;
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                display: flex;
+                align-items: center;
+                font-size: large;
+                height: 4rem;
+                &:not(:first-child) {
+                    margin-left: 1.5rem;
+                }
+                    .nav-link {
+                        margin: 0;
+                        padding: 0;
+                        height: 4rem;
+                        line-height: 4rem;
+                    }
+                    .active_link {
+                        color: #FF3300;
+                        font-weight: bold;
+                        border-bottom: 3px solid #FF3300;
+                    }
+                }
             }
         }
-    } 
-
+        
+    }
 }
