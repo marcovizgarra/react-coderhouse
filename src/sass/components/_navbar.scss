@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     height: 4rem;
+    background-color: black !important;
     #cart_widget_container {
         margin-right: 2.5rem;
     }
@@ -26,6 +27,7 @@
             }
         }
         .collapse {
+            background-color: black !important;
             .navbar-nav {
                 .nav-item {
                 display: flex;

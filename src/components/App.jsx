@@ -5,6 +5,8 @@ import NavBar from './NavBar.jsx';
 import Home from './Home.jsx';
 import CartContextProvider from '../context/CartContext.jsx';
 import Productos from './Producto.jsx';
+import CompFireBase from './ComFireBase.jsx';
+import CheckOut from './CheckOut.jsx';
 
 const App = () => {
     return (
@@ -17,7 +19,6 @@ const App = () => {
                     <Routes>
                         <Route path={"/"} element={<Home />}/>
                         <Route path={"/productos"} element={<Productos />}/>
-                        <Route path={"/juegos"} element={<Catalogue/>}/>
                         <Route path={"/juegos/:platform"} element={<Catalogue/>} />
                     </Routes>  
                 </BrowserRouter>

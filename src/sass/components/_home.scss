@@ -1,7 +1,31 @@
-// .homePage {
-//     width: 99.99vw;
-//     height: 99.9vh;
-//     background-image: url("/public/img/gow-wallpaper.jpg");
-//     background-size: cover;
-//     background-repeat: no-repeat;
-// }
+.homePage {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    // background: linear-gradient(to bottom, #333333, #000000);
+    // background: radial-gradient(circle at 0% 50%, #000000, #912e00, #000000);
+    #carouselHomePage {
+        width: $desktop_width_items;
+        height: auto;
+        .carousel-indicators {
+            button {
+                width: 5rem;
+                height: .15rem;
+            }
+        }
+        .carousel-item {
+            .slide {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                padding: 5rem;
+                color: white;
+            }
+        }
+        .carousel_slide_button {
+            width: 5%;
+        }
+    }
+}

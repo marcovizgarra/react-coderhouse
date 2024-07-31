@@ -7,7 +7,8 @@
 .navbar {
   padding: 0;
   margin: 0;
-  height: 4rem; }
+  height: 4rem;
+  background-color: black !important; }
   .navbar #cart_widget_container {
     margin-right: 2.5rem; }
   .navbar .container-fluid {
@@ -25,22 +26,24 @@
         margin-right: 1rem;
         box-shadow: none;
         border-color: white; }
-    .navbar .container-fluid .collapse .navbar-nav .nav-item {
-      display: flex;
-      align-items: center;
-      font-size: large;
-      height: 4rem; }
-      .navbar .container-fluid .collapse .navbar-nav .nav-item:not(:first-child) {
-        margin-left: 1.5rem; }
-      .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
-        margin: 0;
-        padding: 0;
-        height: 4rem;
-        line-height: 4rem; }
-      .navbar .container-fluid .collapse .navbar-nav .nav-item .active_link {
-        color: #FF3300;
-        font-weight: bold;
-        border-bottom: 3px solid #FF3300; }
+    .navbar .container-fluid .collapse {
+      background-color: black !important; }
+      .navbar .container-fluid .collapse .navbar-nav .nav-item {
+        display: flex;
+        align-items: center;
+        font-size: large;
+        height: 4rem; }
+        .navbar .container-fluid .collapse .navbar-nav .nav-item:not(:first-child) {
+          margin-left: 1.5rem; }
+        .navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+          margin: 0;
+          padding: 0;
+          height: 4rem;
+          line-height: 4rem; }
+        .navbar .container-fluid .collapse .navbar-nav .nav-item .active_link {
+          color: #FF3300;
+          font-weight: bold;
+          border-bottom: 3px solid #FF3300; }
 
 #cart_widget_container {
   background-image: url("/public/img/cartWidget/cart-shopping-solid.svg");
@@ -72,7 +75,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #000000;
+  background-color: #2a2a2a;
   border-bottom: 1px solid #FF3300; }
   .header-section img {
     width: 1.5rem;
@@ -84,6 +87,63 @@
     text-align: center;
     padding: .5rem;
     margin: 0; }
+
+.homePage {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh; }
+  .homePage #carouselHomePage {
+    width: 70vw;
+    height: auto; }
+    .homePage #carouselHomePage .carousel-indicators button {
+      width: 5rem;
+      height: .15rem; }
+    .homePage #carouselHomePage .carousel-item .slide {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 5rem;
+      color: white; }
+    .homePage #carouselHomePage .carousel_slide_button {
+      width: 5%; }
+
+.most_viewed_product {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  background: linear-gradient(to bottom, #353535, black);
+  width: 100vw; }
+  .most_viewed_product h1 {
+    margin: 1rem;
+    text-transform: uppercase; }
+  .most_viewed_product .card_container {
+    display: flex;
+    flex-direction: row; }
+    .most_viewed_product .card_container .row {
+      width: 20rem;
+      margin: auto; }
+      .most_viewed_product .card_container .row .col-md-3 {
+        width: 100%; }
+        .most_viewed_product .card_container .row .col-md-3 .card {
+          color: white;
+          height: 33rem;
+          background-color: #2A2A2A; }
+          .most_viewed_product .card_container .row .col-md-3 .card .card-body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center; }
+            .most_viewed_product .card_container .row .col-md-3 .card .card-body .card-text {
+              height: 3.2rem; }
+            .most_viewed_product .card_container .row .col-md-3 .card .card-body button {
+              background-color: #FF3300;
+              border-radius: 100px;
+              border: 0; }
 
 .catalogue {
   display: flex;

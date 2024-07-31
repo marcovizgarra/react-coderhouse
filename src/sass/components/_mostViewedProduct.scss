@@ -1,0 +1,46 @@
+.most_viewed_product {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    background: linear-gradient(to bottom ,#353535, black);
+    // border: 1px solid grey;
+    width: 100vw;
+    // $desktop_width_items
+    h1 {
+        margin: 1rem;
+        text-transform: uppercase;
+    }
+    .card_container {
+        display: flex;
+        flex-direction: row;
+        .row {
+            width: 20rem;
+            margin: auto;
+            .col-md-3{
+                width: 100%;
+                .card {
+                    color: white;
+                    height: 33rem;
+                    background-color: #2A2A2A;
+                    .card-body {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                        .card-text {
+                            height: 3.2rem;
+                        }
+                        button {
+                            background-color: $JBL_color;
+                            border-radius: 100px;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

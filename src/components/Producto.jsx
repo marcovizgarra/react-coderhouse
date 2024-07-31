@@ -2,13 +2,13 @@ import { useContext } from "react"
 import { CartContext } from "../context/CartContext"
 
 const Productos = () => {
-    const {catalogo, agregarProducto, totalProductos, carrito} = useContext(CartContext);
+    const {catalogue, agregarProducto, totalProductos, carrito} = useContext(CartContext);
 
     return(
         <>
             <div className="container">
                 {
-                    catalogo.map((prod) => (
+                    catalogue.map((prod) => (
                         <div key={prod.id} className="row">
                             <div className="col-md-3">                       
                                 <div className="card">
