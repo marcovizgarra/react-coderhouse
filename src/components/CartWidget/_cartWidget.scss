@@ -12,13 +12,16 @@
     width: 5rem;
     height: 3rem;
     color: white;
-        &:hover {
-            background-image: url('/public/img/cartWidget/cart-shopping-solid-yellow.svg');
-        }
+
+    &:hover {
+        background-image: url('/public/img/cartWidget/cart-shopping-solid-yellow.svg');
+    }
+
     img {
         width: 2rem;
         margin-right: .6rem;
     }
+
     p {
         background-color: rgb(255, 0, 0);
         border-radius: 10rem;

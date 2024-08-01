@@ -5,6 +5,7 @@ import slideImg3 from "/public/carousel/pb_710.jpg";
 import slideImg4 from "/public/carousel/quantum_610.jpg";
 import slideImg5 from "/public/carousel/tour_pro_2.jpg";
 import MostViewedProduct from '../MostViewedProduct.jsx';
+import ProductCard from '../ProductCard/ProductCard.jsx';
 
 const Home = () => {
     return(
@@ -66,9 +67,15 @@ const Home = () => {
                     </button>
                 </div>
 
-                <article className='most_viewed_products'>
-                    <MostViewedProduct />
+                <article className="container most_viewed">
+                    <div className="row row-cols-4">
+                        <ProductCard />
+                    </div>
                 </article>
+
+                {/* <article className='most_viewed_products'>
+                    <MostViewedProduct />
+                </article> */}
             </section>
         </>
     )

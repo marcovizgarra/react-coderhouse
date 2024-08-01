@@ -1,0 +1,30 @@
+.col {
+    .product_card {
+        height: 28rem;
+        border-radius: 0;
+        &:hover {
+            box-shadow: 0 0 9px 2px rgba(119, 64, 0, 0.466);
+        }
+    
+        .card-body {
+            align-items: center;
+        }
+    
+        .p_title {
+            font-size: x-large;
+            font-weight: bold;
+            letter-spacing: .1rem;
+        }
+    
+        .p_price {
+            color: $JBL_color;
+            letter-spacing: .1rem;
+            font-weight: bold;
+        }
+    
+        .p_description {
+            
+            height: 2rem;
+        }
+    }
+}

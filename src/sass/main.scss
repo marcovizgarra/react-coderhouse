@@ -5,7 +5,8 @@
 // Components
     @import '../components/NavBar/navbar'; //OK
     @import '../components/CartWidget/cartWidget'; //OK
-    @import '../components/Header/header';
+    @import '../components/Header/header'; // OK
     @import '../components/Home/home'; //OK
+    @import '../components/ProductCard/productCard'; // OK
     @import './components/mostViewedProduct';
     @import './components/catalogue';

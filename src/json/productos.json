@@ -16,7 +16,7 @@
     {
         "id": 3,
         "img":"https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw58ae575e/JBL_TOUR_One%20M2_Product%20Image_Hero_Black.jpg?sw=270&sh=330&sm=fit&sfrm=png",
-        "title":"JBL Tour Onne M2",
+        "title":"JBL Tour One M2",
         "price":472,
         "description":"Auriculares supraaurales inalámbricos con cancelación de ruido"
     },
@@ -32,7 +32,7 @@
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwd241832a/1_JBL_PARTYBOX_110_HERO_x2.jpg?sw=299&sh=299&sm=fit&sfrm=png",
         "title": "JBL Partybox 110",
         "price": 870,
-        "description": "Altavoz para fiestas portátil con un potente sonido de 160W, luces con ritmos"
+        "description": "Altavoz para fiestas portátil con un potente sonido de 160W, con luces"
     },
     {
         "id": 6,

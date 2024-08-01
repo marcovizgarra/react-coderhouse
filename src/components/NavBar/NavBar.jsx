@@ -42,7 +42,8 @@ const NavBar = () => {
                                 <a className="nav-link active_link" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link link-light" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Catálogo</a>
+                                <Link to={"/catalogo"}>Catálogo</Link>
+                                {/* <a className="nav-link link-light" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Catálogo</a> */}
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link link-light" href="#">Parlantes</a>
