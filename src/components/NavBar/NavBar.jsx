@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import screenSize from '/src/hooks/screenSize.jsx'
 import nav_logo from '/public/img/navbar/JBL_logo.png'
-import CartWidget from './CartWidget.jsx';
+import CartWidget from '../CartWidget/CartWidget.jsx';
 import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
 import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
 
@@ -38,8 +38,11 @@ const NavBar = () => {
                     
                     <div className="collapse navbar-collapse bg-dark" id="navbarNavDropdown">
                         <ul className="navbar-nav">
-                            <li className="nav-item ">
+                            <li className="nav-item">
                                 <a className="nav-link active_link" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link link-light" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Catálogo</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link link-light" href="#">Parlantes</a>

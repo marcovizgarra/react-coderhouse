@@ -3,9 +3,9 @@
     @import './utilities/variables';
 
 // Components
-    @import './components/navbar';
-    @import './components/cartWidget';
-    @import './components/header';
-    @import './components/home';
+    @import '../components/NavBar/navbar'; //OK
+    @import '../components/CartWidget/cartWidget'; //OK
+    @import '../components/Header/header';
+    @import '../components/Home/home'; //OK
     @import './components/mostViewedProduct';
     @import './components/catalogue';

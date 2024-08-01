@@ -1,10 +1,10 @@
-import { getFileName } from '../js/functions.js';
+import { getFileName } from '../../js/functions.js';
 import slideImg1 from "/public/carousel/first_slide.png";
 import slideImg2 from "/public/carousel/bar_800.jpg";
 import slideImg3 from "/public/carousel/pb_710.jpg";
 import slideImg4 from "/public/carousel/quantum_610.jpg";
 import slideImg5 from "/public/carousel/tour_pro_2.jpg";
-import MostViewedProduct from './MostViewedProduct.jsx';
+import MostViewedProduct from '../MostViewedProduct.jsx';
 
 const Home = () => {
     return(

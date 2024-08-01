@@ -1,7 +1,7 @@
 .navbar {
     padding: 0;
     margin: 0;
-    height: 4rem;
+    margin-bottom: .5rem;
     background-color: black !important;
     #cart_widget_container {
         margin-right: 2.5rem;
@@ -9,6 +9,7 @@
     .container-fluid {
         padding: 0;
         margin: 0;
+        text-transform: uppercase;
         .nav_logo {
             width: 4rem;
             margin-right: 2rem;

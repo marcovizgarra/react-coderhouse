@@ -19,10 +19,8 @@ const MostViewedProduct = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{item.title}</h5>
                                             <p className="card-text">{item.cardDescription}</p>
-                                            <b>
-                                                <p className="card-text text-warning">USD {item.price}</p>
-                                            </b>
-                                            <button className="btn btn-primary" onClick={() => { agregarProducto(item.id) }}>Agregar al carrito</button>
+                                            <b><p className="card-text text-warning price">U$D {item.price}</p></b>
+                                            <button className="btn btn-primary rounded-pill" onClick={() => { agregarProducto(item.id) }}>Agregar al carrito</button>
                                             <p>¡Hasta 6 cuotas sin interés!</p>
                                         </div>
                                     </div>
