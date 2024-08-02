@@ -1,29 +1,29 @@
-.catalogue {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    h1 {
-        margin: .5rem;
-        font-size: xx-large;
-        text-transform: uppercase;
-    }
+// .catalogue {
+//     display: flex;
+//     text-align: center;
+//     flex-direction: column;
+//     justify-content: center;
+//     color: white;
+//     h1 {
+//         margin: .5rem;
+//         font-size: xx-large;
+//         text-transform: uppercase;
+//     }
 
-    .gamesContainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        .card {
-            color: white;
-            width: 22rem;
-            margin: 1rem;
-            border: 1px solid white ;
-            img{
-                width: 21.9rem;
-                height: 26rem;
-            }
-        }
-    }
-}
+//     .gamesContainer {
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         .card {
+//             color: white;
+//             width: 22rem;
+//             margin: 1rem;
+//             border: 1px solid white ;
+//             img{
+//                 width: 21.9rem;
+//                 height: 26rem;
+//             }
+//         }
+//     }
+// }

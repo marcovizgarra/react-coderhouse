@@ -1,16 +1,20 @@
+// Functions
 import { getFileName } from '../../js/functions.js';
+
+// Images
 import slideImg1 from "/public/carousel/first_slide.png";
 import slideImg2 from "/public/carousel/bar_800.jpg";
 import slideImg3 from "/public/carousel/pb_710.jpg";
 import slideImg4 from "/public/carousel/quantum_610.jpg";
 import slideImg5 from "/public/carousel/tour_pro_2.jpg";
-import MostViewedProduct from '../MostViewedProduct.jsx';
+
+// Components
 import ProductCard from '../ProductCard/ProductCard.jsx';
 
 const Home = () => {
     return(
         <>
-            <section className="homePage">
+            <section className="homePage flex_col_center">
                 <div id="carouselHomePage" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselHomePage" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -73,9 +77,6 @@ const Home = () => {
                     </div>
                 </article>
 
-                {/* <article className='most_viewed_products'>
-                    <MostViewedProduct />
-                </article> */}
             </section>
         </>
     )

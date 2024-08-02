@@ -1,6 +1,7 @@
 // Utilities
     @import './utilities/reset';
     @import './utilities/variables';
+    @import './utilities/common_classes';
 
 // Components
     @import '../components/NavBar/navbar'; //OK
@@ -8,5 +9,6 @@
     @import '../components/Header/header'; // OK
     @import '../components/Home/home'; //OK
     @import '../components/ProductCard/productCard'; // OK
+    @import '../components/Catalogue/catalogue2'; // OK
     @import './components/mostViewedProduct';
     @import './components/catalogue';

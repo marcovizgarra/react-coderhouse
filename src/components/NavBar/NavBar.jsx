@@ -1,10 +1,17 @@
+// Hooks
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import screenSize from '/src/hooks/screenSize.jsx'
+
+// Images
 import nav_logo from '/public/img/navbar/JBL_logo.png'
-import CartWidget from '../CartWidget/CartWidget.jsx';
 import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
 import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
+
+// Components
+import screenSize from '/src/hooks/screenSize.jsx'
+import CartWidget from '../CartWidget/CartWidget.jsx';
+
+
 
 const NavBar = () => {
     const [collapsed, setCollapsed] = useState(true);
@@ -13,39 +20,37 @@ const NavBar = () => {
     const breakSize = 990
 
     const getLinkClass = (path) => {
-        return location.pathname === path ? 'nav-link active' : 'nav-link';
+        return location.pathname == path ? 'nav-link active_link' : 'nav-link link-light';
     };
 
     return (    
         <>
             <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                        <img className='nav_logo' src={nav_logo} alt={"nav_logo"}
-                            style={{
-                                marginLeft: widthSize <= breakSize ? "0rem" : "5rem",
-                                marginRight: widthSize <= breakSize ? "0rem" : "2rem",
-                            }} />
-                    </a>
-                    
-                    <div className="toggle_and_cart">
-                        {widthSize <= breakSize ? <CartWidget /> :  null}
 
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onClick={ () => {setCollapsed(!collapsed)}}>
+                    <Link to={"/"}>
+                        <img className='nav_logo' src={nav_logo} alt={"nav_logo"} style={{ marginLeft: widthSize <= breakSize ? "0rem" : "5rem", marginRight: widthSize <= breakSize ? "0rem" : "2rem", }} />
+                    </Link>
+
+                    <div className="toggle_and_cart flex_row_center">
+                        {widthSize <= breakSize ? <CartWidget /> : null}
+
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onClick={() => { setCollapsed(!collapsed) }}>
                             {collapsed ? (<img src={navCollapsedIcon} alt='collapsedIcon' width="20"></img>) : (<img src={navExpandIcon} alt='expandIcon' width="20"></img>)}
                         </button>
                     </div>
-                    
+
                     <div className="collapse navbar-collapse bg-dark" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active_link" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Home</a>
+                                <Link to={"/"} className={getLinkClass("/")} style={{ marginLeft: widthSize <= breakSize ? "1.5rem" : "" }}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={"/catalogo"}>Catálogo</Link>
-                                {/* <a className="nav-link link-light" aria-current="page" href="#" style={{marginLeft: widthSize <= breakSize ? "1.5rem" : ""}}>Catálogo</a> */}
+                                <Link to={"/catalogo"} className={getLinkClass("/catalogo")} style={{ marginLeft: widthSize <= breakSize ? "1.5rem" : "" }}>Catálogo</Link>
                             </li>
-                            <li className="nav-item">
+
+                            {/* Crear componente y añadir ruta */}
+                            <li className="nav-item"> 
                                 <a className="nav-link link-light" href="#">Parlantes</a>
                             </li>
                             <li className="nav-item">
@@ -64,8 +69,8 @@ const NavBar = () => {
                         </ul>
                     </div>
                 </div>
-                {widthSize <= breakSize ? "" :  <CartWidget />}
-                
+                {widthSize <= breakSize ? "" : <CartWidget />}
+
             </nav>
 
             {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">

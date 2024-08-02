@@ -1,0 +1,26 @@
+.catalogue_container {
+    .speakers_container {
+        width: 80vw;
+        
+        .category_title {
+            color: white;
+            background-color: $JBL_color;
+            height: 2rem;
+            line-height: 2rem;
+            font-size: x-large;
+            width: 100%;
+            text-align: left;
+            font-family: $MichromaFont;
+            text-transform: uppercase;
+        }
+
+        .banner {
+            width: 100%;
+        }
+
+        .speakers {
+            width: 62vw;
+        }
+
+    }
+}

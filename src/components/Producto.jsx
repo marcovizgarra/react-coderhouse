@@ -1,8 +1,11 @@
+// Hooks
 import { useContext } from "react"
-import { CartContext } from "../context/CartContext"
+
+// Custom hooks
+import { MainContext } from "../context/MainContext"
 
 const Productos = () => {
-    const {catalogue, agregarProducto, totalProductos, carrito} = useContext(CartContext);
+    const {catalogue, agregarProducto, totalProductos, carrito} = useContext(MainContext);
 
     return(
         <>

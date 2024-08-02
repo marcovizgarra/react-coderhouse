@@ -1,9 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@200..700&display=swap");
 * {
   font-family: "Oswald", sans-serif;
   font-size: large;
   margin: 0;
   padding: 0; }
+
+.flex_row_center {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center; }
+
+.flex_col_center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center; }
 
 .navbar {
   padding: 0;
@@ -19,15 +38,12 @@
     .navbar .container-fluid .nav_logo {
       width: 4rem;
       margin-right: 2rem; }
-    .navbar .container-fluid .toggle_and_cart {
-      display: flex;
-      flex-direction: row; }
-      .navbar .container-fluid .toggle_and_cart #cart_widget_container {
-        margin-right: 1.5rem; }
-      .navbar .container-fluid .toggle_and_cart .navbar-toggler {
-        margin-right: 1rem;
-        box-shadow: none;
-        border-color: white; }
+    .navbar .container-fluid .toggle_and_cart #cart_widget_container {
+      margin-right: 1.5rem; }
+    .navbar .container-fluid .toggle_and_cart .navbar-toggler {
+      margin-right: 1rem;
+      box-shadow: none;
+      border-color: white; }
     .navbar .container-fluid .collapse {
       background-color: black !important; }
       .navbar .container-fluid .collapse .navbar-nav .nav-item {
@@ -54,10 +70,8 @@
   background-position: center;
   background-position-x: 47%;
   background-color: #1e324b;
-  display: flex;
   justify-content: flex-end;
   border-radius: 2rem;
-  text-align: center;
   width: 5rem;
   height: 3rem;
   color: white; }
@@ -73,16 +87,13 @@
     width: 1rem;
     font-weight: bold; }
 
-.header-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.header_section {
   background-color: #2a2a2a;
-  border-bottom: 1px solid #FF3300; }
-  .header-section img {
+  border-bottom: 1px solid #FF4502; }
+  .header_section img {
     width: 1.5rem;
     margin-right: .5rem; }
-  .header-section h4 {
+  .header_section h4 {
     font-weight: lighter;
     font-size: 1.1rem;
     color: white;
@@ -92,10 +103,8 @@
 
 .homePage {
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 80vh; }
+  min-height: 80vh;
+  justify-content: flex-start; }
   .homePage #carouselHomePage {
     width: 70vw;
     height: auto; }
@@ -117,7 +126,8 @@
       align-items: center; }
 
 .col .product_card {
-  height: 28rem;
+  height: 34rem;
+  width: 17rem;
   border-radius: 0; }
   .col .product_card:hover {
     box-shadow: 0 0 9px 2px rgba(119, 64, 0, 0.466); }
@@ -128,11 +138,28 @@
     font-weight: bold;
     letter-spacing: .1rem; }
   .col .product_card .p_price {
-    color: #FF3300;
+    color: #FF4502;
     letter-spacing: .1rem;
     font-weight: bold; }
   .col .product_card .p_description {
     height: 2rem; }
+
+.catalogue_container .speakers_container {
+  width: 80vw; }
+  .catalogue_container .speakers_container .category_title {
+    color: white;
+    background-color: #FF4502;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: x-large;
+    width: 100%;
+    text-align: left;
+    font-family: "Michroma", sans-serif;
+    text-transform: uppercase; }
+  .catalogue_container .speakers_container .banner {
+    width: 100%; }
+  .catalogue_container .speakers_container .speakers {
+    width: 62vw; }
 
 .most_viewed_product {
   margin-top: 2rem;
@@ -169,29 +196,5 @@
               font-weight: bold;
               letter-spacing: .1rem; }
             .most_viewed_product .card_container .row .col-md-3 .card .card-body button {
-              background-color: #FF3300;
+              background-color: #FF4502;
               border: 0; }
-
-.catalogue {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  color: white; }
-  .catalogue h1 {
-    margin: .5rem;
-    font-size: xx-large;
-    text-transform: uppercase; }
-  .catalogue .gamesContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; }
-    .catalogue .gamesContainer .card {
-      color: white;
-      width: 22rem;
-      margin: 1rem;
-      border: 1px solid white; }
-      .catalogue .gamesContainer .card img {
-        width: 21.9rem;
-        height: 26rem; }

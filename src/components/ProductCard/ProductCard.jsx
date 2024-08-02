@@ -1,37 +1,46 @@
-import { useEffect, useState } from "react"
-import productsArray from '/src/json/productos.json'
+// Hooks
+import { useContext, useEffect, useState } from "react"
 
-const ProductCard = () => {
-    const [products, setProducts] = useState([]);
+// Custom hooks
+import { MainContext } from "/src/context/MainContext.jsx"
+
+const ProductCard = ({type}) => {
+    // const [products, setProducts] = useState([]);
+    const [filteredItems, setFilteredItems] = useState([])
+    const {catalogue} = useContext(MainContext)
 
     useEffect(() => {
-        const productLoader = new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                if (productsArray) {
-                    resolve(productsArray);
-                } else {
-                    reject("No fue posible realizar la carga de los productos");
-                }
-            }, 3000)
-        })
+        if (type == "headphone") {
+            setFilteredItems(catalogue.filter(item => item.type == "headphone")) 
+        } else {
+            setFilteredItems(catalogue)
+        }
+    }, [type, catalogue])
 
-        productLoader
-            .then(resolved => {
-                setProducts(resolved)
-            })
-            .catch(error => {
-                console.error(error);
-            })
-    }, [])
+    // useEffect(() => {
+    //     const productLoader = new Promise ((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if (catalogue) {
+    //                 resolve(catalogue);
+    //             } else {
+    //                 reject("No fue posible realizar la carga de los productos");
+    //             }
+    //         }, 3000)
+    //     })
+
+    //     productLoader
+    //         .then(resolve => {
+    //             setProducts(resolve)
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //         })
+    // }, [])
 
     return(
         <>
-            <div className="container">
-                
-            </div>
-
             {
-                products.map((item) => (
+                filteredItems.map((item) => (
                     <div key={item.id}  className="col my-1">
                         <div className="card border-0 product_card">
                             <img src={item.img} className="card-img-top img-fluid" alt={item.title} />

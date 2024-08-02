@@ -3,6 +3,7 @@
         "id": 1,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwd338bf9a/JBL_Tune_Flex_Product_Image_Hero_White.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title":"JBL Tune Flex",
+        "type": "headphone",
         "price":145,
         "description":"Auriculares True Wireless con cancelación de ruido"
     },
@@ -10,6 +11,7 @@
         "id": 2,
         "img":"https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw77493435/1.JBL_Tour_Pro%202_Product%20Image_Hero_Black.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title":"JBL Tour Pro 2",
+        "type": "headphone",
         "price":382,
         "description":"Auriculares True Wireless con cancelación de ruido"
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "img":"https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw58ae575e/JBL_TOUR_One%20M2_Product%20Image_Hero_Black.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title":"JBL Tour One M2",
+        "type": "headphone",
         "price":472,
         "description":"Auriculares supraaurales inalámbricos con cancelación de ruido"
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwa678ced7/1.JBL_Wave_VIBE_100TWS_Product%20Images_Hero_Black.jpg?sw=299&sh=299&sm=fit&sfrm=png",
         "title": "JBL Wave 100TWS",
+        "type": "headphone",
         "price": 70,
         "description": "Auriculares supraaurales True Wireless"
     },
@@ -31,6 +35,7 @@
         "id": 5,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwd241832a/1_JBL_PARTYBOX_110_HERO_x2.jpg?sw=299&sh=299&sm=fit&sfrm=png",
         "title": "JBL Partybox 110",
+        "type": "speakers",
         "price": 870,
         "description": "Altavoz para fiestas portátil con un potente sonido de 160W, con luces"
     },
@@ -38,6 +43,7 @@
         "id": 6,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0cced459/JBL_AUTHENTICS_500_HERO_42813_x3.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title": "JBL Authentics 500",
+        "type": "speakers",
         "price": 1350,
         "description": "Altavoz inteligente de alta fidelidad y diseño retro, con Wi-Fi y Bluethooth"
     },
@@ -45,6 +51,7 @@
         "id": 7,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4bc94fe7/JBL_CHARGE5_HERO_BLUE_0038_x3.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title": "JBL Charge 5",
+        "type": "speakers",
         "price": 330,
         "description": "Altavoz portátitl resistente al agua con batería integrada"
     },
@@ -52,6 +59,7 @@
         "id": 8,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5115a3ac/1_JBL_PULSE_5_HERO_34364_x2.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title": "JBL Pulse 5",
+        "type": "speakers",
         "price": 375,
         "description": "Altavoz Bluetooth portátil con juego de luces"
     },
@@ -59,6 +67,7 @@
         "id": 9,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6b1d398a/JBL_CINEMA_SB190_HERO.jpg?sw=270&sh=330&sm=fit&sfrm=png",
         "title": "JBL Cinema SB190",
+        "type": "home_theater",
         "price": 830,
         "description": "Barra de sonido de 2.1 canales con Virtual Dolby Atmos"
     },
@@ -66,6 +75,7 @@
         "id": 10,
         "img": "https://www.jbl.com.ar/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf1ff9eed/JBL_QUANTUM%20ONE_Product%20Image_Angle.png?sw=270&sh=330&sm=fit&sfrm=png",
         "title": "JBL Quantum ONE",
+        "type": "gamer_headphones",
         "price": 215,
         "description": "Auriculares integrales profesionales de gaming en PC on calbe USB"
     }
