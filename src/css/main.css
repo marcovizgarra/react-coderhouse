@@ -185,7 +185,7 @@
         letter-spacing: .1rem; }
       .item_conainer .product .product_details .p_price {
         color: #FF4502;
-        font-size: x-large;
+        font-size: xx-large;
         letter-spacing: .1rem;
         font-weight: bold; }
       .item_conainer .product .product_details .p_description {
@@ -196,6 +196,12 @@
         height: 2rem;
         font-size: x-large;
         font-weight: lighter; }
+
+.shop_buttons .buy_btn {
+  margin-right: .4rem; }
+  .shop_buttons .buy_btn img {
+    margin-bottom: .2rem;
+    margin-right: .4rem; }
 
 .most_viewed_product {
   margin-top: 2rem;

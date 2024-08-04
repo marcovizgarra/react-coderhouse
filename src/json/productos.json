@@ -5,7 +5,8 @@
         "title":"JBL Tune Flex",
         "type": "headphone",
         "price":145,
-        "description":"Auriculares True Wireless con cancelación de ruido"
+        "description":"Auriculares True Wireless con cancelación de ruido",
+        "stock": 9
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "title":"JBL Tour Pro 2",
         "type": "headphone",
         "price":382,
-        "description":"Auriculares True Wireless con cancelación de ruido"
+        "description":"Auriculares True Wireless con cancelación de ruido",
+        "stock": 8
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "title":"JBL Tour One M2",
         "type": "headphone",
         "price":472,
-        "description":"Auriculares supraaurales inalámbricos con cancelación de ruido"
+        "description":"Auriculares supraaurales inalámbricos con cancelación de ruido",
+        "stock": 5
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "title": "JBL Wave 100TWS",
         "type": "headphone",
         "price": 70,
-        "description": "Auriculares supraaurales True Wireless"
+        "description": "Auriculares supraaurales True Wireless",
+        "stock": 3
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "title": "JBL Partybox 110",
         "type": "speakers",
         "price": 870,
-        "description": "Altavoz para fiestas portátil con un potente sonido de 160W, con luces"
+        "description": "Altavoz para fiestas portátil con un potente sonido de 160W, con luces",
+        "stock": 19
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "title": "JBL Authentics 500",
         "type": "speakers",
         "price": 1350,
-        "description": "Altavoz inteligente de alta fidelidad y diseño retro, con Wi-Fi y Bluethooth"
+        "description": "Altavoz inteligente de alta fidelidad y diseño retro, con Wi-Fi y Bluethooth",
+        "stock": 15
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "title": "JBL Charge 5",
         "type": "speakers",
         "price": 330,
-        "description": "Altavoz portátitl resistente al agua con batería integrada"
+        "description": "Altavoz portátitl resistente al agua con batería integrada",
+        "stock": 20
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "title": "JBL Pulse 5",
         "type": "speakers",
         "price": 375,
-        "description": "Altavoz Bluetooth portátil con juego de luces"
+        "description": "Altavoz Bluetooth portátil con juego de luces",
+        "stock": 11
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "title": "JBL Cinema SB190",
         "type": "home_theater",
         "price": 830,
-        "description": "Barra de sonido de 2.1 canales con Virtual Dolby Atmos"
+        "description": "Barra de sonido de 2.1 canales con Virtual Dolby Atmos",
+        "stock": 8
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "title": "JBL Quantum ONE",
         "type": "gamer_headphones",
         "price": 215,
-        "description": "Auriculares integrales profesionales de gaming en PC on calbe USB"
+        "description": "Auriculares integrales profesionales de gaming en PC on calbe USB",
+        "stock": 13
     }
 
 ]

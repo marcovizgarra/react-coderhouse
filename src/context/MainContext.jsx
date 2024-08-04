@@ -9,6 +9,7 @@ export const MainContext = createContext();
 
 const MainContextProvider = ({children}) => {
     
+    const [cart, setCart] = useState([])
     const [catalogue, setCatalogue] = useState([]);
 
     useEffect(() => {
@@ -29,26 +30,23 @@ const MainContextProvider = ({children}) => {
             .catch(error => {
                 console.error(error);
             })
-    }, [])
+    }, [])   
 
+    // const agregarProducto = (id) => {
+    //     const producto = catalogue.find(item => item.id == id);
 
-    const [carrito, setCarrito] = useState([]);
+    //     setCarrito([...carrito, producto])
+    // }
 
-    const agregarProducto = (id) => {
-        const producto = catalogue.find(item => item.id == id);
+    // const totalProductos = () => {
+    //     return carrito.length;
+    // }
 
-        setCarrito([...carrito, producto])
-    }
+    // const vaciarCarrito = () => {
+    //     setCarrito([])
+    // }
 
-    const totalProductos = () => {
-        return carrito.length;
-    }
-
-    const vaciarCarrito = () => {
-        setCarrito([])
-    }
-
-    return  <MainContext.Provider value={{catalogue, carrito, agregarProducto, totalProductos, vaciarCarrito}}>
+    return  <MainContext.Provider value={{catalogue, cart, setCart}}>
                 {children}
             </MainContext.Provider>
 

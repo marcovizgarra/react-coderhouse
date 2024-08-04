@@ -2,9 +2,10 @@
 import { useContext, useEffect, useState } from 'react'
 // Context
 import { MainContext } from '../../context/MainContext'
+import ItemCount2 from '../ItemCount2/ItemCount2';
 
 const ItemDetail2 = ({id}) => {
-    const {catalogue, carrito, agregarProducto, totalProductos, vaciarCarrito} = useContext(MainContext);
+    const {catalogue} = useContext(MainContext);
     const [product, setProduct] = useState([]);
 
     const renderItemDetail = () => {
@@ -22,6 +23,7 @@ const ItemDetail2 = ({id}) => {
                     <hr width={"100%"}/>
                     <p className='p_price'>USD {item.price}</p>
                     <p className='p_offer'>Hasta 6 cuotas sin interes de USD {(item.price/6)} con tarjeta de crédito bancaria</p>
+                    <ItemCount2 id={item.id}/>
                 </div>
             </div>
         </article>  
