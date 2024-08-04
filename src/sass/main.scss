@@ -10,5 +10,13 @@
     @import '../components/Home/home'; //OK
     @import '../components/ProductCard/productCard'; // OK
     @import '../components/Catalogue/catalogue2'; // OK
+    @import '../components/ItemDetail/ItemDetail2.scss';  // OK
+    
+    // sin usar
     @import './components/mostViewedProduct';
     @import './components/catalogue';
+
+    .splite_container {
+        width: 60vw;
+        background-color: gray;
+    }

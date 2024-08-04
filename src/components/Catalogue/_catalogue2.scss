@@ -1,7 +1,7 @@
 .catalogue_container {
-    .speakers_container {
-        width: 80vw;
-        
+    .type_container {
+        width: $items_container_vw;
+
         .category_title {
             color: white;
             background-color: $JBL_color;
@@ -18,8 +18,8 @@
             width: 100%;
         }
 
-        .speakers {
-            width: 62vw;
+        .prod_container {
+            width: 66vw;
         }
 
     }

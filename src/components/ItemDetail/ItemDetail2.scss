@@ -1,0 +1,42 @@
+.item_conainer {
+    width: 100vw;
+    padding: .5rem;
+
+    .product {
+            width: 65vw;
+            height: 26rem;
+            border: 1px solid #EBEDEE;
+
+            .product_details {
+                padding: 1.5rem;
+                background-color: #F7F9FA;
+                height: 100%;
+
+                .p_title {
+                    text-transform: uppercase;
+                    font-size: xx-large;
+                    font-weight: bold;
+                    letter-spacing: .1rem;
+                }
+            
+                .p_price {
+                    color: $JBL_color;
+                    font-size: x-large;
+                    letter-spacing: .1rem;
+                    font-weight: bold;
+                }
+            
+                .p_description {
+                    height: 2rem;
+                    font-size: x-large;
+                    font-weight: lighter;
+                }
+
+                .p_offer {
+                    height: 2rem;
+                    font-size: x-large;
+                    font-weight: lighter;
+                }
+            }
+    }
+}

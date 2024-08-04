@@ -1,8 +1,8 @@
-// Hooks
-import { useContext, useEffect, useState } from "react"
+// React hooks
+    import { useContext, useEffect, useState } from "react"
 
 // Custom hooks
-import { MainContext } from "/src/context/MainContext.jsx"
+    import { MainContext } from "/src/context/MainContext.jsx"
 
 const ProductCard = ({type}) => {
     // const [products, setProducts] = useState([]);

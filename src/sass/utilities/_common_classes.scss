@@ -17,3 +17,11 @@
     align-items: center;
     text-align: center;
 }
+
+.flex_start_col {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start
+}

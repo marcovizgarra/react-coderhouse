@@ -1,14 +1,22 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './Header/Header.jsx'; // OK
-import NavBar from './NavBar/NavBar.jsx'; // OK
-import Home from './Home/Home.jsx'; // OK
+// React hooks
+    import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// Components 
+    import Header from './Header/Header.jsx'; // OK
+    import NavBar from './NavBar/NavBar.jsx'; // OK
+    import Home from './Home/Home.jsx'; // OK
+    import Catalogue2 from './Catalogue/Catalogue2.jsx'; // OK
+// Context
+    import MainContextProvider from '../context/MainContext.jsx';
+
+// Styles
+    import SplideFull from './SlpideFull.jsx';
+
 import CartContextProvider from '../context/MainContext.jsx';
 import Producto from './Producto.jsx';
 import ItemListContainer from './ItemListContainer.jsx';
 import ItemDetailContainer from './ItemDetailContainer.jsx';
-import Catalogue2 from './Catalogue/Catalogue2.jsx'; // OK
-import MainContextProvider from '../context/MainContext.jsx';
 import ProductCard from './ProductCard/ProductCard.jsx';
+import ItemDetail2 from './ItemDetail/ItemDetail2.jsx';
 
 const App = () => {
     return (
@@ -16,6 +24,7 @@ const App = () => {
             <MainContextProvider>
                 <BrowserRouter>
                     <Header prop={"Hasta 6 cuotas sin interes con todos los bancos"}/>
+                    {/* <SplideFull /> */}
                     <NavBar />
                     {/* 
                     <Producto />
@@ -27,6 +36,7 @@ const App = () => {
                     <Routes>
                         <Route path={"/"} element={<Home />}/>
                         <Route path={"/catalogo"} element={<Catalogue2 />}/>
+                        <Route path={"/parlantes"} element={<ItemDetail2 />}/>
                         <Route path={"/:type"} element={<Catalogue2/>} />
                     </Routes>  
                 </BrowserRouter>

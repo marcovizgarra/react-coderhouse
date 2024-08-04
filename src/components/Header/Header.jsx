@@ -1,3 +1,4 @@
+// Images
 import cardIcon from '/public/img/header/credit-card-regular-white.svg';
 
 const Header = ({prop}) => {

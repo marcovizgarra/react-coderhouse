@@ -24,6 +24,13 @@
   align-items: center;
   text-align: center; }
 
+.flex_start_col {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
 .navbar {
   padding: 0;
   margin: 0;
@@ -61,7 +68,7 @@
         .navbar .container-fluid .collapse .navbar-nav .nav-item .active_link {
           color: #FF3300;
           font-weight: bold;
-          border-bottom: 3px solid #FF3300; }
+          border-bottom: 4px solid #FF3300; }
 
 #cart_widget_container {
   background-image: url("/public/img/cartWidget/cart-shopping-solid.svg");
@@ -102,8 +109,7 @@
     margin: 0; }
 
 .homePage {
-  margin-top: 2rem;
-  min-height: 80vh;
+  min-height: 85vw;
   justify-content: flex-start; }
   .homePage #carouselHomePage {
     width: 70vw;
@@ -144,9 +150,9 @@
   .col .product_card .p_description {
     height: 2rem; }
 
-.catalogue_container .speakers_container {
-  width: 80vw; }
-  .catalogue_container .speakers_container .category_title {
+.catalogue_container .type_container {
+  width: 85vw; }
+  .catalogue_container .type_container .category_title {
     color: white;
     background-color: #FF4502;
     height: 2rem;
@@ -156,10 +162,40 @@
     text-align: left;
     font-family: "Michroma", sans-serif;
     text-transform: uppercase; }
-  .catalogue_container .speakers_container .banner {
+  .catalogue_container .type_container .banner {
     width: 100%; }
-  .catalogue_container .speakers_container .speakers {
-    width: 62vw; }
+  .catalogue_container .type_container .prod_container {
+    width: 66vw; }
+
+.item_conainer {
+  width: 100vw;
+  padding: .5rem; }
+  .item_conainer .product {
+    width: 65vw;
+    height: 26rem;
+    border: 1px solid #EBEDEE; }
+    .item_conainer .product .product_details {
+      padding: 1.5rem;
+      background-color: #F7F9FA;
+      height: 100%; }
+      .item_conainer .product .product_details .p_title {
+        text-transform: uppercase;
+        font-size: xx-large;
+        font-weight: bold;
+        letter-spacing: .1rem; }
+      .item_conainer .product .product_details .p_price {
+        color: #FF4502;
+        font-size: x-large;
+        letter-spacing: .1rem;
+        font-weight: bold; }
+      .item_conainer .product .product_details .p_description {
+        height: 2rem;
+        font-size: x-large;
+        font-weight: lighter; }
+      .item_conainer .product .product_details .p_offer {
+        height: 2rem;
+        font-size: x-large;
+        font-weight: lighter; }
 
 .most_viewed_product {
   margin-top: 2rem;
@@ -198,3 +234,7 @@
             .most_viewed_product .card_container .row .col-md-3 .card .card-body button {
               background-color: #FF4502;
               border: 0; }
+
+.splite_container {
+  width: 60vw;
+  background-color: gray; }

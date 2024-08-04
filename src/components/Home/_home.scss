@@ -1,6 +1,5 @@
 .homePage {
-    margin-top: 2rem;
-    min-height: 80vh;
+    min-height: $items_container_vw;
     justify-content: flex-start;
     // background: linear-gradient(to bottom, #333333, #000000);
     // background: radial-gradient(circle at 0% 50%, #000000, #912e00, #000000);
