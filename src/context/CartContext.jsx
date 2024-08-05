@@ -49,15 +49,20 @@ const CartContextProvider = ({children}) => {
         }
     }, [product, productId, cart])
 
+    useEffect(() => {
+        setItemsOnCart(totalOfProducts())
+    }, [cart])
+
+    // Devuelve el total de los productos que existen en el carrito
     const totalOfProducts = () => {
         return cart.reduce((acc, obj) => {
             return acc + obj.quantity
         }, 0)
     }
 
+    // Devuelve el índice del producto renderizado en ItemDetail
     const findIndexProd = (productId) => {
-        let indexProduct = cart.findIndex(item => item.prodId == productId)
-        return indexProduct
+        return cart.findIndex(item => item.prodId == productId)
     }
 
     // Si el producto está en el carrito devuelve la cantidad agregada, si el producto no está devuelve 0
@@ -85,23 +90,25 @@ const CartContextProvider = ({children}) => {
     }
 
     const addToCart = () => {
+        let updatedCart = ([])
+
         if (stock < 1) {
             console.log("no hay stock");
             console.log(cart);
         } else {
             const index = findIndexProd(productId);
             if (index !== -1) {
-                const updatedCart = [...cart];
+                updatedCart = [...cart];
                 updatedCart[index].quantity += counter;
-                setCart(updatedCart);
             } else {
-                setCart([...cart, {
+                updatedCart = [...cart, {
                     prodId: productId,
                     quantity: counter
-                }]);
+                }]
+
             }
-            
-            setItemsOnCart(totalOfProducts());
+            setCart(updatedCart);
+
             setStock(stock - counter);
             setCounter(1);
 

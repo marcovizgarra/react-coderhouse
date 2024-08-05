@@ -5,6 +5,11 @@ import JS from '/public/js.png'
 import HTML from '/public/HTML.png'
 import CSS from '/public/css3.svg'
 
+// .splite_container {
+//     width: 60vw;
+//     background-color: gray;
+// }
+
 const SplideFull = () => {
     return(
         <>

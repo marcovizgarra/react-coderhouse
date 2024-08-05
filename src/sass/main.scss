@@ -4,20 +4,12 @@
     @import './utilities/common_classes';
 
 // Components
-    @import '../components/NavBar/navbar'; //OK
-    @import '../components/CartWidget/cartWidget'; //OK
-    @import '../components/Header/header'; // OK
-    @import '../components/Home/home'; //OK
-    @import '../components/ProductCard/productCard'; // OK
-    @import '../components/Catalogue/catalogue2'; // OK
-    @import '../components/ItemDetail/ItemDetail2.scss';  // OK
-    @import '../components/ItemCount2/itemCount2'; // OK
-    
-    // sin usar
-    @import './components/mostViewedProduct';
-    @import './components/catalogue';
-
-    .splite_container {
-        width: 60vw;
-        background-color: gray;
-    }
+    @import '../components/NavBar/navbar';
+    @import '../components/CartWidget/cartWidget';
+    @import '../components/Header/header';
+    @import '../components/Home/home';
+    @import '../components/ProductCard/productCard';
+    @import '../components/Catalogue/catalogue2';
+    @import '../components/ItemDetail/ItemDetail2.scss';
+    @import '../components/ItemCount2/itemCount2';
+    @import '../components/Checkout/CheckOut.scss';
