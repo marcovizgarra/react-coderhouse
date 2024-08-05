@@ -70,30 +70,6 @@
           font-weight: bold;
           border-bottom: 4px solid #FF3300; }
 
-#cart_widget_container {
-  background-image: url("/public/img/cartWidget/cart-shopping-solid.svg");
-  background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position-x: 47%;
-  background-color: #1e324b;
-  justify-content: flex-end;
-  border-radius: 2rem;
-  width: 5rem;
-  height: 3rem;
-  color: white; }
-  #cart_widget_container:hover {
-    background-image: url("/public/img/cartWidget/cart-shopping-solid-yellow.svg"); }
-  #cart_widget_container img {
-    width: 2rem;
-    margin-right: .6rem; }
-  #cart_widget_container p {
-    background-color: red;
-    border-radius: 10rem;
-    height: min-content;
-    width: 1rem;
-    font-weight: bold; }
-
 .header_section {
   background-color: #2a2a2a;
   border-bottom: 1px solid #FF4502; }

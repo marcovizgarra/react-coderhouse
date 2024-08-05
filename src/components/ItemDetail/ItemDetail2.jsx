@@ -1,11 +1,11 @@
 // React hooks
 import { useContext, useEffect, useState } from 'react'
 // Context
-import { MainContext } from '../../context/MainContext'
+import { CartContext } from '../../context/CartContext'
 import ItemCount2 from '../ItemCount2/ItemCount2';
 
 const ItemDetail2 = ({id}) => {
-    const {catalogue} = useContext(MainContext);
+    const {catalogue} = useContext(CartContext);
     const [product, setProduct] = useState([]);
 
     const renderItemDetail = () => {

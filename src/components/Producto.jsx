@@ -2,28 +2,28 @@
 import { useContext } from "react"
 
 // Custom hooks
-import { MainContext } from "../context/MainContext"
+import { CartContext } from "../context/CartContext"
 
 const Productos = () => {
-    const {catalogue, agregarProducto, totalProductos, carrito} = useContext(MainContext);
+    const { catalogue, agregarProducto, totalProductos, carrito } = useContext(CartContext);
 
-    return(
+    return (
         <>
             <div className="container">
                 {
                     catalogue.map((prod) => (
                         <div key={prod.id} className="row">
-                            <div className="col-md-3">                       
+                            <div className="col-md-3">
                                 <div className="card">
                                     <img src={prod.img} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">{prod.title}</h5>
-                                            <p className="card-text">{prod.cardDescription}</p>
-                                            <b>
-                                                <p className="card-text text-warning">USD {prod.price}</p>
-                                            </b>
-                                            <button className="btn btn-primary" onClick={() => {agregarProducto(prod.id)}}>Agregar (+)</button>                                            
-                                        </div>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{prod.title}</h5>
+                                        <p className="card-text">{prod.cardDescription}</p>
+                                        <b>
+                                            <p className="card-text text-warning">USD {prod.price}</p>
+                                        </b>
+                                        <button className="btn btn-primary" onClick={() => { agregarProducto(prod.id) }}>Agregar (+)</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -39,16 +39,16 @@ const Productos = () => {
 
             <div className="row">
                 <div className="col">
-                <table className="table">
+                    <table className="table">
                         <tbody>
                             {
                                 carrito.map((prod, index) => (
                                     <tr key={prod.id + index}>
                                         <td className="align-middle">
-                                            <img src={prod.img} alt={prod.title} width={60}/>
+                                            <img src={prod.img} alt={prod.title} width={60} />
                                         </td>
-                                        <td  className="align-middle">{prod.title}</td>
-                                        <td  className="align-middle">USD {prod.price}</td>
+                                        <td className="align-middle">{prod.title}</td>
+                                        <td className="align-middle">USD {prod.price}</td>
                                     </tr>
                                 ))
                             }

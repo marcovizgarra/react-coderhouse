@@ -33,7 +33,7 @@ const NavBar = () => {
                     </Link>
 
                     <div className="toggle_and_cart flex_row_center">
-                        {widthSize <= breakSize ? <CartWidget /> : null}
+                        {widthSize <= breakSize ? <CartWidget mRight={"1rem"}/> : null}
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onClick={() => { setCollapsed(!collapsed) }}>
                             {collapsed ? (<img src={navCollapsedIcon} alt='collapsedIcon' width="20"></img>) : (<img src={navExpandIcon} alt='expandIcon' width="20"></img>)}
@@ -69,7 +69,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                 </div>
-                {widthSize <= breakSize ? "" : <CartWidget />}
+                {widthSize <= breakSize ? "" : <CartWidget mRight={"4rem"}/>}
 
             </nav>
 

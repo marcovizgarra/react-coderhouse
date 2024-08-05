@@ -25,7 +25,7 @@ const Catalogue2 = () => {
                         <ProductCard />
                     </div> */}
 
-                    <ItemDetail2 id={5}/>
+                    <ItemDetail2 id={7}/>
 
                 </article>
             </section>

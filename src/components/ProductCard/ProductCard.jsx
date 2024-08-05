@@ -2,40 +2,22 @@
     import { useContext, useEffect, useState } from "react"
 
 // Custom hooks
-    import { MainContext } from "/src/context/MainContext.jsx"
+    import { CartContext } from "/src/context/CartContext.jsx"
 
 const ProductCard = ({type}) => {
     // const [products, setProducts] = useState([]);
     const [filteredItems, setFilteredItems] = useState([])
-    const {catalogue} = useContext(MainContext)
+    const {catalogue} = useContext(CartContext)
 
     useEffect(() => {
-        if (type == "headphone") {
-            setFilteredItems(catalogue.filter(item => item.type == "headphone")) 
+        let typeOfProduct = catalogue.filter(item => item.type == type)       
+
+        if (typeOfProduct.length > 0) {
+            setFilteredItems(catalogue.filter(item => item.type == type)) 
         } else {
             setFilteredItems(catalogue)
         }
     }, [type, catalogue])
-
-    // useEffect(() => {
-    //     const productLoader = new Promise ((resolve, reject) => {
-    //         setTimeout(() => {
-    //             if (catalogue) {
-    //                 resolve(catalogue);
-    //             } else {
-    //                 reject("No fue posible realizar la carga de los productos");
-    //             }
-    //         }, 3000)
-    //     })
-
-    //     productLoader
-    //         .then(resolve => {
-    //             setProducts(resolve)
-    //         })
-    //         .catch(error => {
-    //             console.error(error);
-    //         })
-    // }, [])
 
     return(
         <>
