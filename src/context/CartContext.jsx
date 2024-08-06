@@ -90,14 +90,16 @@ const CartContextProvider = ({children}) => {
     }
 
     const addToCart = () => {
-        let updatedCart = ([])
+        let updatedCart = ([...cart])
 
         if (stock < 1) {
             console.log("no hay stock");
             console.log(cart);
         } else {
             const index = findIndexProd(productId);
-            if (index !== -1) {
+            if (index !== -1 && cart[findIndexProd(productId)] !== -1) {
+                console.log("id producto", productId);
+                
                 updatedCart = [...cart];
                 updatedCart[index].quantityOnCart += counter;
                 console.log("va por el true");
@@ -106,7 +108,6 @@ const CartContextProvider = ({children}) => {
                 delete productAdd.stock;
                 updatedCart = [...cart, productAdd];
                     console.log("va por el else");
-                    
             }
             setCart(updatedCart);
 

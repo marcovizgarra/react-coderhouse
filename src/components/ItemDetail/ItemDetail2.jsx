@@ -22,7 +22,7 @@ const ItemDetail2 = ({id}) => {
                     <p className='p_description' >{item.description}</p>
                     <hr width={"100%"}/>
                     <p className='p_price'>USD {item.price}</p>
-                    <p className='p_offer'>Hasta 6 cuotas sin interes de USD {(item.price/6)} con tarjeta de crédito bancaria</p>
+                    <p className='p_offer'>Hasta 6 cuotas sin interes de USD {Math.round(item.price/6)} con tarjeta de crédito bancaria</p>
                     <ItemCount2 id={item.id}/>
                 </div>
             </div>

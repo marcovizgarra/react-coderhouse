@@ -21,11 +21,7 @@ const Catalogue2 = () => {
                         Parlantes
                     </h2>
 
-                    {/* <div className="row row-cols-4 prod_container">
-                        <ProductCard />
-                    </div> */}
-
-                    <ItemDetail2 id={7}/>
+                    <ItemDetail2 id={1}/>
 
                 </article>
             </section>

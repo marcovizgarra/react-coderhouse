@@ -203,3 +203,11 @@
       width: 92%;
       background-color: #FF3301;
       box-shadow: inset 0px 0px 19px 0px #cc2900; }
+
+.container .row {
+  height: 6rem; }
+  .container .row .img_container .item_img {
+    width: 6rem;
+    height: 6rem; }
+  .container .row .col h4 {
+    font-size: large; }
