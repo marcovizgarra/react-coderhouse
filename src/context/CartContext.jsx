@@ -56,13 +56,13 @@ const CartContextProvider = ({children}) => {
     // Devuelve el total de los productos que existen en el carrito
     const totalOfProducts = () => {
         return cart.reduce((acc, obj) => {
-            return acc + obj.quantity
+            return acc + obj.quantityOnCart
         }, 0)
     }
 
     // Devuelve el índice del producto renderizado en ItemDetail
     const findIndexProd = (productId) => {
-        return cart.findIndex(item => item.prodId == productId)
+        return cart.findIndex(item => item.id == productId)
     }
 
     // Si el producto está en el carrito devuelve la cantidad agregada, si el producto no está devuelve 0
@@ -70,7 +70,7 @@ const CartContextProvider = ({children}) => {
         const index = findIndexProd(productId);
 
         if (index !== -1) {
-            return cart[index].quantity;
+            return cart[index].quantityOnCart;
         } else {
             return 0;
         }
@@ -99,13 +99,14 @@ const CartContextProvider = ({children}) => {
             const index = findIndexProd(productId);
             if (index !== -1) {
                 updatedCart = [...cart];
-                updatedCart[index].quantity += counter;
+                updatedCart[index].quantityOnCart += counter;
+                console.log("va por el true");
             } else {
-                updatedCart = [...cart, {
-                    prodId: productId,
-                    quantity: counter
-                }]
-
+                const productAdd = {...product, quantityOnCart: counter};
+                delete productAdd.stock;
+                updatedCart = [...cart, productAdd];
+                    console.log("va por el else");
+                    
             }
             setCart(updatedCart);
 

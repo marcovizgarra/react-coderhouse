@@ -1,4 +1,4 @@
-const CheckOut = () => {
+const CheckOut2 = () => {
     return(
         <>
             <form style={{width: "500px"}}>
@@ -21,4 +21,4 @@ const CheckOut = () => {
     )
 }
 
-export default CheckOut
+export default CheckOut2
