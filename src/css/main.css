@@ -178,3 +178,18 @@
   .shop_buttons .buy_btn img {
     margin-bottom: .2rem;
     margin-right: .4rem; }
+
+.container .checkOut {
+  width: 85vw; }
+  .container .checkOut .cartList {
+    width: 100%; }
+  .container .checkOut .orderDetail {
+    width: 40vw;
+    margin: 1rem;
+    border: 1px solid #D9D9D9; }
+    .container .checkOut .orderDetail .title {
+      background-color: #D9D9D9;
+      width: 100%; }
+    .container .checkOut .orderDetail .btn {
+      background-color: #FF4502;
+      border: 0; }

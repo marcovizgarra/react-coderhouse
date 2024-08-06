@@ -1,5 +1,6 @@
 // React hooks
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 // Functions
 import { getFileName } from '../../js/functions';
 // Context
@@ -19,14 +20,17 @@ const CartNotification = ({quantity}) => {
 
 const CartWidget = ({mRight}) => {    
     const {itemsOnCart} = useContext(CartContext)
-    
+    const navigateTo = useNavigate()
+
+    const handleClick = (path) => {
+        navigateTo(path)
+    };
 
     return (
         <>
-            <button type="button" className="btn btn-primary position-relative" style={{marginRight: mRight}} >
+            <button type="button" className="btn btn-primary position-relative" style={{marginRight: mRight}} onClick={() => { handleClick('/checkout') }}>
                 <img src={cartIcon} alt={getFileName(cartIcon)} width={"25rem"} />
                 <CartNotification quantity={itemsOnCart}/>
-                
             </button>
         </>
     )

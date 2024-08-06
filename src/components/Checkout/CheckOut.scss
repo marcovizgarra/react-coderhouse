@@ -1,0 +1,25 @@
+.container {
+    .checkOut {
+        width: $items_container_vw;
+
+        .cartList{
+            width: 100%;
+        }
+
+        .orderDetail {
+            width: 40vw;
+            margin: 1rem;
+            border: 1px solid #D9D9D9;
+            
+            .title{
+                background-color: #D9D9D9;
+                width: 100%;
+            }
+            
+            .btn {
+                background-color: $JBL_color;
+                border: 0;
+            }
+        }
+    }
+}
