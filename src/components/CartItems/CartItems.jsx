@@ -1,8 +1,15 @@
+// React hooks
 import { useContext, useState } from "react"
 import { CartContext } from '../../context/CartContext'
+// Images
+import trashIcon from '/public/img/cartItems/trash-solid-red.svg'
+
+
+import ItemCount2 from '../ItemCount2/ItemCount2'
+import { getFileName } from "../../js/functions"
 
 const CartItems = () => {
-    const {cart, catalogue} = useContext(CartContext);
+    const {cart, deleteFromCart ,catalogue} = useContext(CartContext);
 
     return(
         <>
@@ -27,6 +34,9 @@ const CartItems = () => {
                             </div>
                             
                             <p className="col">U$D {item.price}</p>
+                            {/* <div className="col">
+                                <ItemCount2 />
+                            </div> */}
                             <p className="col">{item.quantityOnCart}</p>
                             
                             <div className="col">
@@ -34,8 +44,9 @@ const CartItems = () => {
                             </div>
 
                             <div className="col">
-                                <p className="m-0">Eliminar</p>
+                                <img src={trashIcon} alt={getFileName(trashIcon)} className="cursor-pointer" width={25} onClick={() => {deleteFromCart(item.id)}} />
                             </div>
+                                {/* <p className="m-0">Eliminar</p></div> */}
                         </section>
                     ))
                 }

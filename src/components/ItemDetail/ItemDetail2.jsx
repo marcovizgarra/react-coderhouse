@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 // Context
 import { CartContext } from '../../context/CartContext'
 import ItemCount2 from '../ItemCount2/ItemCount2';
+import AddToCart from '../AddToCart/AddToCart';
 
 const ItemDetail2 = ({id}) => {
     const {catalogue} = useContext(CartContext);
@@ -23,7 +24,11 @@ const ItemDetail2 = ({id}) => {
                     <hr width={"100%"}/>
                     <p className='p_price'>USD {item.price}</p>
                     <p className='p_offer'>Hasta 6 cuotas sin interes de USD {Math.round(item.price/6)} con tarjeta de crédito bancaria</p>
-                    <ItemCount2 id={item.id}/>
+                    
+                    <div className="shop_buttons flex_row_center">
+                        <AddToCart />                            
+                        <ItemCount2 id={item.id}/>
+                    </div>           
                 </div>
             </div>
         </article>  

@@ -7,13 +7,13 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children}) => {
     
-    const [productId, setProductId] =useState(0);
-    const [cart, setCart] = useState([]);
     const [catalogue, setCatalogue] = useState([]);
-    const [itemsOnCart, setItemsOnCart] = useState(0);
-    const [stock, setStock] = useState(0);
-    const [counter, setCounter] = useState(1);
     const [product, setProduct] = useState([]);
+    const [productId, setProductId] =useState(0);
+    const [stock, setStock] = useState(0);
+    const [cart, setCart] = useState([]);
+    const [itemsOnCart, setItemsOnCart] = useState(0);
+    const [counter, setCounter] = useState(1);
 
     useEffect(() => {
         const productLoader = new Promise ((resolve, reject) => {
@@ -66,8 +66,9 @@ const CartContextProvider = ({children}) => {
     }
 
     // Si el producto está en el carrito devuelve la cantidad agregada, si el producto no está devuelve 0
-    const quantOnCart = (productId) => {
-        const index = findIndexProd(productId);
+    const quantOnCart = (id) => {
+
+        const index = findIndexProd(id);
 
         if (index !== -1) {
             return cart[index].quantityOnCart;
@@ -120,7 +121,18 @@ const CartContextProvider = ({children}) => {
         }
     };
 
-    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, increase, decrease, addToCart, setProductId}}>
+    const deleteFromCart = () => {
+        const index = findIndexProd(productId)
+        let updatedCart = [...cart]
+
+        if (index !== -1) {
+            updatedCart.splice(index, 1);
+            setCart(updatedCart)
+        }
+        console.log(cart);
+    }
+
+    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, increase, decrease, addToCart, deleteFromCart, setProductId}}>
                 {children}
             </CartContext.Provider>
 

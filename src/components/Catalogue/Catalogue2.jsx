@@ -13,7 +13,7 @@ import ItemDetail2 from "../ItemDetail/ItemDetail2"
 const Catalogue2 = () => {
     return(
         <>
-            <section className="catalogue_container">
+            <section className="catalogue_container flex_col_center">
                 <article className="type_container">
                     <img className="banner" src={banner_parlantes} alt={getFileName(banner_parlantes)} />
                     <h2 className="m-0 p-0 category_title">
