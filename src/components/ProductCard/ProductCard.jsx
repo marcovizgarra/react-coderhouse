@@ -3,11 +3,20 @@
 
 // Custom hooks
     import { CartContext } from "/src/context/CartContext.jsx"
+import { useNavigate } from "react-router-dom"
+import { style } from "@splidejs/splide/src/js/utils";
 
 const ProductCard = ({type}) => {
     // const [products, setProducts] = useState([]);
-    const [filteredItems, setFilteredItems] = useState([])
-    const {catalogue} = useContext(CartContext)
+    const [filteredItems, setFilteredItems] = useState([]);
+    const [hoverCard, setHoverCard] = useState(false)
+    const {catalogue} = useContext(CartContext);
+
+    const navigateTo = useNavigate();
+
+    const handleClick = (path) => {
+        navigateTo(path)
+    }
 
     useEffect(() => {
         let typeOfProduct = catalogue.filter(item => item.type == type)       
@@ -23,18 +32,20 @@ const ProductCard = ({type}) => {
         <>
             {
                 filteredItems.map((item) => (
-                    <div key={item.id}  className="col my-1">
+                    <div key={item.id} className={"col my-1 cursor_pointer"}
+                        onClick={() => { handleClick("/:" + item.id) }}
+                        onMouseEnter={() => {setHoverCard(true)}}
+                        onMouseLeave={() => {setHoverCard(false)}}>
                         <div className="card border-0 product_card">
                             <img src={item.img} className="card-img-top img-fluid" alt={item.title} />
                             <div className="card-body text-center">
-                                <p className="card-text p_title">{item.title}</p>
-                                <p className="p_description">{item.description}</p>
-                                <p className="p_price">
-                                    USD {item.price}
+                                <p className="card-text title">{item.title}</p>
+                                <p className="description">{item.description}</p>
+                                <p className="price">
+                                    U$D {item.price}
                                     <br />
                                 </p>
                                 <p>Hasta 6 cuotas sin interés</p>
-                                
                             </div>
                         </div>
                     </div>

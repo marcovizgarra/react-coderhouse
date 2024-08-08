@@ -9,7 +9,7 @@ import ItemCount2 from '../ItemCount2/ItemCount2'
 import { getFileName } from "../../js/functions"
 
 const CartItems = () => {
-    const {cart, deleteFromCart ,catalogue} = useContext(CartContext);
+    const {cart, deleteFromCart, catalogue} = useContext(CartContext);
 
     return(
         <>
@@ -34,19 +34,18 @@ const CartItems = () => {
                             </div>
                             
                             <p className="col">U$D {item.price}</p>
-                            {/* <div className="col">
-                                <ItemCount2 />
-                            </div> */}
-                            <p className="col">{item.quantityOnCart}</p>
+
+                            <div className="col">
+                                <p className="bg-secondary rounded-pill p-1 mt-3 text-light">{item.quantityOnCart}</p>
+                            </div>
                             
                             <div className="col">
-                                USD {Math.round(item.price * item.quantityOnCart)}
+                                U$D {Math.round(item.price * item.quantityOnCart)}
                             </div>
 
                             <div className="col">
-                                <img src={trashIcon} alt={getFileName(trashIcon)} className="cursor-pointer" width={25} onClick={() => {deleteFromCart(item.id)}} />
+                                <img src={trashIcon} alt={getFileName(trashIcon)} className="cursor_pointer" width={25} onClick={() => {deleteFromCart(item.id)}} />
                             </div>
-                                {/* <p className="m-0">Eliminar</p></div> */}
                         </section>
                     ))
                 }

@@ -121,8 +121,8 @@ const CartContextProvider = ({children}) => {
         }
     };
 
-    const deleteFromCart = () => {
-        const index = findIndexProd(productId)
+    const deleteFromCart = (id) => {
+        const index = findIndexProd(id)
         let updatedCart = [...cart]
 
         if (index !== -1) {
@@ -132,7 +132,7 @@ const CartContextProvider = ({children}) => {
         console.log(cart);
     }
 
-    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, increase, decrease, addToCart, deleteFromCart, setProductId}}>
+    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts}}>
                 {children}
             </CartContext.Provider>
 

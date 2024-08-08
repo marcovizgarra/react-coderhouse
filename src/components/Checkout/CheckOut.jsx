@@ -1,6 +1,12 @@
+// React hooks
+import { useContext } from "react"
+// Context
+import { CartContext } from "../../context/CartContext"
+// Components
 import CartItems from "../CartItems/CartItems"
 
 const CheckOut = () => {
+    const {totalOfProducts} = useContext(CartContext)
     return(
         <>
             <div className="container flex_col_center">
@@ -18,6 +24,11 @@ const CheckOut = () => {
 
                         <div className="sub_total_items flex_spc_btween px-3">
                             <p>TOTAL DE ARTÍCULOS</p>
+                            <p>{totalOfProducts()}</p>
+                        </div>
+
+                        <div className="sub_total_items flex_spc_btween px-3">
+                            <p>SUB TOTAL</p>
                             <p>$1.000</p>
                         </div>
                         

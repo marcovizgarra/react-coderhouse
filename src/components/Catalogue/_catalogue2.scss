@@ -2,24 +2,21 @@
     .type_container {
         width: $items_container_vw;
 
-        .category_title {
-            color: white;
-            background-color: $JBL_color;
-            height: 2rem;
-            line-height: 2rem;
-            font-size: x-large;
-            width: 100%;
-            text-align: left;
-            font-family: $MichromaFont;
-            text-transform: uppercase;
+        .banner_container {
+            background-color: #FA4517;
+            width: 100vw;
         }
 
-        .banner {
-            width: 100%;
+        .title_container {
+            width: $desktop_width_items;
+            .banner {
+                width: $desktop_width_items;
+            }
+
         }
 
-        .prod_container {
-            width: 66vw;
+        .product_container {
+            width: $desktop_width_items;
         }
 
     }

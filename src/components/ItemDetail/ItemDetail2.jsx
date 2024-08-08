@@ -1,13 +1,26 @@
 // React hooks
 import { useContext, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 // Context
 import { CartContext } from '../../context/CartContext'
+// Components
 import ItemCount2 from '../ItemCount2/ItemCount2';
 import AddToCart from '../AddToCart/AddToCart';
 
-const ItemDetail2 = ({id}) => {
+const ItemDetail2 = () => {
     const {catalogue} = useContext(CartContext);
     const [product, setProduct] = useState([]);
+
+    const { id } = useParams()
+    
+    useEffect(() => {
+        const filteredProduct = catalogue.filter(item => (":" + item.id) == id)
+        setProduct(filteredProduct)
+
+        console.log(catalogue);
+        console.log(filteredProduct);        
+        
+    }, [id, catalogue]) 
 
     const renderItemDetail = () => {
         return product.map(item => (
@@ -34,10 +47,6 @@ const ItemDetail2 = ({id}) => {
         </article>  
         ));
     };
-
-    useEffect(() => {
-        setProduct(catalogue.filter(item => item.id == id))
-    }, [catalogue]) 
 
     return(
         <> 
