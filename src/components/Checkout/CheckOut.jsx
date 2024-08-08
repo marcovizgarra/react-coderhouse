@@ -4,10 +4,10 @@ const CheckOut = () => {
     return(
         <>
             <div className="container flex_col_center">
-                <section className="flex_row_center checkOut">
+                <section className="flex_start_row checkOut">
                     
-                    <article className="cartList flex_col_center">
-                        <h3>TU CARRITO DE COMPRAS</h3>
+                    <article className="cartList">
+                        <h3 className="m-3">TU CARRITO DE COMPRAS</h3>
                         <CartItems />
                     </article>
 

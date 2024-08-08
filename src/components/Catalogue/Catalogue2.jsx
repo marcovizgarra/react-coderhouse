@@ -13,15 +13,15 @@ import ItemDetail2 from "../ItemDetail/ItemDetail2"
 const Catalogue2 = () => {
     return(
         <>
-            <section className="catalogue_container flex_col_center">
-                <article className="type_container flex_col_center">
+            <section className="catalogue_container">
+                <article className="type_container">
                     <img className="banner" src={banner_parlantes} alt={getFileName(banner_parlantes)} />
                     <h2 className="m-0 p-0 category_title">
                         <img className="px-1 pb-1" src={JBL_exclam} alt={getFileName(JBL_exclam)} width={"50"} />
                         Parlantes
                     </h2>
 
-                    <ItemDetail2 id={1}/>
+                    <ItemDetail2 id={10}/>
 
                 </article>
             </section>

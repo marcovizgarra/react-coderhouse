@@ -1,10 +1,10 @@
 .container {
     .checkOut {
         width: $items_container_vw;
+        height: 100%;
 
         .cartList{
             width: 100%;
-            height: 100%;
         }
 
         .orderDetail {

@@ -26,6 +26,14 @@
     align-items: flex-start
 }
 
+.flex_start_row {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
 .flex_spc_btween {
     display: flex;
     justify-content: space-between;
