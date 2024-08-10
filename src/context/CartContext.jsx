@@ -1,7 +1,6 @@
 // React hooks
 import { createContext, useState, useEffect } from "react";
-// Files
-import productsArray from '/src/json/productos.json'
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 export const CartContext = createContext();
 
@@ -16,24 +15,40 @@ const CartContextProvider = ({children}) => {
     const [counter, setCounter] = useState(1);
 
     useEffect(() => {
-        const productLoader = new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                if (productsArray) {
-                    resolve(productsArray);
+        const db = getFirestore();
+        const productsCollection = collection(db, "items");
+        getDocs(productsCollection)
+            .then(snapShot => {
+                if (snapShot.docs.length > 0) {
+                    setCatalogue(snapShot.docs.map(document => ({
+                        id: document.id, ...document.data()
+                    })))
                 } else {
-                    reject("No fue posible realizar la carga de los productos");
+                    console.error("No fue posible cargar la colección de lementos");
                 }
-            }, 3000)
-        })
+            })
+        console.log(catalogue);
+    }, [])
 
-        productLoader
-            .then(resolve => {
-                setCatalogue(resolve)
-            })
-            .catch(error => {
-                console.error(error);
-            })
-    }, [])   
+    // useEffect(() => {
+    //     const productLoader = new Promise ((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if (productsArray) {
+    //                 resolve(productsArray);
+    //             } else {
+    //                 reject("No fue posible realizar la carga de los productos");
+    //             }
+    //         }, 3000)
+    //     })
+
+    //     productLoader
+    //         .then(resolve => {
+    //             setCatalogue(resolve)
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //         })
+    // }, [])   
 
     useEffect(() => {
         if (catalogue.length > 0) {

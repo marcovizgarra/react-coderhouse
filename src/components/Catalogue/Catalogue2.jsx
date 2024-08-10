@@ -2,10 +2,8 @@
 import { getFileName } from "../../js/functions"
 // Components
 import ProductCard from "../ProductCard/ProductCard"
-import ItemDetail from "../ItemDetail"
 // Images
 import banner_catalogue from "/public/catalogue/main_banner.jpg"
-import ItemDetail2 from "../ItemDetail/ItemDetail2"
 import CategoryTitle from "../CategoryTitle/CategoryTitle"
 
 const Catalogue2 = () => {
@@ -23,7 +21,7 @@ const Catalogue2 = () => {
                     </div>
                     
                     <div className="row row-cols-4 product_container flex_row_center">
-                        <ProductCard type={"speakers"} />
+                        <ProductCard type={"speaker"} />
                     </div>
                 </article>
 

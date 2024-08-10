@@ -11,8 +11,6 @@
     import screenSize from '/src/hooks/screenSize.jsx'
     import CartWidget from '../CartWidget/CartWidget.jsx';
 
-
-
 const NavBar = () => {
     const [collapsed, setCollapsed] = useState(true);
     const location = useLocation();

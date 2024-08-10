@@ -19,7 +19,6 @@ const App = () => {
             <CartContextProvider>
                 <BrowserRouter>
                     <Header prop={"Hasta 6 cuotas sin interes con todos los bancos"}/>
-                    {/* <SplideFull /> */}
                     <NavBar />
 
                     <Routes>
