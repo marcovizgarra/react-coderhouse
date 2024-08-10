@@ -12,6 +12,7 @@ import CartContextProvider from '../context/CartContext.jsx';
 import ItemDetail from './ItemDetail/ItemDetail.jsx';
 import Cart from './Cart/Cart.jsx';
 import Footer from './Footer/Footer.jsx';
+import CheckOut from './CheckOut/CheckOut.jsx';
 
 const App = () => {
     return (
@@ -26,7 +27,8 @@ const App = () => {
                         <Route path={"/catalogo"} element={<Catalogue2 />}/>
                         <Route path={"/parlantes"} element={<ItemDetail />}/>
                         <Route path={"/:id"} element={<ItemDetail />} />
-                        <Route path={"/checkout"} element={<Cart />} />
+                        <Route path={"/cart"} element={<Cart />} />
+                        <Route path={"/checkOut"} element={<CheckOut />} />
                     </Routes> 
                     
                     <Footer /> 

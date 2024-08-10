@@ -28,7 +28,7 @@ const CartWidget = ({mRight}) => {
 
     return (
         <>
-            <button type="button" className="btn btn-primary position-relative" style={{marginRight: mRight}} onClick={() => { handleClick('/checkout') }}>
+            <button type="button" className="btn btn-primary position-relative" style={{marginRight: mRight}} onClick={() => { handleClick('/cart') }}>
                 <img src={cartIcon} alt={getFileName(cartIcon)} width={"25rem"} />
                 <CartNotification quantity={itemsOnCart}/>
             </button>

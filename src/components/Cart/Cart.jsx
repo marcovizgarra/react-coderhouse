@@ -4,10 +4,17 @@ import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 // Components
 import CartItems from "../CartItems/CartItems"
+import { useNavigate } from "react-router-dom"
 
 const CheckOut = () => {
     const { totalPrice, totalOfProducts, cart, total } = useContext(CartContext)
 
+    const navigateTo = useNavigate()
+
+    const handleClick = (path) => {
+        navigateTo(path)
+    };
+    
     useEffect(() => {
         totalPrice()
     },[cart])
@@ -49,7 +56,7 @@ const CheckOut = () => {
                             <b><p>USD {total}</p></b>
                         </div>
 
-                        <button type="button" className="btn btn-primary rounded-pill my-3">REALIZAR PAGO</button>
+                        <button type="button" className="btn btn-primary rounded-pill my-3" onClick={() => { handleClick('/checkOut') }}>REALIZAR PAGO</button>
                     </article>
                 </section>
             </div>
