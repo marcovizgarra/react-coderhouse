@@ -1,21 +1,49 @@
 footer {
     padding-top: 2rem;
+    margin-top: 4rem;
     background-color: black;
     color: white;
     width: 100%;
+    
+    .JBL_logo_n_awards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        background: linear-gradient(270deg, #000000 0%, #ffffff 51%, #000000 100%);
+        color: black;
+        height: 8rem;
+        margin-bottom: 2rem;
+        text-align: left;
+
+        img {
+            &:not(:last-child) {
+                margin-right: 2rem
+            };
+        }
+
+        hr{ 
+            border: none;
+            border-left: 2px solid white;
+            height: 6rem;
+            width:          2px;
+            margin-right: 2rem 
+        }
+    }
 
     .section_container {
         display: flex;
         width: 40%;
         justify-content: space-between;
 
-        h5 {
-            text-transform: uppercase;
+        p {
+            font-weight: lighter;
         }
 
         .section_link {
             color: white;
             text-decoration: none;
+            font-weight: lighter;
             &:hover {
                 color: $JBL_color;
                 transition: 1s;

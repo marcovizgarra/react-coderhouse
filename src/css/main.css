@@ -265,18 +265,38 @@
 
 footer {
   padding-top: 2rem;
+  margin-top: 4rem;
   background-color: black;
   color: white;
   width: 100%; }
+  footer .JBL_logo_n_awards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background: linear-gradient(270deg, #000000 0%, #ffffff 51%, #000000 100%);
+    color: black;
+    height: 8rem;
+    margin-bottom: 2rem;
+    text-align: left; }
+    footer .JBL_logo_n_awards img:not(:last-child) {
+      margin-right: 2rem; }
+    footer .JBL_logo_n_awards hr {
+      border: none;
+      border-left: 2px solid white;
+      height: 6rem;
+      width: 2px;
+      margin-right: 2rem; }
   footer .section_container {
     display: flex;
     width: 40%;
     justify-content: space-between; }
-    footer .section_container h5 {
-      text-transform: uppercase; }
+    footer .section_container p {
+      font-weight: lighter; }
     footer .section_container .section_link {
       color: white;
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: lighter; }
       footer .section_container .section_link:hover {
         color: #FF3301;
         transition: 1s; }

@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+
+// Partners
 import akg_logo from '/public/img/footer/footer-logo-akg.png'
 import hk_logo from '/public/img/footer/footer-logo-hk.png'
 import infinity_logo from '/public/img/footer/footer-logo-infinity.png'
@@ -10,11 +12,24 @@ import footer_logo from '/public/img/footer/footer-logo.png'
 import facebook_logo from '/public/img/footer/facebook-icon.png'
 import instagram_logo from '/public/img/footer/instagram-icon.png'
 import youtube_logo from '/public/img/footer/youtube-icon.png'
+// Awards
+import JBL_logo from '/public/img/navbar/JBL_logo.png'
+import eisa_logo from '/public/img/footer/awards/eisa.png'
+import if_design_logo from '/public/img/footer/awards/IF-Design.png'
+import reddot_logo from '/public/img/footer/awards/reddot.png'
 
 const Footer = () => {
     return(
         <>
             <footer className='flex_col_center'>
+                <div className="JBL_logo_n_awards">
+                    <img src={JBL_logo} alt="" width={"70px"} height={"70px"}/>
+                    <hr />
+                    <img src={eisa_logo} alt="" width={"70px"} height={"70px"}/>
+                    <img src={if_design_logo} alt="" width={"120px"} height={"70px"}/>
+                    <img src={reddot_logo} alt="" width={"126px"} height={"70px"}/>
+                    <p className='my-0 mx-5'>AWARDS <br /> 2018/ 2019/ 2021/ 2022/ 2023/ 2024</p>
+                </div>
 
                 <div className="section_container">
                     <div className="e_commerce footer_section flex_col_center">
