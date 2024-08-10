@@ -5,13 +5,12 @@ import Header from './Header/Header.jsx';
 import NavBar from './NavBar/NavBar.jsx';
 import Home from './Home/Home.jsx';
 import Catalogue2 from './Catalogue/Catalogue2.jsx';
-
 // Context
 import CartContextProvider from '../context/CartContext.jsx';
 // Styles
 // import SplideFull from './SlpideFull.jsx';
-import ItemDetail2 from './ItemDetail/ItemDetail2.jsx';
-import CheckOut from './CheckOut/CheckOut.jsx';
+import ItemDetail from './ItemDetail/ItemDetail.jsx';
+import Cart from './Cart/Cart.jsx';
 
 const App = () => {
     return (
@@ -24,9 +23,9 @@ const App = () => {
                     <Routes>
                         <Route path={"/"} element={<Home />}/>
                         <Route path={"/catalogo"} element={<Catalogue2 />}/>
-                        <Route path={"/parlantes"} element={<ItemDetail2 />}/>
-                        <Route path={"/:id"} element={<ItemDetail2 />} />
-                        <Route path={"/checkout"} element={<CheckOut />} />
+                        <Route path={"/parlantes"} element={<ItemDetail />}/>
+                        <Route path={"/:id"} element={<ItemDetail />} />
+                        <Route path={"/checkout"} element={<Cart />} />
                     </Routes>  
                 </BrowserRouter>
             </CartContextProvider>

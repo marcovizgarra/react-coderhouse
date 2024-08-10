@@ -4,27 +4,24 @@ import { useParams } from 'react-router-dom';
 // Context
 import { CartContext } from '../../context/CartContext'
 // Components
-import ItemCount2 from '../ItemCount2/ItemCount2';
+import ItemCount from '../ItemCount/ItemCount';
 import AddToCart from '../AddToCart/AddToCart';
 
-const ItemDetail2 = () => {
-    const {catalogue} = useContext(CartContext);
+const ItemDetail = () => {
+    const { catalogue, stock } = useContext(CartContext);
     const [product, setProduct] = useState([]);
 
     const { id } = useParams()
     
     useEffect(() => {
         const filteredProduct = catalogue.filter(item => (":" + item.id) == id)
-        setProduct(filteredProduct)
-
-        console.log(catalogue);
-        console.log(filteredProduct);        
+        setProduct(filteredProduct)      
         
     }, [id, catalogue]) 
 
     const renderItemDetail = () => {
         return product.map(item => (
-            <article key={item.id} className="item_conainer flex_col_center">
+            <article key={item.id} className="item_conainer flex_start_col">
             
             <div className="product flex_row_center">
                 <div className="product_images">
@@ -32,17 +29,25 @@ const ItemDetail2 = () => {
                 </div>
 
                 <div className="flex_start_col product_details container-fluid">
-                    <h2 className='p_title' >{item.title}</h2>
-                    <p className='p_description' >{item.description}</p>
+                    <h2 className='title' >{item.title}</h2>
+                    <p className='description' >{item.description}</p>
                     <hr width={"100%"}/>
-                    <p className='p_price'>USD {item.price}</p>
-                    <p className='p_offer'>Hasta 6 cuotas sin interes de USD {Math.round(item.price/6)} con tarjeta de crédito bancaria</p>
+                    <p className='price'>USD {item.price}</p>
+                    <p className='offer'>Hasta 6 cuotas sin interes de USD {Math.round(item.price/6)} con tarjeta de crédito bancaria</p>
+                    {stock < 1 ? <p className='stock_0'>AGOTADO: temporalmente sin stock</p> : ""}
                     
                     <div className="shop_buttons flex_row_center">
                         <AddToCart />                            
-                        <ItemCount2 id={item.id}/>
+                        <ItemCount id={item.id}/>
                     </div>           
                 </div>
+            </div>
+            <div className='product_description flex_row_center'>
+                <div className="description">
+                    <h3>{item.full_desc_title}</h3>
+                    <p>{item.full_desc_content}</p>
+                </div>
+                <img src={item.img_secondary} alt="123" />
             </div>
         </article>  
         ));
@@ -55,4 +60,4 @@ const ItemDetail2 = () => {
     )
 }
 
-export default ItemDetail2
+export default ItemDetail

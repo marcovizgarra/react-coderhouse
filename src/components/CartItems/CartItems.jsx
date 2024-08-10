@@ -1,11 +1,9 @@
 // React hooks
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { CartContext } from '../../context/CartContext'
 // Images
 import trashIcon from '/public/img/cartItems/trash-solid-red.svg'
-
-
-import ItemCount2 from '../ItemCount2/ItemCount2'
+// Functions
 import { getFileName } from "../../js/functions"
 
 const CartItems = () => {

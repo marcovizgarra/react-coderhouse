@@ -1,6 +1,6 @@
 // React hooks
 import { createContext, useState, useEffect } from "react";
-import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 export const CartContext = createContext();
 
@@ -27,28 +27,7 @@ const CartContextProvider = ({children}) => {
                     console.error("No fue posible cargar la colección de lementos");
                 }
             })
-        console.log(catalogue);
     }, [])
-
-    // useEffect(() => {
-    //     const productLoader = new Promise ((resolve, reject) => {
-    //         setTimeout(() => {
-    //             if (productsArray) {
-    //                 resolve(productsArray);
-    //             } else {
-    //                 reject("No fue posible realizar la carga de los productos");
-    //             }
-    //         }, 3000)
-    //     })
-
-    //     productLoader
-    //         .then(resolve => {
-    //             setCatalogue(resolve)
-    //         })
-    //         .catch(error => {
-    //             console.error(error);
-    //         })
-    // }, [])   
 
     useEffect(() => {
         if (catalogue.length > 0) {
@@ -58,9 +37,7 @@ const CartContextProvider = ({children}) => {
             if (productExists) {
                 setProduct(productExists)
                 setStock(productExists.stock - cartQuant)
-            }
-                console.log("quant on cart: " + quantOnCart(productId));
-                console.log("stock uEff: " + stock);   
+            } 
         }
     }, [product, productId, cart])
 
@@ -94,8 +71,7 @@ const CartContextProvider = ({children}) => {
 
     const increase = () => {
         if (stock > 0 && counter <= stock && stock - counter > 0) {
-        setCounter(counter + 1)
-        console.log("stock: " + stock);            
+        setCounter(counter + 1)         
     }
     }
 
@@ -109,30 +85,20 @@ const CartContextProvider = ({children}) => {
         let updatedCart = ([...cart])
 
         if (stock < 1) {
-            console.log("no hay stock");
-            console.log(cart);
+            console.warn("no hay stock");
         } else {
             const index = findIndexProd(productId);
             if (index !== -1 && cart[findIndexProd(productId)] !== -1) {
-                console.log("id producto", productId);
-                
                 updatedCart = [...cart];
                 updatedCart[index].quantityOnCart += counter;
-                console.log("va por el true");
             } else {
                 const productAdd = {...product, quantityOnCart: counter};
                 delete productAdd.stock;
                 updatedCart = [...cart, productAdd];
-                    console.log("va por el else");
             }
             setCart(updatedCart);
-
             setStock(stock - counter);
             setCounter(1);
-
-            console.log("qOnCart: " + quantOnCart(productId));
-            console.log(cart);
-            console.log("stock: " + stock);
         }
     };
 
@@ -147,7 +113,7 @@ const CartContextProvider = ({children}) => {
         console.log(cart);
     }
 
-    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts}}>
+    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, stock, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts}}>
                 {children}
             </CartContext.Provider>
 

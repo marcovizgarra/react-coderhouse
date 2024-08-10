@@ -1,4 +1,3 @@
-// Functions
 import { getFileName } from "../../js/functions"
 import JBL_exclam from "/public/catalogue/JBL_exclam.png"
 

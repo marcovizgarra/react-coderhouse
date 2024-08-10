@@ -1,16 +1,8 @@
-// React hooks
-import { useContext, useEffect, useState } from "react"
-// Images
-import cartIcon from '/public/img/cartWidget/cart-shopping-solid.svg'
-// Context
+import { useContext, useEffect } from "react"
 import { CartContext } from "../../context/CartContext";
-import { getFileName } from "../../js/functions";
-// Components
-import AddToCart from "../AddToCart/AddToCart";
 
-
-const ItemCount2 = ({ id }) => {
-    const { increase, decrease, addToCart, setProductId, counter } = useContext(CartContext);
+const ItemCount = ({ id }) => {
+    const { increase, decrease, setProductId, counter } = useContext(CartContext);
     
     useEffect(() => {
         setProductId(id)
@@ -27,4 +19,4 @@ const ItemCount2 = ({ id }) => {
     )
 }
 
-export default ItemCount2
+export default ItemCount

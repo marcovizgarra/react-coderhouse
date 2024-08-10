@@ -1,6 +1,6 @@
 .col {
     .product_card {
-        height: 30rem;
+        height: 31rem;
         width: 17rem;
         border-radius: 0;
 
@@ -12,7 +12,8 @@
             align-items: center;
 
             .title {
-                font-size: x-large;
+                font-size: large;
+                text-transform: uppercase;
                 font-weight: bold;
                 letter-spacing: .1rem;
             }
@@ -24,7 +25,7 @@
             }
 
             .description {
-                height: 2.5rem;
+                height: 3.9rem;
             }
         }
     }

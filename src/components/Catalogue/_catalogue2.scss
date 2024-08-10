@@ -3,8 +3,13 @@
         width: $items_container_vw;
 
         .banner_container {
-            background-color: #FA4517;
+            background-color: black;
             width: 100vw;
+            display: flex;
+            justify-content: flex-end;
+            img {
+                width: 72rem;
+            }
         }
 
         .title_container {

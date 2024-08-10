@@ -1,0 +1,77 @@
+.item_conainer {
+    width: 100%;
+    padding: .5rem;
+
+    .product {
+        width: 100%;
+        height: 26rem;
+        border: 1px solid #EBEDEE;
+
+        .product_images {
+            width: 100vw;
+        }
+
+        .product_details {
+            padding: 1.5rem;
+            background-color: #F7F9FA;
+            height: 100%;
+
+            .title {
+                text-transform: uppercase;
+                font-size: xx-large;
+                font-weight: bold;
+                letter-spacing: .1rem;
+            }
+
+            .price {
+                color: $JBL_color;
+                font-size: xx-large;
+                letter-spacing: .1rem;
+                font-weight: bold;
+            }
+
+            .description {
+                height: 2rem;
+                font-size: x-large;
+                font-weight: lighter;
+            }
+
+            .stock_0 {
+                text-transform: uppercase;
+                font-size: xx-large;
+                text-shadow: 0px -.5px .5px $JBL_color;
+            }
+
+            .offer {
+                height: 2rem;
+                font-size: x-large;
+                font-weight: lighter;
+            }
+        }
+    }
+
+    .product_description {
+        padding-left: 2rem;
+        width: 100%;
+        
+        img {
+            max-width: 26rem;
+        }
+
+        .description {
+            text-align: justify;
+            padding-right: 10rem;
+
+
+            h3 {
+                text-transform: uppercase;
+            }
+    
+            p {
+                font-size: x-large;
+                font-weight: lighter;
+            }
+        }
+
+    }
+}

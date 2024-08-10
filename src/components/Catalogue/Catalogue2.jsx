@@ -3,7 +3,7 @@ import { getFileName } from "../../js/functions"
 // Components
 import ProductCard from "../ProductCard/ProductCard"
 // Images
-import banner_catalogue from "/public/catalogue/main_banner.jpg"
+import banner_catalogue from "/public/catalogue/JBL.jpg"
 import CategoryTitle from "../CategoryTitle/CategoryTitle"
 
 const Catalogue2 = () => {
@@ -54,10 +54,7 @@ const Catalogue2 = () => {
                         <ProductCard type={"home_theater"} />
                     </div>
                 </article>
-
             </section>
-            
-            
         </>
     )
 }

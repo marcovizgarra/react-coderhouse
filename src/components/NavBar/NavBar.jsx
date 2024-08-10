@@ -1,15 +1,13 @@
 // React hooks
-    import { useEffect, useState } from 'react';
-    import { Link, useLocation } from 'react-router-dom';
-
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 // Images
-    import nav_logo from '/public/img/navbar/JBL_logo.png'
-    import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
-    import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
-
+import nav_logo from '/public/img/navbar/JBL_logo.png'
+import navCollapsedIcon from '/public/img/navbar/bars-solid.svg';
+import navExpandIcon from '/public/img/navbar/xmark-solid.svg';
 // Components
-    import screenSize from '/src/hooks/screenSize.jsx'
-    import CartWidget from '../CartWidget/CartWidget.jsx';
+import screenSize from '/src/hooks/screenSize.jsx'
+import CartWidget from '../CartWidget/CartWidget.jsx';
 
 const NavBar = () => {
     const [collapsed, setCollapsed] = useState(true);

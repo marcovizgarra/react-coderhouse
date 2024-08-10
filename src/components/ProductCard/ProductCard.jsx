@@ -1,15 +1,11 @@
 // React hooks
-    import { useContext, useEffect, useState } from "react"
-
+import { useContext, useEffect, useState } from "react"
 // Custom hooks
-    import { CartContext } from "/src/context/CartContext.jsx"
+import { CartContext } from "/src/context/CartContext.jsx"
 import { useNavigate } from "react-router-dom"
-import { style } from "@splidejs/splide/src/js/utils";
 
 const ProductCard = ({type}) => {
-    // const [products, setProducts] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
-    const [hoverCard, setHoverCard] = useState(false)
     const {catalogue} = useContext(CartContext);
 
     const navigateTo = useNavigate();
@@ -33,9 +29,7 @@ const ProductCard = ({type}) => {
             {
                 filteredItems.map((item) => (
                     <div key={item.id} className={"col my-1 cursor_pointer"}
-                        onClick={() => { handleClick("/:" + item.id) }}
-                        onMouseEnter={() => {setHoverCard(true)}}
-                        onMouseLeave={() => {setHoverCard(false)}}>
+                        onClick={() => { handleClick("/:" + item.id) }}>
                         <div className="card border-0 product_card">
                             <img src={item.img} className="card-img-top img-fluid" alt={item.title} />
                             <div className="card-body text-center">
