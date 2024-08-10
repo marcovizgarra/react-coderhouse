@@ -1,12 +1,17 @@
 // React hooks
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 // Context
 import { CartContext } from "../../context/CartContext"
 // Components
 import CartItems from "../CartItems/CartItems"
 
 const CheckOut = () => {
-    const {totalOfProducts} = useContext(CartContext)
+    const { totalPrice, totalOfProducts, cart, total } = useContext(CartContext)
+
+    useEffect(() => {
+        totalPrice()
+    },[cart])
+
     return(
         <>
             <div className="container flex_col_center">
@@ -29,7 +34,7 @@ const CheckOut = () => {
 
                         <div className="sub_total_items flex_spc_btween px-3">
                             <p>SUB TOTAL</p>
-                            <p>$1.000</p>
+                            <p>USD {total}</p>
                         </div>
                         
                         <div className="delivery flex_spc_btween px-3">
@@ -41,7 +46,7 @@ const CheckOut = () => {
 
                         <div className="total flex_spc_btween px-3">
                             <b><p>TOTAL</p></b>
-                            <b><p>$1.000</p></b>
+                            <b><p>USD {total}</p></b>
                         </div>
 
                         <button type="button" className="btn btn-primary rounded-pill my-3">REALIZAR PAGO</button>

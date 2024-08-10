@@ -17,17 +17,18 @@ import JBL_logo from '/public/img/navbar/JBL_logo.png'
 import eisa_logo from '/public/img/footer/awards/eisa.png'
 import if_design_logo from '/public/img/footer/awards/IF-Design.png'
 import reddot_logo from '/public/img/footer/awards/reddot.png'
+import { getFileName } from '../../js/functions'
 
 const Footer = () => {
     return(
         <>
             <footer className='flex_col_center'>
                 <div className="JBL_logo_n_awards">
-                    <img src={JBL_logo} alt="" width={"70px"} height={"70px"}/>
+                    <img src={JBL_logo} alt={getFileName(JBL_logo)} width={"70px"} height={"70px"}/>
                     <hr />
-                    <img src={eisa_logo} alt="" width={"70px"} height={"70px"}/>
-                    <img src={if_design_logo} alt="" width={"120px"} height={"70px"}/>
-                    <img src={reddot_logo} alt="" width={"126px"} height={"70px"}/>
+                    <img src={eisa_logo} alt={getFileName(eisa_logo)} width={"70px"} height={"70px"}/>
+                    <img src={if_design_logo} alt={getFileName(if_design_logo)} width={"120px"} height={"70px"}/>
+                    <img src={reddot_logo} alt={getFileName(reddot_logo)} width={"126px"} height={"70px"}/>
                     <p className='my-0 mx-5'>AWARDS <br /> 2018/ 2019/ 2021/ 2022/ 2023/ 2024</p>
                 </div>
 
@@ -51,22 +52,22 @@ const Footer = () => {
 
                     <div className="social_media footer_section">
                         <h5>Seguinos</h5>
-                        <a href=""><img className='social_media_img' src={facebook_logo} alt="" /></a>
-                        <a href=""><img className='social_media_img' src={instagram_logo} alt="" /></a>
-                        <a href=""><img className='social_media_img' src={youtube_logo} alt="" /></a>
+                        <a href=""><img className='social_media_img' src={facebook_logo} alt={getFileName(facebook_logo)} /></a>
+                        <a href=""><img className='social_media_img' src={instagram_logo} alt={getFileName(instagram_logo)} /></a>
+                        <a href=""><img className='social_media_img' src={youtube_logo} alt={getFileName(youtube_logo)} /></a>
                     </div>
                 </div>
 
-                <hr width={"70%"} />
+                <hr width={"60%"} />
                 <div className="partners_container flex_row_center">
                     <img className='harman_logo' src={footer_logo} alt="" />
-                    <img src={akg_logo} alt="" />
-                    <img src={hk_logo} alt="" />
-                    <img src={infinity_logo} alt="" />
-                    <img src={jbl_logo} alt="" />
-                    <img src={levinson_logo} alt="" />
-                    <img src={lexicon_logo} alt="" />
-                    <img src={revel_logo} alt="" />
+                    <img src={akg_logo} alt={getFileName(akg_logo)} />
+                    <img src={hk_logo} alt={getFileName(hk_logo)} />
+                    <img src={infinity_logo} alt={getFileName(infinity_logo)} />
+                    <img src={jbl_logo} alt={getFileName(jbl_logo)} />
+                    <img src={levinson_logo} alt={getFileName(levinson_logo)} />
+                    <img src={lexicon_logo} alt={getFileName(lexicon_logo)} />
+                    <img src={revel_logo} alt={getFileName(revel_logo)} />
                 </div>
                 <hr width={"60%"} />
                 <p className='copy_right'>© 2024 Harman International Industries, Incorporated. Todos los derechos reservados.</p>

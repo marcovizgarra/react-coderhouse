@@ -13,6 +13,7 @@ const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [itemsOnCart, setItemsOnCart] = useState(0);
     const [counter, setCounter] = useState(1);
+    const [total, setTotal] = useState(0)
 
     useEffect(() => {
         const db = getFirestore();
@@ -74,6 +75,7 @@ const CartContextProvider = ({ children }) => {
             setCounter(counter + 1)
         }
     }
+    
 
     const decrease = () => {
         if (counter > 1) {
@@ -113,7 +115,18 @@ const CartContextProvider = ({ children }) => {
         console.log(cart);
     }
 
-    return <CartContext.Provider value={{ catalogue, cart, itemsOnCart, counter, stock, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts }}>
+    const totalPrice = () => {
+        const newCart = [...cart];
+        let operation = 0;
+
+        newCart.forEach(item => {
+            operation += item.quantityOnCart * item.price
+        });
+
+        setTotal(operation)
+    }
+
+    return <CartContext.Provider value={{ catalogue, cart, itemsOnCart, counter, stock, total, totalPrice, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts, }}>
         {children}
     </CartContext.Provider>
 
