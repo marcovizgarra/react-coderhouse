@@ -12,49 +12,49 @@ const ItemDetail = () => {
     const [product, setProduct] = useState([]);
 
     const { id } = useParams()
-    
+
     useEffect(() => {
         const filteredProduct = catalogue.filter(item => (":" + item.id) == id)
-        setProduct(filteredProduct)      
-        
-    }, [id, catalogue]) 
+        setProduct(filteredProduct)
+
+    }, [id, catalogue])
 
     const renderItemDetail = () => {
         return product.map(item => (
             <article key={item.id} className="item_conainer flex_start_col">
-            
-            <div className="product flex_row_center">
-                <div className="product_images">
-                    <img src={item.img} alt={item.title} width={"400px"}/>
-                </div>
 
-                <div className="flex_start_col product_details container-fluid">
-                    <h2 className='title' >{item.title}</h2>
-                    <p className='description' >{item.description}</p>
-                    <hr width={"100%"}/>
-                    <p className='price'>USD {item.price}</p>
-                    <p className='offer'>Hasta 6 cuotas sin interes de USD {Math.round(item.price/6)} con tarjeta de crédito bancaria</p>
-                    {stock < 1 ? <p className='stock_0'>AGOTADO: temporalmente sin stock</p> : ""}
-                    
-                    <div className="shop_buttons flex_row_center">
-                        <AddToCart />                            
-                        <ItemCount id={item.id}/>
-                    </div>           
+                <div className="product flex_row_center">
+                    <div className="product_images">
+                        <img src={item.img} alt={item.title} width={"400px"} />
+                    </div>
+
+                    <div className="flex_start_col product_details container-fluid">
+                        <h2 className='title' >{item.title}</h2>
+                        <p className='description' >{item.description}</p>
+                        <hr width={"100%"} />
+                        <p className='price'>USD {item.price}</p>
+                        <p className='offer'>Hasta 6 cuotas sin interes de USD {Math.round(item.price / 6)} con tarjeta de crédito bancaria</p>
+                        {stock < 1 ? <p className='stock_0'>AGOTADO: temporalmente sin stock</p> : ""}
+
+                        <div className="shop_buttons flex_row_center">
+                            <AddToCart />
+                            <ItemCount id={item.id} />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className='product_description flex_row_center'>
-                <div className="description">
-                    <h3>{item.full_desc_title}</h3>
-                    <p>{item.full_desc_content}</p>
+                <div className='product_description flex_row_center'>
+                    <div className="description">
+                        <h3>{item.full_desc_title}</h3>
+                        <p>{item.full_desc_content}</p>
+                    </div>
+                    <img src={item.img_secondary} alt="123" />
                 </div>
-                <img src={item.img_secondary} alt="123" />
-            </div>
-        </article>  
+            </article>
         ));
     };
 
-    return(
-        <> 
+    return (
+        <>
             {(product.length > 0) ? renderItemDetail() : <h1>cargando---</h1>}
         </>
     )

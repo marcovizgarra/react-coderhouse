@@ -1,0 +1,49 @@
+footer {
+    padding-top: 2rem;
+    background-color: black;
+    color: white;
+    width: 100%;
+
+    .section_container {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+
+        h5 {
+            text-transform: uppercase;
+        }
+
+        .section_link {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: $JBL_color;
+                transition: 1s;
+            }
+        }
+        
+        .footer_section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .social_media_img {
+            width: 20px;
+            margin: .5rem;
+        }
+
+        .partners_container {
+            .harman_logo {
+                padding-right: 3rem;
+            }
+        }
+    
+        .copy_right {
+            font-size: large;
+            font-weight: lighter;
+        }
+        
+    }
+
+}

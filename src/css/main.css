@@ -144,10 +144,8 @@
 .catalogue_container .type_container {
   width: 85vw; }
   .catalogue_container .type_container .banner_container {
-    background-color: black;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end; }
+    background-color: #FA4617;
+    width: 100vw; }
     .catalogue_container .type_container .banner_container img {
       width: 72rem; }
   .catalogue_container .type_container .title_container {
@@ -264,3 +262,33 @@
   width: 100%;
   font-family: "Michroma", sans-serif;
   text-transform: uppercase; }
+
+footer {
+  padding-top: 2rem;
+  background-color: black;
+  color: white;
+  width: 100%; }
+  footer .section_container {
+    display: flex;
+    width: 40%;
+    justify-content: space-between; }
+    footer .section_container h5 {
+      text-transform: uppercase; }
+    footer .section_container .section_link {
+      color: white;
+      text-decoration: none; }
+      footer .section_container .section_link:hover {
+        color: #FF3301;
+        transition: 1s; }
+    footer .section_container .footer_section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; }
+    footer .section_container .social_media_img {
+      width: 20px;
+      margin: .5rem; }
+    footer .section_container .partners_container .harman_logo {
+      padding-right: 3rem; }
+    footer .section_container .copy_right {
+      font-size: large;
+      font-weight: lighter; }

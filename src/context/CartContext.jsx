@@ -4,11 +4,11 @@ import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 export const CartContext = createContext();
 
-const CartContextProvider = ({children}) => {
-    
+const CartContextProvider = ({ children }) => {
+
     const [catalogue, setCatalogue] = useState([]);
     const [product, setProduct] = useState([]);
-    const [productId, setProductId] =useState(0);
+    const [productId, setProductId] = useState(0);
     const [stock, setStock] = useState(0);
     const [cart, setCart] = useState([]);
     const [itemsOnCart, setItemsOnCart] = useState(0);
@@ -37,7 +37,7 @@ const CartContextProvider = ({children}) => {
             if (productExists) {
                 setProduct(productExists)
                 setStock(productExists.stock - cartQuant)
-            } 
+            }
         }
     }, [product, productId, cart])
 
@@ -71,8 +71,8 @@ const CartContextProvider = ({children}) => {
 
     const increase = () => {
         if (stock > 0 && counter <= stock && stock - counter > 0) {
-        setCounter(counter + 1)         
-    }
+            setCounter(counter + 1)
+        }
     }
 
     const decrease = () => {
@@ -92,7 +92,7 @@ const CartContextProvider = ({children}) => {
                 updatedCart = [...cart];
                 updatedCart[index].quantityOnCart += counter;
             } else {
-                const productAdd = {...product, quantityOnCart: counter};
+                const productAdd = { ...product, quantityOnCart: counter };
                 delete productAdd.stock;
                 updatedCart = [...cart, productAdd];
             }
@@ -113,9 +113,9 @@ const CartContextProvider = ({children}) => {
         console.log(cart);
     }
 
-    return  <CartContext.Provider value={{catalogue, cart, itemsOnCart, counter, stock, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts}}>
-                {children}
-            </CartContext.Provider>
+    return <CartContext.Provider value={{ catalogue, cart, itemsOnCart, counter, stock, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts }}>
+        {children}
+    </CartContext.Provider>
 
 }
 

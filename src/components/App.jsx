@@ -7,10 +7,11 @@ import Home from './Home/Home.jsx';
 import Catalogue2 from './Catalogue/Catalogue2.jsx';
 // Context
 import CartContextProvider from '../context/CartContext.jsx';
-// Styles
+// Components
 // import SplideFull from './SlpideFull.jsx';
 import ItemDetail from './ItemDetail/ItemDetail.jsx';
 import Cart from './Cart/Cart.jsx';
+import Footer from './Footer/Footer.jsx';
 
 const App = () => {
     return (
@@ -26,7 +27,9 @@ const App = () => {
                         <Route path={"/parlantes"} element={<ItemDetail />}/>
                         <Route path={"/:id"} element={<ItemDetail />} />
                         <Route path={"/checkout"} element={<Cart />} />
-                    </Routes>  
+                    </Routes> 
+                    
+                    <Footer /> 
                 </BrowserRouter>
             </CartContextProvider>
         </>

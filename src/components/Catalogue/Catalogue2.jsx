@@ -7,19 +7,19 @@ import banner_catalogue from "/public/catalogue/JBL.jpg"
 import CategoryTitle from "../CategoryTitle/CategoryTitle"
 
 const Catalogue2 = () => {
-    return(
+    return (
         <>
             <section className="catalogue_container flex_col_center">
                 <article className="type_container flex_col_center">
-                    
+
                     <div className="banner_container">
                         <img className="banner" src={banner_catalogue} alt={getFileName(banner_catalogue)} />
                     </div>
 
                     <div className="title_container">
-                        <CategoryTitle title={"Parlantes"}/>
+                        <CategoryTitle title={"Parlantes"} />
                     </div>
-                    
+
                     <div className="row row-cols-4 product_container flex_row_center">
                         <ProductCard type={"speaker"} />
                     </div>
@@ -27,7 +27,7 @@ const Catalogue2 = () => {
 
                 <article className="type_container flex_col_center">
                     <div className="title_container">
-                        <CategoryTitle title={"Auriculares"}/>
+                        <CategoryTitle title={"Auriculares"} />
                     </div>
 
                     <div className="row row-cols-4 product_container flex_row_center">
@@ -37,9 +37,9 @@ const Catalogue2 = () => {
 
                 <article className="type_container flex_col_center">
                     <div className="title_container">
-                        <CategoryTitle title={"Gamer"}/>
+                        <CategoryTitle title={"Gamer"} />
                     </div>
-                    
+
                     <div className="row row-cols-4 product_container flex_row_center">
                         <ProductCard type={"gamer"} />
                     </div>
@@ -47,9 +47,9 @@ const Catalogue2 = () => {
 
                 <article className="type_container flex_col_center">
                     <div className="title_container">
-                        <CategoryTitle title={"Audio para el hogar"}/>
+                        <CategoryTitle title={"Audio para el hogar"} />
                     </div>
-                    
+
                     <div className="row row-cols-4 product_container flex_row_center">
                         <ProductCard type={"home_theater"} />
                     </div>
