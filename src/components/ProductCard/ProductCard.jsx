@@ -4,9 +4,9 @@ import { useContext, useEffect, useState } from "react"
 import { CartContext } from "/src/context/CartContext.jsx"
 import { useNavigate } from "react-router-dom"
 
-const ProductCard = ({type}) => {
+const ProductCard = ({ type }) => {
     const [filteredItems, setFilteredItems] = useState([]);
-    const {catalogue} = useContext(CartContext);
+    const { catalogue } = useContext(CartContext);
 
     const navigateTo = useNavigate();
 
@@ -15,16 +15,16 @@ const ProductCard = ({type}) => {
     }
 
     useEffect(() => {
-        let typeOfProduct = catalogue.filter(item => item.type == type)       
+        let typeOfProduct = catalogue.filter(item => item.type == type)
 
         if (typeOfProduct.length > 0) {
-            setFilteredItems(catalogue.filter(item => item.type == type)) 
+            setFilteredItems(catalogue.filter(item => item.type == type))
         } else {
             setFilteredItems(catalogue)
         }
     }, [type, catalogue])
 
-    return(
+    return (
         <>
             {
                 filteredItems.map((item) => (
@@ -44,7 +44,7 @@ const ProductCard = ({type}) => {
                         </div>
                     </div>
                 ))
-            }        
+            }
         </>
     )
 }

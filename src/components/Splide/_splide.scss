@@ -1,0 +1,32 @@
+.splide_container {
+    width: 55vw;
+    height: 40vh;
+
+    .splide__pagination {
+        position: relative;
+        bottom: -10px;
+        z-index: 1;
+        ;
+    }
+
+    .splide__pagination__page {
+        background-color: #000000;
+    }
+
+    .splide__pagination__page.is-active {
+        background-color: $JBL_color;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+
+    .price {
+        color: $JBL_color;
+    }
+}

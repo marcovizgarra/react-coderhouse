@@ -8,7 +8,6 @@ import Catalogue2 from './Catalogue/Catalogue2.jsx';
 // Context
 import CartContextProvider from '../context/CartContext.jsx';
 // Components
-// import SplideFull from './SlpideFull.jsx';
 import ItemDetail from './ItemDetail/ItemDetail.jsx';
 import Cart from './Cart/Cart.jsx';
 import Footer from './Footer/Footer.jsx';
