@@ -45,6 +45,17 @@
 .cursor_pointer {
   cursor: pointer; }
 
+.btn_JBL {
+  border: 1px solid #00000000;
+  background-color: #FF3301;
+  box-shadow: inset 0px 0px 19px 0px #cc2900; }
+  .btn_JBL:hover {
+    background-color: white;
+    color: red;
+    box-shadow: inset 0px 0px 19px 0px #e2e2e2;
+    transition: .2s;
+    border: 1px solid #FF3301; }
+
 .navbar {
   padding: 0;
   margin: 0;
@@ -224,6 +235,13 @@
       width: 92%;
       background-color: #FF3301;
       box-shadow: inset 0px 0px 19px 0px #cc2900; }
+
+#empty_cart {
+  background: linear-gradient(270deg, #ffffff 0%, #e95d0017 51%, #ffffff 100%);
+  padding-bottom: 1rem; }
+  #empty_cart h1 {
+    padding: 1rem;
+    color: #FF3301; }
 
 .items_on_cart .row {
   height: 5.5rem; }

@@ -71,6 +71,7 @@ const CheckOut = () => {
             })
         
         setCart([])
+        setTotalProdOrder(0)
     };
 
     return (
