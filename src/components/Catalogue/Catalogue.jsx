@@ -6,7 +6,7 @@ import ProductCard from "../ProductCard/ProductCard"
 import banner_catalogue from "/public/catalogue/JBL.jpg"
 import CategoryTitle from "../CategoryTitle/CategoryTitle"
 
-const Catalogue2 = () => {
+const Catalogue = () => {
     return (
         <>
             <section className="catalogue_container flex_col_center">
@@ -59,4 +59,4 @@ const Catalogue2 = () => {
     )
 }
 
-export default Catalogue2
+export default Catalogue

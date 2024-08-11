@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Header/Header.jsx';
 import NavBar from './NavBar/NavBar.jsx';
 import Home from './Home/Home.jsx';
-import Catalogue2 from './Catalogue/Catalogue2.jsx';
+import Catalogue from './Catalogue/Catalogue.jsx';
 // Context
 import CartContextProvider from '../context/CartContext.jsx';
 // Components
@@ -24,8 +24,7 @@ const App = () => {
 
                     <Routes>
                         <Route path={"/"} element={<Home />}/>
-                        <Route path={"/catalogo"} element={<Catalogue2 />}/>
-                        {/* <Route path={"/:type"} element={<CategoryRender />}/> */}
+                        <Route path={"/catalogo"} element={<Catalogue />}/>
                         <Route path={"/category/:type"} element={<CategoryRender />} />
                         <Route path={"/:id"} element={<ItemDetail />} />
                         <Route path={"/cart"} element={<Cart />} />

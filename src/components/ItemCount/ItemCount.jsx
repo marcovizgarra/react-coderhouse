@@ -3,11 +3,11 @@ import { CartContext } from "../../context/CartContext";
 
 const ItemCount = ({ id }) => {
     const { increase, decrease, setProductId, counter } = useContext(CartContext);
-    
+
     useEffect(() => {
         setProductId(id)
     }, [id])
-    
+
     return (
         <>
             <div className="btn-group item_count" role="group">

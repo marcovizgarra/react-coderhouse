@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { FC, useContext, useEffect, useState } from 'react'
-import { CartContext } from '../context/CartContext';
+import { useContext, useEffect, useState } from 'react'
+import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
 

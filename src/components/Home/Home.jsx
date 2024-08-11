@@ -7,8 +7,7 @@ import slideImg3 from "/public/carousel/pb_710.png";
 import slideImg4 from "/public/carousel/quantum_610.jpg";
 import slideImg5 from "/public/carousel/tour_pro_2.jpg";
 // Components
-import ProductCard from '../ProductCard/ProductCard.jsx';
-import SplideFull from '../Splide.jsx';
+import SplideFull from '../Splide/SplideFull.jsx';
 
 const Home = () => {
     return(

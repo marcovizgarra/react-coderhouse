@@ -1,6 +1,10 @@
-import { addDoc, collection, getFirestore } from "firebase/firestore"
+// React hooks
 import { useContext, useEffect, useState } from "react"
+// Fire base
+import { addDoc, collection, getFirestore } from "firebase/firestore"
+// Cart
 import { CartContext } from "../../context/CartContext"
+// Components
 import OrderCompleteMessage from "../OrderCompleteMessage/OrderCompleteMessage";
 
 const CheckOut = () => {

@@ -1,10 +1,13 @@
+// React hooks
 import { useParams } from "react-router-dom"
-import CategoryTitle from "../CategoryTitle/CategoryTitle"
-import ProductCard from "../ProductCard/ProductCard"
+import { useEffect, useState } from "react"
+// Images
 import speaker_banner from '/public/img/banners/Speakers-Banner.jpg'
 import head_phone_banner from '/public/img/banners/headphone-banner.jpg'
 import home_theater from '/public/img/banners/home-theater.jpg'
-import { useEffect, useState } from "react"
+// Components
+import CategoryTitle from "../CategoryTitle/CategoryTitle"
+import ProductCard from "../ProductCard/ProductCard"
 
 const CategoryRender = () => {
     const { type } = useParams()

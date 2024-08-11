@@ -1,6 +1,6 @@
+// React hooks
 import { Link } from 'react-router-dom'
-
-// Partners
+// Img - Partners
 import akg_logo from '/public/img/footer/footer-logo-akg.png'
 import hk_logo from '/public/img/footer/footer-logo-hk.png'
 import infinity_logo from '/public/img/footer/footer-logo-infinity.png'
@@ -12,11 +12,12 @@ import footer_logo from '/public/img/footer/footer-logo.png'
 import facebook_logo from '/public/img/footer/facebook-icon.png'
 import instagram_logo from '/public/img/footer/instagram-icon.png'
 import youtube_logo from '/public/img/footer/youtube-icon.png'
-// Awards
+// Img - Awards
 import JBL_logo from '/public/img/navbar/JBL_logo.png'
 import eisa_logo from '/public/img/footer/awards/eisa.png'
 import if_design_logo from '/public/img/footer/awards/IF-Design.png'
 import reddot_logo from '/public/img/footer/awards/reddot.png'
+// Functions
 import { getFileName } from '../../js/functions'
 
 const Footer = () => {

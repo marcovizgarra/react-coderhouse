@@ -1,12 +1,11 @@
 // React hooks
 import { useContext, useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 // Context
 import { CartContext } from "../../context/CartContext"
 // Components
 import CartItems from "../CartItems/CartItems"
-import { useNavigate } from "react-router-dom"
 import EmptyCart from "../EmptyCart/EmptyCart"
-import OrderCompleteMessage from "../OrderCompleteMessage/OrderCompleteMessage"
 
 const CheckOut = () => {
     const { totalPrice, totalOfProducts, cart, total } = useContext(CartContext)

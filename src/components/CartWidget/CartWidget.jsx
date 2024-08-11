@@ -8,8 +8,8 @@ import { CartContext } from '../../context/CartContext';
 // Images
 import cartIcon from '/public/img/cartWidget/cart-shopping-solid.svg';
 
-const CartNotification = ({quantity}) => {   
-    return(
+const CartNotification = ({ quantity }) => {
+    return (
         <>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {quantity}
@@ -18,7 +18,7 @@ const CartNotification = ({quantity}) => {
     )
 };
 
-const CartWidget = ({ mRight }) => {    
+const CartWidget = ({ mRight }) => {
     const { cart, itemsOnCart } = useContext(CartContext)
     const navigateTo = useNavigate()
 
@@ -28,12 +28,12 @@ const CartWidget = ({ mRight }) => {
 
     return (
         <>
-            <button type="button" className={(cart.length == 0 ? "empty_cart_btn " : "cart_items_btn rounded-pill ") + "btn btn-primary position-relative"} style={{marginRight: mRight}} onClick={() => { handleClick('/cart') }}>
+            <button type="button" className={(cart.length == 0 ? "empty_cart_btn " : "cart_items_btn rounded-pill ") + "btn btn-primary position-relative"} style={{ marginRight: mRight }} onClick={() => { handleClick('/cart') }}>
                 <img src={cartIcon} alt={getFileName(cartIcon)} width={"25rem"} />
                 {
                     cart.length == 0
                         ? ""
-                        : <CartNotification quantity={itemsOnCart}/>
+                        : <CartNotification quantity={itemsOnCart} />
                 }
             </button>
         </>
