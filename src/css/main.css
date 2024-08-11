@@ -190,12 +190,11 @@
 .catalogue_container .type_container {
   width: 85vw; }
   .catalogue_container .type_container .banner_container {
-    background-color: #FA4617;
     width: 100vw; }
     .catalogue_container .type_container .banner_container img {
       width: 72rem; }
   .catalogue_container .type_container .title_container {
-    width: 70vw; }
+    width: 30vw; }
     .catalogue_container .type_container .title_container .banner {
       width: 70vw; }
   .catalogue_container .type_container .product_container {

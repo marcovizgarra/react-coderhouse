@@ -1,6 +1,6 @@
 // React hooks
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// Components 
+// Components
 import Header from './Header/Header.jsx';
 import NavBar from './NavBar/NavBar.jsx';
 import Home from './Home/Home.jsx';
@@ -12,6 +12,7 @@ import ItemDetail from './ItemDetail/ItemDetail.jsx';
 import Cart from './Cart/Cart.jsx';
 import Footer from './Footer/Footer.jsx';
 import CheckOut from './CheckOut/CheckOut.jsx';
+import CategoryRender from './CategoryRender/CategoryRender.jsx';
 
 const App = () => {
     return (
@@ -24,13 +25,14 @@ const App = () => {
                     <Routes>
                         <Route path={"/"} element={<Home />}/>
                         <Route path={"/catalogo"} element={<Catalogue2 />}/>
-                        <Route path={"/parlantes"} element={<ItemDetail />}/>
+                        {/* <Route path={"/:type"} element={<CategoryRender />}/> */}
+                        <Route path={"/category/:type"} element={<CategoryRender />} />
                         <Route path={"/:id"} element={<ItemDetail />} />
                         <Route path={"/cart"} element={<Cart />} />
                         <Route path={"/checkOut"} element={<CheckOut />} />
-                    </Routes> 
-                    
-                    <Footer /> 
+                    </Routes>
+
+                    <Footer />
                 </BrowserRouter>
             </CartContextProvider>
         </>

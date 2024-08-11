@@ -19,7 +19,7 @@ const NavBar = () => {
         return location.pathname == path ? 'nav-link active_link' : 'nav-link link-light';
     };
 
-    return (    
+    return (
         <>
             <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
                 <div className="container-fluid">
@@ -29,7 +29,7 @@ const NavBar = () => {
                     </Link>
 
                     <div className="toggle_and_cart flex_row_center">
-                        {widthSize <= breakSize ? <CartWidget mRight={"1rem"}/> : null}
+                        {widthSize <= breakSize ? <CartWidget mRight={"1rem"} /> : null}
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onClick={() => { setCollapsed(!collapsed) }}>
                             {collapsed ? (<img src={navCollapsedIcon} alt='collapsedIcon' width="20"></img>) : (<img src={navExpandIcon} alt='expandIcon' width="20"></img>)}
@@ -45,77 +45,22 @@ const NavBar = () => {
                                 <Link to={"/catalogo"} className={getLinkClass("/catalogo")} style={{ marginLeft: widthSize <= breakSize ? "1.5rem" : "" }}>Catálogo</Link>
                             </li>
 
-                            {/* Crear componente y añadir ruta */}
-                            <li className="nav-item"> 
-                                <a className="nav-link link-light" href="#">Parlantes</a>
-                            </li>
                             <li className="nav-item">
-                                <a className="nav-link link-light" href="#">Audio para el hogar</a>
+                                <Link to={"/category/:speaker"} className={getLinkClass("/category/:speaker")} style={{ marginLeft: widthSize <= breakSize ? "1.5rem" : "" }}>Parlantes</Link>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link link-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Auriculares
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">In ear</a></li>
-                                    <li><a className="dropdown-item" href="#">On ear</a></li>
-                                    <li><a className="dropdown-item" href="#">Gamer</a></li>
-                                </ul>
+
+                            <li className="nav-item">
+                                <Link to={"/category/:headphone"} className={getLinkClass("/category/:headphone")} style={{ marginLeft: widthSize <= breakSize ? "1.5rem" : "" }}>Auriculares</Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link to={"/category/:home_theater"} className={getLinkClass("/category/:home_theater")} style={{ marginLeft: widthSize <= breakSize ? "1.5rem" : "" }}>Audio para el hogar</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
-                {widthSize <= breakSize ? "" : <CartWidget mRight={"4rem"}/>}
-
+                {widthSize <= breakSize ? "" : <CartWidget mRight={"4rem"} />}
             </nav>
-
-            {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapsed(!collapsed)}}>
-                        {collapsed ? (<img src={navCollapsedIcon} alt='collapsedIcon'></img>) : (<img src={navExpandIcon} alt='expandIcon'></img>)}
-                    </button>
-
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        
-                        <div className="navLogo">
-                            <img src={navbar_logo}></img>
-                        </div>
-
-                        <ul className="navbar-nav mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link className={getLinkClass("/")} to={"/"}>Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={getLinkClass("/juegos")} to={"/juegos"}>Juegos</Link>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Consolas
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li className='dropdown-li'>
-                                            <Link to={"/juegos/PS5"} className="dropdown-item">Play Station 5</Link>
-                                    </li>
-                                    <li className='dropdown-li'>
-                                        <Link to={"/juegos/PS4"} className="dropdown-item">Play Station 4</Link>
-                                    </li>
-                                    <li className='dropdown-li'>
-                                        <Link to={"/juegos/PS3"} className="dropdown-item">Play Station 3</Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <CartWidget />
-                            </li>
-                        </ul>
-
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
-                    </div>
-                </div>
-            </nav> */}
         </>
     )
 }
