@@ -1,0 +1,38 @@
+.container_complete {
+    width: 100%;
+
+    h2 {
+        width: 40vw;
+        padding: 1rem;
+        margin-bottom: .5rem;
+        font-size: medium;
+        color: white;
+        background-color: black;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0;
+        width: 40vw;
+        background-color: #ececec;
+        border-left: 4px solid grey;
+        font-weight: lighter;
+        font-size: 1.1rem;
+    }
+
+    #OrderComplete {
+        border: 1px solid grey;
+        width: 40vw;
+        img {
+            padding: 1rem;
+        }
+    
+        hr{ 
+            border: none;
+            border-left: 2px solid rgb(161, 161, 161);
+            height: 6rem;
+            width:          2px;
+            margin-right: 2rem 
+        }
+    }
+}

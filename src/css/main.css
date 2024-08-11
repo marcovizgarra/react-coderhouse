@@ -346,6 +346,35 @@
       font-weight: bold;
       text-align: center; }
 
+.container_complete {
+  width: 100%; }
+  .container_complete h2 {
+    width: 40vw;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    font-size: medium;
+    color: white;
+    background-color: black;
+    text-transform: uppercase; }
+  .container_complete p {
+    margin: 0;
+    width: 40vw;
+    background-color: #ececec;
+    border-left: 4px solid grey;
+    font-weight: lighter;
+    font-size: 1.1rem; }
+  .container_complete #OrderComplete {
+    border: 1px solid grey;
+    width: 40vw; }
+    .container_complete #OrderComplete img {
+      padding: 1rem; }
+    .container_complete #OrderComplete hr {
+      border: none;
+      border-left: 2px solid #a1a1a1;
+      height: 6rem;
+      width: 2px;
+      margin-right: 2rem; }
+
 footer {
   padding-top: 2rem;
   margin-top: 4rem;
