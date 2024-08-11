@@ -1,13 +1,30 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore"
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../context/CartContext"
-import CartItems from "../CartItems/CartItems";
 
 const CheckOut = () => {
-    const { cart, totalPrice } = useContext(CartContext);
+    const { cart, setCart, total, totalOfProducts } = useContext(CartContext);
+    const [totalProdOrder, setTotalProdOrder] = useState(0)
+    const [orderId, setOrderId] = useState("")
+    // Form
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState(0);
+    const [e_mail, setE_mail] = useState("");
+    const [street, setStreet] = useState("");
+    const [addressNumber, setAddressNumber] = useState(0);
+    const [city, setCity] = useState("");
+    const [newsletter, setNewsletter] = useState(false);
+
+    useEffect(() => {
+        setTotalProdOrder(totalOfProducts())
+    }, [cart])
 
     const orderCreator = () => {
-        if (input_name == '') {
+        if (name == '') {
+            return false
+        };
+
+        if (phone == '') {
             return false
         };
 
@@ -15,30 +32,45 @@ const CheckOut = () => {
             return false
         };
 
-        if (contact == '') {
+        if (street == '') {
+            return false
+        };
+
+        if (addressNumber == '') {
+            return false
+        };
+
+        if (city == '') {
             return false
         };
 
         const order = {
-            buyer : {
-                name: input_name,
-                phone: contact,
+            buyer: {
+                name: name,
+                phone: phone,
                 email: e_mail,
+                street: street,
+                addressNumber: addressNumber,
+                city: city,
+                newsletter: newsletter,
             },
             items: cart.map(item => ({
                 id: item.id,
                 title: item.title,
                 price: item.price,
+                quantity: item.quantityOnCart
             })),
-            total: totalPrice()
+            total: total,
         }
 
-        // const db = getFirestore();
-        // const orderCollection = collection(db, "orders");
-        // addDoc(orderCollection, order)
-        //     .then(response => {
-
-        //     })
+        const db = getFirestore();
+        const orderCollection = collection(db, "orders");
+        addDoc(orderCollection, order)
+            .then(response => {
+                setOrderId(response.id)
+            })
+        
+        setCart([])
     };
 
     return (
@@ -47,40 +79,64 @@ const CheckOut = () => {
                 <div className="form_container">
                     <h1>ENVIO A DOMICILIO</h1>
                     <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <div className="mb-3">
+                            <label htmlFor="e_mail" className="form-label">E-mail</label>
+                            <input type="email" className="form-control" id="e_mail" onInput={(e) => { setE_mail(e.target.value) }} />
+                            <div id="emailHelp" className="form-text">TEXTO EN CASO DE ERROR</div>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" />
+                        <div className="mb-3">
+                            <label htmlFor="phone" className="form-label">Teléfono</label>
+                            <input type="number" className="form-control" id="phone" onInput={(e) => { setPhone(e.target.value) }} /><p>TElÉFONO</p>
+                            <p>TEXTO EN EL CASO DE ERROR</p>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div className="mb-3">
+                            <label htmlFor="input_name" className="form-label">Nombre completo</label>
+                            <input type="text" className="form-control" id="input_name" onInput={(e) => { setName(e.target.value) }} /><p>TEXTO EN CASO DE ERROR</p>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div className="mb-3">
+                            <label htmlFor="street" className="form-label">Calle</label>
+                            <input type="text" className="form-control" id="street" onInput={(e) => { setStreet(e.target.value) }} /><p>TEXTO EN CASO DE ERROR</p>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="adress_number" className="form-label">Númeración</label>
+                            <input type="number" className="form-control" id="adress_number" onInput={(e) => { setAddressNumber(e.target.value) }} /><p>TEXTO EN CASO DE ERROR</p>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="city" className="form-label">Localidad</label>
+                            <input type="text" className="form-control" id="city" onInput={(e) => { setCity(e.target.value) }} /><p>TEXTO EN CASO DE ERROR</p>
+                        </div>
+                        <div className="mb-3 form-check">
+                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                            <label className="form-check-label" htmlFor="exampleCheck1" onInput={(e) => { setNewsletter(e.target.value) }}>Suscribirme al Newsletter de JBL</label>
+                        </div>
+                        <button type="submit" className="btn btn-primary" onClick={orderCreator}>Confirmar pedido</button>
                     </form>
                 </div>
 
                 <div className="cart_detail">
-                    <h2>Resumen del pedido</h2>
+                    <h2>Resumen del pedido  ({totalProdOrder})</h2>
                     {
-                        cart.map((item) => (
-                            <div key={item.id} className="product">
-                                <img src={item.img} alt={item.title} />
-                                <h4>{item.title}</h4>
-                                <p>Cód. producto:</p>
-                                <p className="cod_product">{item.id}</p>
-                                <p>Cantidad: {item.quantityOnCart}</p>
-                                <p>U$D {item.quantityOnCart * item.price}</p>
+                        cart.map((item, index) => (
+                            <div key={item.id} className="container container_details flex_col_center">
+                                <div className="col product flex_row_center">
+                                    <img src={item.img} alt={item.title} />
+                                    <div className="row properties">
+                                        <h4>{item.title}</h4>
+                                        <p>Cód. producto:</p>
+                                        <p className="cod_product">{item.id}</p>
+                                        <p>Cantidad: {item.quantityOnCart}</p>
+                                        <p>Total: U$D {item.quantityOnCart * item.price}</p>
+                                    </div>
+                                </div>
+                                {index < (cart.length - 1) ? <hr width={"80%"} /> : ""}
                             </div>
                         ))
                     }
+                    <h5>TOTAL: U$D: {total}</h5>
+                    <p className="delivery">Envío gratis</p>
                 </div>
+                <p>{orderId ? orderId : ""}</p>
             </section>
-
         </>
     )
 }

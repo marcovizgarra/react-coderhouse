@@ -76,7 +76,6 @@ const CartContextProvider = ({ children }) => {
         }
     }
     
-
     const decrease = () => {
         if (counter > 1) {
             setCounter(counter - 1)
@@ -126,7 +125,7 @@ const CartContextProvider = ({ children }) => {
         setTotal(operation)
     }
 
-    return <CartContext.Provider value={{ catalogue, cart, itemsOnCart, counter, stock, total, totalPrice, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts, }}>
+    return <CartContext.Provider value={{ catalogue, cart, setCart, itemsOnCart, counter, stock, total, totalPrice, increase, decrease, addToCart, deleteFromCart, setProductId, totalOfProducts, }}>
         {children}
     </CartContext.Provider>
 
