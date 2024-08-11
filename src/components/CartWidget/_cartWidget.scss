@@ -1,31 +1,7 @@
-// #cart_widget_container {
-//     background-image: url('/public/img/cartWidget/cart-shopping-solid.svg');
-//     background-size: 2rem;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-position-x: 47%;
-//     background-color: $nav_secondary_color;
-//     justify-content: flex-end;
-//     border-radius: 2rem;
-//     width: 5rem;
-//     height: 3rem;
-//     color: white;
-
-//     &:hover {
-//         background-image: url('/public/img/cartWidget/cart-shopping-solid-yellow.svg');
-//     }
-
-//     img {
-//         width: 2rem;
-//         margin-right: .6rem;
-//     }
-
-//     p {
-//         background-color: rgb(255, 0, 0);
-//         border-radius: 10rem;
-//         height: min-content;
-//         width: 1rem;
-//         font-weight: bold;
-//     }
-
-// }
+.empty_cart_btn {
+    background-color: #00000000;
+    border: 0;
+    img {
+        background-color: #00000000;
+    }
+}

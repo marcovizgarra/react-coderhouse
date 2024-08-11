@@ -18,8 +18,8 @@ const CartNotification = ({quantity}) => {
     )
 };
 
-const CartWidget = ({mRight}) => {    
-    const {itemsOnCart} = useContext(CartContext)
+const CartWidget = ({ mRight }) => {    
+    const { cart, itemsOnCart } = useContext(CartContext)
     const navigateTo = useNavigate()
 
     const handleClick = (path) => {
@@ -28,9 +28,13 @@ const CartWidget = ({mRight}) => {
 
     return (
         <>
-            <button type="button" className="btn btn-primary position-relative" style={{marginRight: mRight}} onClick={() => { handleClick('/cart') }}>
+            <button type="button" className={(cart.length == 0 ? "empty_cart_btn " : "cart_items_btn rounded-pill ") + "btn btn-primary position-relative"} style={{marginRight: mRight}} onClick={() => { handleClick('/cart') }}>
                 <img src={cartIcon} alt={getFileName(cartIcon)} width={"25rem"} />
-                <CartNotification quantity={itemsOnCart}/>
+                {
+                    cart.length == 0
+                        ? ""
+                        : <CartNotification quantity={itemsOnCart}/>
+                }
             </button>
         </>
     )

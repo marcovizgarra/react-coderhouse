@@ -95,6 +95,12 @@
           font-weight: bold;
           border-bottom: 4px solid #FF3300; }
 
+.empty_cart_btn {
+  background-color: #00000000;
+  border: 0; }
+  .empty_cart_btn img {
+    background-color: #00000000; }
+
 .header_section {
   background-color: #2a2a2a;
   border-bottom: 1px solid #FF3301; }
