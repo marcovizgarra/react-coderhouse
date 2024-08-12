@@ -1,5 +1,7 @@
 // React hooks
 import { useContext, useEffect, useState } from "react"
+// Custom hooks
+import screenSize from '../../hooks/screenSize';
 // Fire base
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 // Cart
@@ -9,8 +11,9 @@ import OrderCompleteMessage from "../OrderCompleteMessage/OrderCompleteMessage";
 
 const CheckOut = () => {
     const { cart, setCart, total, totalOfProducts } = useContext(CartContext);
-    const [totalProdOrder, setTotalProdOrder] = useState(0)
-    const [orderId, setOrderId] = useState("")
+    const { widthSize } = screenSize()
+    const [totalProdOrder, setTotalProdOrder] = useState(0);
+    const [orderId, setOrderId] = useState("");
     // Form
     const [name, setName] = useState("");
     const [phone, setPhone] = useState(0);
@@ -87,7 +90,7 @@ const CheckOut = () => {
                         <OrderCompleteMessage idOrder={orderId} />
                     </>
                     : <>
-                        <section className="check_out flex_row_center">
+                        <section className={widthSize > 920 ? "check_out flex_row_center" : "check_out flex_col_center"}>
                             <div className="form_container">
                                 <h1>ENVIO A DOMICILIO</h1>
                                 <form>

@@ -1,6 +1,18 @@
 .container_complete {
     width: 100%;
 
+    .JBL_logo {
+        width: 120px;
+    }
+
+    .thanks {
+        width: 200px;
+
+        @media only screen and (max-width: 375px) {
+            width: 150px;
+        }
+    }
+
     h2 {
         width: 40vw;
         padding: 1rem;
@@ -9,6 +21,14 @@
         color: white;
         background-color: black;
         text-transform: uppercase;
+
+        @media only screen and (max-width: 1024px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 375px) {
+            width: 95vw;
+        }
     }
 
     p {
@@ -18,11 +38,29 @@
         border-left: 4px solid grey;
         font-weight: lighter;
         font-size: 1.1rem;
+
+        @media only screen and (max-width: 1024px) {
+            font-size: .9rem;
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 375px) {
+            width: 95vw;
+        }
     }
 
     #OrderComplete {
         border: 1px solid grey;
         width: 40vw;
+
+        @media only screen and (max-width: 1024px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 375px) {
+            width: 95vw;
+        }
+
         img {
             padding: 1rem;
         }
@@ -31,7 +69,7 @@
             border: none;
             border-left: 2px solid rgb(161, 161, 161);
             height: 6rem;
-            width:          2px;
+            width: 2px;
             margin-right: 2rem 
         }
     }

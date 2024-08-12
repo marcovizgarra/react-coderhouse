@@ -17,9 +17,9 @@ const OrderCompleteMessage = ({ idOrder }) => {
         <>
             <div className="container_complete flex_col_center">
                 <div id="OrderComplete" className='flex_row_center'>
-                    <img src={JBL_logo} alt={getFileName(JBL_logo)} width={"120"} />
+                    <img src={JBL_logo} className='JBL_logo' alt={getFileName(JBL_logo)}/>
                     <hr />
-                    <img src={thanks_for_shopping} alt={getFileName(thanks_for_shopping)} width={"200"} />
+                    <img src={thanks_for_shopping} className='thanks' alt={getFileName(thanks_for_shopping)} />
 
                 </div>
                 <h2>Código de compra: {idOrder}</h2>

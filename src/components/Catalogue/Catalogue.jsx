@@ -4,7 +4,6 @@ import { getFileName } from "../../js/functions"
 import ProductCard from "../ProductCard/ProductCard"
 // Images
 import banner_catalogue from "/public/img/catalogue/JBL.jpg"
-import CategoryTitle from "../CategoryTitle/CategoryTitle"
 import JBL_exclam from "/public/img/catalogue/JBL_exclam.png"
 
 const Catalogue = () => {

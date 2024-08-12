@@ -4,11 +4,22 @@
 
     .product {
         width: 100%;
-        height: 26rem;
         border: 1px solid #EBEDEE;
 
         .product_images {
-            width: 100vw;
+            width: 100%;
+
+            @media only screen and (max-width: 1020px) {
+                width: 50%;
+            }
+
+            .img_primary {
+                width: 400px;
+
+                @media only screen and (max-width: 1020px) {
+                    width: 300px;
+                }
+            }
         }
 
         .product_details {
@@ -31,9 +42,14 @@
             }
 
             .description {
-                height: 2rem;
+                height: 3rem;
                 font-size: x-large;
                 font-weight: lighter;
+
+                @media only screen and (max-width: 425px) {
+                    font-size: large;
+                    text-align: left;
+                }
             }
 
             .stock_0 {
@@ -43,9 +59,14 @@
             }
 
             .offer {
-                height: 2rem;
+                height: 4rem;
                 font-size: x-large;
                 font-weight: lighter;
+                
+                @media only screen and (max-width: 425px) {
+                    font-size: large;
+                    text-align: left;
+                }
             }
         }
     }
@@ -54,22 +75,51 @@
         padding-left: 2rem;
         width: 100%;
 
-        img {
+        @media only screen and (max-width: 620px) {
+            padding: .5rem;
+        }
+
+        .img_product_secondary {
             max-width: 26rem;
+
+            @media only screen and (max-width: 1024px) {
+                max-width: 18rem;
+            }
+
+            @media only screen and (max-width: 768px) {
+                max-width: 16rem;
+            }
         }
 
         .description {
             text-align: justify;
             padding-right: 10rem;
 
+            @media only screen and (max-width: 1024px) {
+                padding-right: 2rem;
+            }
+
+            @media only screen and (max-width: 768px) {
+                padding-right: 1rem;
+            }
+
+            @media only screen and (max-width: 620px) {
+                padding: 0;
+            }
 
             h3 {
+                margin-top: 1rem;
                 text-transform: uppercase;
+                text-align: left;
             }
 
             p {
                 font-size: x-large;
                 font-weight: lighter;
+
+                @media only screen and (max-width: 768px) {
+                    font-size: large;
+                }
             }
         }
 

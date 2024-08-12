@@ -1,0 +1,37 @@
+.publish {
+    padding-top: 1.5rem;
+    margin-top: 7rem;
+    border: 1px solid grey;
+    height: 35vh;
+    background-color: #F8F8F7;
+    border-radius: 1rem;
+    border-color: rgb(70, 68, 68);
+
+    h4 {
+        text-transform: uppercase;
+        color: $JBL_color;
+    }
+
+    .container {
+        align-items: baseline;
+
+        .pub_item {
+            margin: 1rem;
+
+            h2 {
+                margin: 2rem;
+            }
+
+            p {
+                @media only screen and (max-width: 1011px) {
+                    font-size: medium;
+                }
+    
+                @media only screen and (max-width: 450px) {
+                    font-size: small;
+                }
+
+            }
+        }
+    }
+}

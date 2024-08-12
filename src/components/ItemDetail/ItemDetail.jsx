@@ -1,6 +1,8 @@
 // React hooks
 import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+// Custom hooks
+import screenSize from '../../hooks/screenSize';
 // Context
 import { CartContext } from '../../context/CartContext'
 // Components
@@ -10,6 +12,7 @@ import AddToCart from '../AddToCart/AddToCart';
 const ItemDetail = () => {
     const { catalogue, stock } = useContext(CartContext);
     const [product, setProduct] = useState([]);
+    const { widthSize } = screenSize()
 
     const { id } = useParams()
 
@@ -23,9 +26,9 @@ const ItemDetail = () => {
         return product.map(item => (
             <article key={item.id} className="item_conainer flex_start_col">
 
-                <div className="product flex_row_center">
-                    <div className="product_images">
-                        <img src={item.img} alt={item.title} width={"400px"} />
+                <div className={"product " + (widthSize > 680 ? "flex_row_center" : "flex_col_center")}>
+                    <div className="product_images flex_row_center">
+                        <img src={item.img} className='img_primary' alt={item.title} />
                     </div>
 
                     <div className="flex_start_col product_details container-fluid">
@@ -42,12 +45,12 @@ const ItemDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div className='product_description flex_row_center'>
+                <div className={'product_description' + (widthSize > 620 ? " flex_row_center" : " flex_col_center")}>
                     <div className="description">
                         <h3>{item.full_desc_title}</h3>
                         <p>{item.full_desc_content}</p>
                     </div>
-                    <img src={item.img_secondary} alt="123" />
+                    <img src={item.img_secondary} className='img_product_secondary' alt={item.title + "_secondary_img"} />
                 </div>
             </article>
         ));

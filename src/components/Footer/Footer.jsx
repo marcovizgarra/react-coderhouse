@@ -57,6 +57,11 @@ const Footer = () => {
                         <div className="e_commerce footer_section flex_col_center">
                             <h5>Tienda</h5>
                             <Link to="/catalogo" className='section_link'>Catálogo</Link>
+                            <Link to={"/category/:speaker"} className='section_link'>Parlanes</Link>
+                            <Link to={"/category/:headphone"} className='section_link'>Auriculares</Link>
+                            <Link to={"/category/:home_theater"} className='section_link'>Audio para el hogar</Link>
+                            <br />
+                            <Link to="/cart" className='section_link'>Carrito de compras</Link>
                         </div>
 
                         <div className="contact footer_section flex_col_center">
@@ -72,9 +77,9 @@ const Footer = () => {
                         <div className="social_media footer_section">
                             <h5>Seguinos</h5>
                             <div className="social_media_img">
-                                <a href=""><img src={facebook_logo} alt={getFileName(facebook_logo)} /></a>
-                                <a href=""><img src={instagram_logo} alt={getFileName(instagram_logo)} /></a>
-                                <a href=""><img src={youtube_logo} alt={getFileName(youtube_logo)} /></a>
+                                <a href="https://www.facebook.com/JBLArgentinaOficial" target='blank'><img src={facebook_logo} alt={getFileName(facebook_logo)} /></a>
+                                <a href="https://www.instagram.com/jblargentinaoficial/" target='blank'><img src={instagram_logo} alt={getFileName(instagram_logo)}  target='blank'/></a>
+                                <a href="https://www.youtube.com/JBL"  target='blank'><img src={youtube_logo} alt={getFileName(youtube_logo)}  target='blank' /></a>
                             </div>
                         </div>
                     </div>

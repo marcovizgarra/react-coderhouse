@@ -6,6 +6,9 @@ import slideImg2 from "/public/img/carousel/bar_800.jpg";
 import slideImg3 from "/public/img/carousel/pb_710.png";
 import slideImg4 from "/public/img/carousel/quantum_610.jpg";
 import slideImg5 from "/public/img/carousel/tour_pro_2.jpg";
+import top_banner from "/public/img/home/top_banner.png";
+import banner_middle from "/public/img/home/banner_middle.jpg";
+import theater_banner from "/public/img/home/theater_banner.jpg";
 // Components
 import SplideFull from '../Splide/SplideFull.jsx';
 
@@ -81,12 +84,16 @@ const Home = () => {
                         <SplideFull type={"headphone"}/>  
                 </article>
 
+                <img src={top_banner} className='banner_home' alt={getFileName(top_banner)} />
+
                 <article className="container products flex_col_center">
                         <br />
                         <h2>PARLANTES</h2>
                         <hr width={"80%"} />
                         <SplideFull type={"speaker"}/>  
                 </article>
+
+                <img src={banner_middle} className='banner_home' alt={getFileName(banner_middle)} />
 
                 <article className="container products flex_col_center">
                         <br />
@@ -95,6 +102,8 @@ const Home = () => {
                         <SplideFull type={"gamer"}/>  
                 </article>
                 
+                <img src={theater_banner} className='banner_home' alt={getFileName(theater_banner)} />
+
                 <article className="container products flex_col_center">
                         <br />
                         <h2>AUDIO PARA EL HOGAR</h2>
