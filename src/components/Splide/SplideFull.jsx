@@ -2,11 +2,13 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import screenSize from '../../hooks/screenSize';
 
 
 const SplideFull = ({ type }) => {
     const [filteredItems, setFilteredItems] = useState([]);
-    const {catalogue} = useContext(CartContext)
+    const { catalogue } = useContext(CartContext)
+    const { widthSize } = screenSize()
     const navigateTo = useNavigate();
 
     const handleClick = (path) => {
@@ -33,7 +35,7 @@ const SplideFull = ({ type }) => {
                             <Splide aria-label={type} options={{
                                 type   : 'loop',
                                 autoplay: true,
-                                perPage: 3,
+                                perPage: widthSize > 767 ? 3 : 1,
                                 focus  : 'center',
                             }}>
                                 {

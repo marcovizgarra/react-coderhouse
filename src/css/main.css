@@ -118,6 +118,9 @@
     text-align: center;
     padding: .5rem;
     margin: 0; }
+    @media only screen and (max-width: 425px) {
+      .header_section h4 {
+        font-size: medium; } }
 
 .homePage {
   min-height: 85vw;
@@ -125,9 +128,21 @@
   .homePage #carouselHomePage {
     width: 70vw;
     height: auto; }
+    @media only screen and (max-width: 1440px) {
+      .homePage #carouselHomePage {
+        width: 90vw; } }
+    @media only screen and (max-width: 768px) {
+      .homePage #carouselHomePage {
+        width: 95vw; } }
+    @media only screen and (max-width: 425px) {
+      .homePage #carouselHomePage {
+        width: 100vw; } }
     .homePage #carouselHomePage .carousel-indicators button {
       width: 5rem;
       height: .15rem; }
+    @media only screen and (max-width: 425px) {
+      .homePage #carouselHomePage .carousel-indicators {
+        display: none; } }
     .homePage #carouselHomePage .carousel-item .slide {
       position: absolute;
       width: 35vw;
@@ -136,18 +151,49 @@
       padding: 4rem;
       color: white;
       text-align: justify; }
+      @media only screen and (max-width: 1440px) {
+        .homePage #carouselHomePage .carousel-item .slide {
+          padding: 2rem;
+          width: 45vw; } }
+      @media only screen and (max-width: 768px) {
+        .homePage #carouselHomePage .carousel-item .slide {
+          width: 50vw; } }
       .homePage #carouselHomePage .carousel-item .slide h4 {
         font-size: 2.2rem; }
+        @media only screen and (max-width: 1440px) {
+          .homePage #carouselHomePage .carousel-item .slide h4 {
+            font-size: x-large; } }
+        @media only screen and (max-width: 768px) {
+          .homePage #carouselHomePage .carousel-item .slide h4 {
+            font-size: large; } }
+        @media only screen and (max-width: 425px) {
+          .homePage #carouselHomePage .carousel-item .slide h4 {
+            text-align: left; } }
       .homePage #carouselHomePage .carousel-item .slide p {
         font-size: xx-large;
         font-weight: lighter; }
+        @media only screen and (max-width: 1440px) {
+          .homePage #carouselHomePage .carousel-item .slide p {
+            font-size: x-large; } }
+        @media only screen and (max-width: 768px) {
+          .homePage #carouselHomePage .carousel-item .slide p {
+            font-size: large; } }
+        @media only screen and (max-width: 425px) {
+          .homePage #carouselHomePage .carousel-item .slide p {
+            display: none; } }
       .homePage #carouselHomePage .carousel-item .slide b {
         font-size: xx-large;
         font-weight: bold; }
+        @media only screen and (max-width: 1440px) {
+          .homePage #carouselHomePage .carousel-item .slide b {
+            font-size: x-large; } }
+        @media only screen and (max-width: 768px) {
+          .homePage #carouselHomePage .carousel-item .slide b {
+            font-size: large; } }
     .homePage #carouselHomePage .carousel_slide_button {
       width: 5%; }
   .homePage .products {
-    margin-top: 3rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -174,8 +220,11 @@
     font-size: larger; }
 
 .splide_container {
-  width: 55vw;
+  width: 60vw;
   height: 40vh; }
+  @media only screen and (max-width: 1024px) {
+    .splide_container {
+      width: 90vw; } }
   .splide_container .splide__pagination {
     position: relative;
     bottom: -10px;
@@ -266,12 +315,21 @@
 .container .checkOut {
   width: 85vw;
   height: 100%; }
+  @media only screen and (max-width: 1400px) {
+    .container .checkOut {
+      width: 100vw; } }
+  @media only screen and (max-width: 769px) {
+    .container .checkOut {
+      align-items: center; } }
   .container .checkOut .cartList {
     width: 100%; }
   .container .checkOut .orderDetail {
     width: 32vw;
     margin: 1rem;
     border: 1px solid #D9D9D9; }
+    @media only screen and (max-width: 769px) {
+      .container .checkOut .orderDetail {
+        width: 90vw; } }
     .container .checkOut .orderDetail h2 {
       font-size: x-large; }
     .container .checkOut .orderDetail .title {
@@ -310,6 +368,45 @@
     .items_on_cart .row .col h4 {
       font-size: large;
       text-transform: uppercase; }
+
+.cart_detail {
+  width: 98%;
+  text-align: left;
+  font-weight: lighter;
+  border: 1px solid #D9D9D9; }
+  .cart_detail h2 {
+    width: 100%;
+    color: white;
+    font-size: x-large;
+    text-transform: uppercase;
+    background-color: #545454;
+    padding: .5rem;
+    margin-bottom: 1rem; }
+  .cart_detail .container_details img {
+    width: 10rem;
+    margin-right: 1.2rem; }
+  .cart_detail .container_details .properties {
+    text-align: left; }
+    @media only screen and (max-width: 427px) {
+      .cart_detail .container_details .properties {
+        width: 50%; } }
+    .cart_detail .container_details .properties h4 {
+      font-size: medium;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0; }
+    .cart_detail .container_details .properties p {
+      padding: 0;
+      margin: 0; }
+    .cart_detail .container_details .properties .cod_product {
+      text-transform: uppercase; }
+  .cart_detail h5 {
+    width: 100%;
+    color: white;
+    padding: .3rem;
+    margin-top: .5rem;
+    text-align: center;
+    background: linear-gradient(270deg, #ffffff 0%, #FF3301 51%, #ffffff 100%); }
 
 .buy_btn {
   margin-right: .4rem; }
@@ -433,6 +530,18 @@ footer {
     height: auto;
     margin-bottom: 2rem;
     text-align: left; }
+    @media only screen and (max-width: 767px) {
+      footer .JBL_logo_n_awards {
+        background: linear-gradient(270deg, #000000 0%, #ffffff 51%, #000000 100%);
+        width: 100%; }
+        footer .JBL_logo_n_awards #JBL_logo {
+          margin-top: 1rem;
+          margin-right: 0; } }
+    footer .JBL_logo_n_awards .awards {
+      margin: .2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      width: 100%; }
     footer .JBL_logo_n_awards img:not(:last-child) {
       margin-right: 2rem; }
     footer .JBL_logo_n_awards hr {

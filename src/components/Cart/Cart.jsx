@@ -1,6 +1,8 @@
 // React hooks
 import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+// Custom hooks
+import screenSize from '../../hooks/screenSize';
 // Context
 import { CartContext } from "../../context/CartContext"
 // Components
@@ -9,6 +11,7 @@ import EmptyCart from "../EmptyCart/EmptyCart"
 
 const CheckOut = () => {
     const { totalPrice, totalOfProducts, cart, total } = useContext(CartContext)
+    const { widthSize } = screenSize()
 
     const navigateTo = useNavigate()
 
@@ -23,7 +26,7 @@ const CheckOut = () => {
     return(
         <>
             <div className="container flex_col_center">
-                <section className="flex_start_row checkOut">
+                <section className={widthSize > 769 ? "flex_start_row checkOut" : "flex_start_col checkOut"}> 
 
                     <article className="cartList">
                         {

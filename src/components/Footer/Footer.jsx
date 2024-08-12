@@ -1,5 +1,7 @@
 // React hooks
 import { Link } from 'react-router-dom'
+// Custon hooks
+import screenSize from '../../hooks/screenSize';
 // Img - Partners
 import akg_logo from '/public/img/footer/footer-logo-akg.png'
 import hk_logo from '/public/img/footer/footer-logo-hk.png'
@@ -20,17 +22,35 @@ import reddot_logo from '/public/img/footer/awards/reddot.png'
 // Functions
 import { getFileName } from '../../js/functions'
 
+
 const Footer = () => {
+    const { widthSize } = screenSize()
+
     return(
         <>
             <footer className='flex_col_center'>
-                <div className="JBL_logo_n_awards wrap">
-                    <img src={JBL_logo} alt={getFileName(JBL_logo)} width={"70px"} height={"70px"}/>
-                    <hr />
-                    <img src={eisa_logo} alt={getFileName(eisa_logo)} width={"70px"} height={"70px"}/>
-                    <img src={if_design_logo} alt={getFileName(if_design_logo)} width={"120px"} height={"70px"}/>
-                    <img src={reddot_logo} alt={getFileName(reddot_logo)} width={"126px"} height={"70px"}/>
-                </div>
+                {
+                    widthSize > 767 
+                        ? <>
+                            <div className="JBL_logo_n_awards wrap">
+                                <img src={JBL_logo} alt={getFileName(JBL_logo)} width={"70px"} height={"70px"}/>
+                                <hr />
+                                <img src={eisa_logo} alt={getFileName(eisa_logo)} width={"70px"} height={"70px"}/>
+                                <img src={if_design_logo} alt={getFileName(if_design_logo)} width={"120px"} height={"70px"}/>
+                                <img src={reddot_logo} alt={getFileName(reddot_logo)} width={"126px"} height={"70px"}/>
+                            </div>
+                        </>
+                        : <>
+                            <div className="JBL_logo_n_awards wrap">
+                                <img id="JBL_logo" src={JBL_logo} alt={getFileName(JBL_logo)} width={"70px"} height={"70px"}/>
+                                <div className="awards flex_row_center">
+                                    <img src={eisa_logo} alt={getFileName(eisa_logo)} width={"50px"} height={"50px"}/>
+                                    <img src={reddot_logo} alt={getFileName(reddot_logo)} width={"100px"} height={"50px"}/>
+                                    <img src={if_design_logo} alt={getFileName(if_design_logo)} width={"90px"} height={"50px"}/>
+                                </div>
+                            </div>
+                        </>
+                }
 
                 <div className="sections_container">
                     <div className="sections ">

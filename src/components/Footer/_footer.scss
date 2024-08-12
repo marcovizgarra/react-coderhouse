@@ -15,6 +15,24 @@ footer {
         height: auto;
         margin-bottom: 2rem;
         text-align: left;
+        
+        @media only screen and (max-width: 767px) {
+            background: linear-gradient(270deg, #000000 0%, #ffffff 51%, #000000 100%);
+            width: 100%;
+
+            #JBL_logo {
+                margin-top: 1rem;
+                margin-right: 0;
+            }
+        }
+
+
+        .awards {
+            margin: .2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 100%;
+        }
 
         img {
             &:not(:last-child) {
