@@ -194,18 +194,25 @@
 
 .catalogue_container {
   width: 100%; }
+  .catalogue_container .banner_container {
+    margin-bottom: 1rem;
+    width: 100%; }
   .catalogue_container .type_container {
-    width: 90%; }
-    .catalogue_container .type_container .banner_container {
-      width: 100%; }
-      .catalogue_container .type_container .banner_container img {
-        width: 72rem; }
-    .catalogue_container .type_container .title_container {
-      width: 30vw; }
-      .catalogue_container .type_container .title_container .banner {
-        width: 70vw; }
-    .catalogue_container .type_container .product_container {
-      width: 70vw; }
+    width: 90%;
+    border-bottom: 1rem; }
+    .catalogue_container .type_container .title .btn_title {
+      font-size: medium;
+      width: 15rem;
+      font-family: "Michroma", sans-serif;
+      background-color: #FF3301;
+      border: 2px solid #FF3301; }
+      .catalogue_container .type_container .title .btn_title:hover {
+        background-color: black; }
+    .catalogue_container .type_container .collapse {
+      border: 1px solid #FF3301;
+      border-radius: .5rem; }
+    .catalogue_container .type_container .cards_container {
+      margin-bottom: 1rem; }
 
 .item_conainer {
   width: 100%;

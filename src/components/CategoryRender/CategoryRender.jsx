@@ -33,7 +33,7 @@ const CategoryRender = () => {
                 <article className="type_container flex_col_center">
 
                     <div className="banner_container">
-                        <img className="banner" src={banner} alt={title} />
+                        <img className="container" src={banner} alt={title} />
                     </div>
 
                     <div className="title_container">

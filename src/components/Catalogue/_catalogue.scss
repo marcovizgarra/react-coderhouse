@@ -1,29 +1,37 @@
 .catalogue_container {
     width: 100%;
 
+    .banner_container {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
     .type_container {
         width: 90%;
+        border-bottom: 1rem;
 
-        .banner_container {
-            width: 100%;
+        .title {
+            .btn_title {
+                font-size: medium;
+                width: 15rem;
+                font-family: "Michroma", sans-serif;
+                background-color: $JBL_color;
+                border: 2px solid $JBL_color;
 
-            img {
-                width: 72rem;
+                &:hover {
+                    background-color: black;
+                }
             }
         }
 
-        .title_container {
-            width: 30vw;
-
-            .banner {
-                width: $desktop_width_items;
-            }
-
+        .collapse {
+            border: 1px solid $JBL_color;
+            border-radius: .5rem;
         }
 
-        .product_container {
-            width: $desktop_width_items;
-        }
+        .cards_container {
 
+            margin-bottom: 1rem;
+        }
     }
 }
