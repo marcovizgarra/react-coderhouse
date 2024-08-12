@@ -40,7 +40,7 @@ const CategoryRender = () => {
                         <CategoryTitle title={title} />
                     </div>
 
-                    <div className="row row-cols-4 product_container flex_row_center">
+                    <div className="container product_container flex_row_center">
                         <ProductCard type={type.substring(1)} />
                     </div>
                 </article>

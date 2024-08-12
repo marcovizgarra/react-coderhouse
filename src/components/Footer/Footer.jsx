@@ -24,43 +24,44 @@ const Footer = () => {
     return(
         <>
             <footer className='flex_col_center'>
-                <div className="JBL_logo_n_awards">
+                <div className="JBL_logo_n_awards wrap">
                     <img src={JBL_logo} alt={getFileName(JBL_logo)} width={"70px"} height={"70px"}/>
                     <hr />
                     <img src={eisa_logo} alt={getFileName(eisa_logo)} width={"70px"} height={"70px"}/>
                     <img src={if_design_logo} alt={getFileName(if_design_logo)} width={"120px"} height={"70px"}/>
                     <img src={reddot_logo} alt={getFileName(reddot_logo)} width={"126px"} height={"70px"}/>
-                    <p className='my-0 mx-5'>AWARDS <br /> 2018/ 2019/ 2021/ 2022/ 2023/ 2024</p>
                 </div>
 
-                <div className="section_container">
-                    <div className="e_commerce footer_section flex_col_center">
-                        <h5>Tienda</h5>
-                        <Link to="/catalogo" className='section_link'>Catálogo</Link>
-                    </div>
+                <div className="sections_container">
+                    <div className="sections ">
+                        <div className="e_commerce footer_section flex_col_center">
+                            <h5>Tienda</h5>
+                            <Link to="/catalogo" className='section_link'>Catálogo</Link>
+                        </div>
 
-                    <div className="contact footer_section flex_col_center">
-                        <h5>Contáctanos</h5>
-                        <p>Horario de Atención</p>
+                        <div className="contact footer_section flex_col_center">
+                            <h5>Contáctanos</h5>
+                            <p>Horario de Atención</p>
 
-                        <br /> <br />
-                        <p>info@jbl.com.ar</p>
-                        <p>De Lunes a Viernes</p>
-                        <p>09:00 a.m a 6:00 p.m</p>
+                            <br />
+                            <p>De Lunes a Viernes</p>
+                            <p>09:00 a.m a 6:00 p.m</p>
+                            <p>Escribinos a: info@jbl.com.ar</p>
+                        </div>
 
-                        <br /> <br />
-                    </div>
-
-                    <div className="social_media footer_section">
-                        <h5>Seguinos</h5>
-                        <a href=""><img className='social_media_img' src={facebook_logo} alt={getFileName(facebook_logo)} /></a>
-                        <a href=""><img className='social_media_img' src={instagram_logo} alt={getFileName(instagram_logo)} /></a>
-                        <a href=""><img className='social_media_img' src={youtube_logo} alt={getFileName(youtube_logo)} /></a>
+                        <div className="social_media footer_section">
+                            <h5>Seguinos</h5>
+                            <div className="social_media_img">
+                                <a href=""><img src={facebook_logo} alt={getFileName(facebook_logo)} /></a>
+                                <a href=""><img src={instagram_logo} alt={getFileName(instagram_logo)} /></a>
+                                <a href=""><img src={youtube_logo} alt={getFileName(youtube_logo)} /></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <hr width={"60%"} />
-                <div className="partners_container flex_row_center">
+                <div className="partners_container flex_row_center wrap">
                     <img className='harman_logo' src={footer_logo} alt="" />
                     <img src={akg_logo} alt={getFileName(akg_logo)} />
                     <img src={hk_logo} alt={getFileName(hk_logo)} />

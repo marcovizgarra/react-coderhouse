@@ -12,9 +12,9 @@ const Catalogue = () => {
             <section className="catalogue_container flex_col_center">
                 <article className="type_container flex_col_center">
 
-                    <div className="banner_container">
-                        <img className="banner" src={banner_catalogue} alt={getFileName(banner_catalogue)} />
-                    </div>
+                    {/* <div className="container banner_container">
+                        <img className="banner container" src={banner_catalogue} alt={getFileName(banner_catalogue)} />
+                    </div> */}
 
                     <div className="title_container">
                         <CategoryTitle title={"Parlantes"} />

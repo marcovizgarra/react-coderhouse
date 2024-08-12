@@ -1,12 +1,14 @@
 .catalogue_container {
+    width: 100%;
+
     .type_container {
-        width: $items_container_vw;
+        width: 90%;
 
         .banner_container {
-            width: 100vw;
+            width: 100%;
 
             img {
-                width: 70%;
+                width: 72rem;
             }
         }
 
