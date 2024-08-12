@@ -1,5 +1,5 @@
 import { getFileName } from "../../js/functions"
-import JBL_exclam from "/public/catalogue/JBL_exclam.png"
+import JBL_exclam from "/public/img/catalogue/JBL_exclam.png"
 
 const CategoryTitle = ({title}) => {
     return(

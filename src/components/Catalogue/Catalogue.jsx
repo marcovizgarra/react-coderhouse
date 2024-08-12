@@ -20,7 +20,7 @@ const Catalogue = () => {
                         <CategoryTitle title={"Parlantes"} />
                     </div>
 
-                    <div className="row row-cols-4 product_container flex_row_center">
+                    <div className="container product_container flex_row_center">
                         <ProductCard type={"speaker"} />
                     </div>
                 </article>
@@ -30,7 +30,7 @@ const Catalogue = () => {
                         <CategoryTitle title={"Auriculares"} />
                     </div>
 
-                    <div className="row row-cols-4 product_container flex_row_center">
+                    <div className="container product_container flex_row_center">
                         <ProductCard type={"headphone"} />
                     </div>
                 </article>
@@ -40,7 +40,7 @@ const Catalogue = () => {
                         <CategoryTitle title={"Gamer"} />
                     </div>
 
-                    <div className="row row-cols-4 product_container flex_row_center">
+                    <div className="container product_container flex_row_center">
                         <ProductCard type={"gamer"} />
                     </div>
                 </article>
@@ -50,7 +50,7 @@ const Catalogue = () => {
                         <CategoryTitle title={"Audio para el hogar"} />
                     </div>
 
-                    <div className="row row-cols-4 product_container flex_row_center">
+                    <div className="container product_container flex_row_center">
                         <ProductCard type={"home_theater"} />
                     </div>
                 </article>

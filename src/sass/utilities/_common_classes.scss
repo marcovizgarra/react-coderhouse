@@ -43,15 +43,16 @@
 }
 
 .btn_JBL {
-    border: 1px solid #00000000;
+    border: 2px solid #00000000;
     background-color: $JBL_color;
+    color: white;
     box-shadow: inset 0px 0px 19px 0px #cc2900;
 
     &:hover {
         background-color: white;
-        color: red;
+        color: black;
         box-shadow: inset 0px 0px 19px 0px #e2e2e2;
         transition: .2s;
-        border: 1px solid $JBL_color;
+        border: 2px solid $JBL_color;
     }
 }

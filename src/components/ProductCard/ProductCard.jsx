@@ -26,25 +26,44 @@ const ProductCard = ({ type }) => {
 
     return (
         <>
-            {
-                filteredItems.map((item) => (
-                    <div key={item.id} className={"col my-1 cursor_pointer"}
-                        onClick={() => { handleClick("/:" + item.id) }}>
-                        <div className="card border-0 product_card">
-                            <img src={item.img} className="card-img-top img-fluid" alt={item.title} />
-                            <div className="card-body text-center">
-                                <p className="card-text title">{item.title}</p>
-                                <p className="description">{item.description}</p>
-                                <p className="price">
-                                    U$D {item.price}
-                                    <br />
-                                </p>
-                                <p>Hasta 6 cuotas sin interés</p>
-                            </div>
+            <div className="row row-cols-4 flex_row_center wrap">
+                {
+                    filteredItems.map((item) => (
+                        <div key={item.id} className="card col cursor_pointer product_card" onClick={() => { handleClick("/:" + item.id) }}>
+                            <img src={item.img} className="card-img-top" alt={item.title} />
+                                <div className="card-body">
+                                    <h5 className="card-title title">{item.title}</h5>
+                                    <div className="description_container">
+                                        <p className="card-text description">{item.description}</p>
+                                    </div>
+                                </div>
+                                <ul className="list-group list-group-flush">
+                                    <li className="list-group-item price">U$D {item.price}</li>
+                                    <li className="list-group-item">Hasta 6 cuotas sin interés</li>
+                                </ul>
+                                <div className="card-body">
+                                    <button type="button" className="p-2 btn-primary rounded-pill btn_JBL" onClick={() => { handleClick("/:" + item.id) }}>Ver producto</button>
+                                </div>
                         </div>
-                    </div>
-                ))
-            }
+                        
+                        // <div key={item.id} className={"col my-1 cursor_pointer"}
+                        //     onClick={() => { handleClick("/:" + item.id) }}>
+                        //     <div className="card border-0 product_card">
+                        //         <img src={item.img} className="card-img-top img-fluid" alt={item.title} />
+                        //         <div className="card-body text-center">
+                        //             <p className="card-text title">{item.title}</p>
+                        //             <p className="description">{item.description}</p>
+                        //             <p className="price">
+                        //                 U$D {item.price}
+                        //                 <br />
+                        //             </p>
+                        //             <p>Hasta 6 cuotas sin interés</p>
+                        //         </div>
+                        //     </div>
+                        // </div>
+                    ))
+                }
+            </div>
         </>
     )
 }

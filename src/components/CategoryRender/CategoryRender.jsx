@@ -25,10 +25,7 @@ const CategoryRender = () => {
             setBanner(home_theater)
             setTitle("AUDIO PARA EL HOGAR")
         }
-    }, [type])
-
-    console.log(type);
-    
+    }, [type])   
 
     return (
         <>

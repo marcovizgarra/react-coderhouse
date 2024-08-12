@@ -12,7 +12,7 @@ import CartWidget from '../CartWidget/CartWidget.jsx';
 const NavBar = () => {
     const [collapsed, setCollapsed] = useState(true);
     const location = useLocation();
-    const { widthSize, heightSize } = screenSize();
+    const { widthSize } = screenSize();
     const breakSize = 990
 
     const getLinkClass = (path) => {

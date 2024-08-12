@@ -1,32 +1,33 @@
-.col {
-    .product_card {
-        height: 31rem;
-        width: 17rem;
-        border-radius: 0;
+.product_card {
+    width: 14rem;
+    margin: .6rem;
+    border: 0;
+    box-shadow: 0px 0px 5px 0px #000000bf;
 
-        &:hover {
-            box-shadow: 0 0 9px 2px rgba(119, 64, 0, 0.466);
+    &:hover {
+        box-shadow: 0px 0px 15px 0px #000000bf;
+    }
+
+    .card-body {
+        .title {
+            font-weight: 400;
+            height: 2.2rem;
         }
 
-        .card-body {
-            align-items: center;
+        .description_container {
+            font-weight: 300;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            height: 4rem;
+        }
+    }
 
-            .title {
-                font-size: large;
-                text-transform: uppercase;
-                font-weight: bold;
-                letter-spacing: .1rem;
-            }
-
-            .price {
-                color: $JBL_color;
-                letter-spacing: .1rem;
-                font-weight: bold;
-            }
-
-            .description {
-                height: 3.9rem;
-            }
+    ul {
+        .price {
+            color: $JBL_color;
+            font-weight: bold;
+            font-size: larger;
         }
     }
 }
