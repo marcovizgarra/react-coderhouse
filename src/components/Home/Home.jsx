@@ -1,11 +1,11 @@
 // Functions
 import { getFileName } from '../../js/functions.js';
 // Images
-import slideImg1 from "/public/carousel/first_slide.png";
-import slideImg2 from "/public/carousel/bar_800.jpg";
-import slideImg3 from "/public/carousel/pb_710.png";
-import slideImg4 from "/public/carousel/quantum_610.jpg";
-import slideImg5 from "/public/carousel/tour_pro_2.jpg";
+import slideImg1 from "/public/img/carousel/first_slide.png";
+import slideImg2 from "/public/img/carousel/bar_800.jpg";
+import slideImg3 from "/public/img/carousel/pb_710.png";
+import slideImg4 from "/public/img/carousel/quantum_610.jpg";
+import slideImg5 from "/public/img/carousel/tour_pro_2.jpg";
 // Components
 import SplideFull from '../Splide/SplideFull.jsx';
 

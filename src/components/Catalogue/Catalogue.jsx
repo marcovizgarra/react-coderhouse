@@ -3,7 +3,7 @@ import { getFileName } from "../../js/functions"
 // Components
 import ProductCard from "../ProductCard/ProductCard"
 // Images
-import banner_catalogue from "/public/catalogue/JBL.jpg"
+import banner_catalogue from "/public/img/catalogue/JBL.jpg"
 import CategoryTitle from "../CategoryTitle/CategoryTitle"
 
 const Catalogue = () => {
