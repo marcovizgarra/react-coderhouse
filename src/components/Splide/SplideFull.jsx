@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import screenSize from '../../hooks/screenSize';
+import Loader from '/src/components/Loader/Loader.jsx'
 
 
 const SplideFull = ({ type }) => {
@@ -29,7 +30,7 @@ const SplideFull = ({ type }) => {
         <>
             {
                 filteredItems == 0 
-                    ? "Cargando..."
+                    ? <Loader />
                     : <>
                         <div className="splide_container">
                             <Splide aria-label={type} options={{

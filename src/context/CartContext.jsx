@@ -100,6 +100,16 @@ const CartContextProvider = ({ children }) => {
             setCart(updatedCart);
             setStock(stock - counter);
             setCounter(1);
+
+            Toastify({
+                text: "PRODUCTO AÑADIDO AL CARRITO!",
+                position: "center",
+                gravity: "bottom",
+                duration: 3000,
+                style: {
+                    background: "green",
+                }
+            }).showToast();
         }
     };
 

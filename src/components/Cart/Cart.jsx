@@ -1,5 +1,5 @@
 // React hooks
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 // Custom hooks
 import screenSize from '../../hooks/screenSize';

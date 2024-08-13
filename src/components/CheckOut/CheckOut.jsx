@@ -9,6 +9,20 @@ import { CartContext } from "../../context/CartContext"
 // Components
 import OrderCompleteMessage from "../OrderCompleteMessage/OrderCompleteMessage";
 
+const validation = ({ messg }) => {
+    return (
+        Toastify({
+            text: messg,
+            position: "center",
+            gravity: "top",
+            duration: 5000,
+            style: {
+                background: "red",
+            }
+        }).showToast()
+    )
+}
+
 const CheckOut = () => {
     const { cart, setCart, total, totalOfProducts } = useContext(CartContext);
     const { widthSize } = screenSize()
@@ -29,26 +43,32 @@ const CheckOut = () => {
 
     const orderCreator = () => {
         if (name == '') {
+            validation({ messg: "Debe completar el campo NOMBRE" })
             return false
         };
 
         if (phone == 0) {
+            validation({ messg: "Debe completar el campo TELEFONO" })
             return false
         };
 
         if (e_mail == '') {
+            validation({ messg: "Debe completar el campo E-MAIL" })
             return false
         };
 
         if (street == '') {
+            validation({ messg: "Debe completar el campo CALLE" })
             return false
         };
 
         if (addressNumber == 0) {
+            validation({ messg: "Debe completar el campo NUMERACIÓN" })
             return false
         };
 
         if (city == '') {
+            validation({ messg: "Debe completar el campo CIUDAD" })
             return false
         };
 
@@ -123,7 +143,7 @@ const CheckOut = () => {
                                         <input type="checkbox" className="form-check-input" id="newsletter_check" />
                                         <label className="form-check-label" htmlFor="newsletter_check" onInput={(e) => { setNewsletter(e.target.value) }}>Suscribirme al Newsletter de JBL</label>
                                     </div>
-                                    <button type="submit" className="btn btn-primary" onClick={(e) => {orderCreator(); e.preventDefault()}}>Confirmar pedido</button>
+                                    <button type="submit" className="btn btn-primary" onClick={(e) => { orderCreator(); e.preventDefault() }}>Confirmar pedido</button>
                                 </form>
                             </div>
 

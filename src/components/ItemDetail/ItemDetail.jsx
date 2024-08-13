@@ -8,6 +8,7 @@ import { CartContext } from '../../context/CartContext'
 // Components
 import ItemCount from '../ItemCount/ItemCount';
 import AddToCart from '../AddToCart/AddToCart';
+import Loader from '../Loader/Loader';
 
 const ItemDetail = () => {
     const { catalogue, stock } = useContext(CartContext);
@@ -58,7 +59,15 @@ const ItemDetail = () => {
 
     return (
         <>
-            {(product.length > 0) ? renderItemDetail() : <h1>cargando---</h1>}
+            {
+                (product.length > 0) 
+                    ? renderItemDetail() 
+                    : <>
+                        <div id="item_detail_loader" className="flex_col_center">
+                            <Loader/>
+                        </div>
+                    </> 
+            }
         </>
     )
 }

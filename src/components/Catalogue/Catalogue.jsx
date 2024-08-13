@@ -1,10 +1,10 @@
 // Functions
 import { getFileName } from "../../js/functions"
-// Components
-import ProductCard from "../ProductCard/ProductCard"
 // Images
 import banner_catalogue from "/public/img/catalogue/JBL.jpg"
 import JBL_exclam from "/public/img/catalogue/JBL_exclam.png"
+// Components
+import ProductCard from "../ProductCard/ProductCard"
 
 const Catalogue = () => {
     return (

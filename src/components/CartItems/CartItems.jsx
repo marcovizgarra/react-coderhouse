@@ -12,7 +12,7 @@ const CartItems = () => {
     const { cart, deleteFromCart, catalogue } = useContext(CartContext);
     const { widthSize } = screenSize()
 
-    return(
+    return (
         <>
             <div className="container flex_col_center">
                 {
@@ -61,7 +61,7 @@ const CartItems = () => {
                                 {
                                     cart.map((item, index) => (
                                         <div key={item.id} className="container container_details flex_col_center">
-                                            <div className={"col product" + (widthSize > 427 ? " flex_row_center" : " flex_col_center" )}>
+                                            <div className={"col product" + (widthSize > 427 ? " flex_row_center" : " flex_col_center")}>
                                                 <img src={item.img} alt={item.title} />
                                                 <div className="row properties">
                                                     <h4>{item.title}</h4>
@@ -78,7 +78,6 @@ const CartItems = () => {
                             </div>
                         </>
                 }
-
             </div>
         </>
     )
