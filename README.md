@@ -45,8 +45,8 @@ npm install
 npm run dev
 ```
 
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm5ram5rZGt4bzlnaW1hMW5ibzQzdjhmaG5nMXhoMDB1ZjBsMDh1bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nWtGe0qZSldEFOvjwk/giphy.gif" />
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm5ram5rZGt4bzlnaW1hMW5ibzQzdjhmaG5nMXhoMDB1ZjBsMDh1bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nWtGe0qZSldEFOvjwk/giphy.gif" width="100%"/>
 
 <br/><br/>
 
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTQ4bXlpdWptdHAwbGR0ZDNoOTczM2pncmY1Znp2cGliM2dhMjMxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ueb8towaXhulw7PB33/giphy.gif"/>
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTQ4bXlpdWptdHAwbGR0ZDNoOTczM2pncmY1Znp2cGliM2dhMjMxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ueb8towaXhulw7PB33/giphy.gif" width="100%"/>
