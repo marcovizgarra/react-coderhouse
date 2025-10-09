@@ -16,6 +16,12 @@
 - Navegación por rutas protegidas con React Router y preservación del estado con Context API.
 - Animaciones y microinteracciones con librerías externas para mejorar la experiencia del usuario.
 
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm5ram5rZGt4bzlnaW1hMW5ibzQzdjhmaG5nMXhoMDB1ZjBsMDh1bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nWtGe0qZSldEFOvjwk/giphy.gif" width="100%"/>
+
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTQ4bXlpdWptdHAwbGR0ZDNoOTczM2pncmY1Znp2cGliM2dhMjMxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ueb8towaXhulw7PB33/giphy.gif" width="100%"/>
+
+
+
 ## 🛠️ Tecnologías principales
 <div align="center">
     <table>
@@ -63,4 +69,4 @@ npm run dev
 - Checkout con resumen dinámico del pedido y formulario de contacto.
 
 ## 📬 Contacto
-Si te interesa conocer más sobre este proyecto o mis próximas colaboraciones, podemos hablar en [LinkedIn](https://www.linkedin.com/).
+Si te interesa conocer más sobre este proyecto o mis próximas colaboraciones, podemos hablar en [LinkedIn](https://www.linkedin.com/in/marco-vizgarra-777a7a255/).
