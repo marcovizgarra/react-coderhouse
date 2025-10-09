@@ -1,53 +1,66 @@
-<h1>👋 Mi nombre es Marco Vizgarra</h1>
-<div>
-    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/></a> 
-    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/></a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
-    <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
-    <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="bootstrap" width="40" height="40"/></a> 
-    <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/></a>
-    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/></a> 
-    <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/></a>
+# 🎧 E-commerce JBL Experience
+
+> Proyecto desarrollado como trabajo integrador del bootcamp de React.js en Coderhouse. Esta versión del README está orientada a presentar mi trabajo a potenciales empleadores.
+
+## 👨‍💻 Sobre mi aporte
+- Diseño e implementación de una **Single Page Application** en React para una tienda oficial de productos JBL.
+- Configuración del proyecto con **Vite** y estructuración modular de componentes reutilizables.
+- Desarrollo de un **carrito de compras con contexto global**, control de stock dinámico y notificaciones de interacción.
+- Integración completa con **Firebase Firestore** para obtener el catálogo en tiempo real y centralizar la data del proyecto.
+- Creación de **experiencias visuales atractivas**: carruseles de productos, banners promocionales y navegación responsive con Bootstrap.
+- Automatización de utilidades (helpers, hooks personalizados) para optimizar la gestión del catálogo y el checkout.
+
+## 🌟 Highlights del producto
+- Catálogo dinámico segmentado por categorías y fichas de detalle individuales.
+- Flujo de compra con actualización de totales, manejo de stock y feedback visual inmediato.
+- Navegación por rutas protegidas con React Router y preservación del estado con Context API.
+- Animaciones y microinteracciones con librerías externas para mejorar la experiencia del usuario.
+
+## 🛠️ Tecnologías principales
+<div align="center">
+    <table>
+        <tr>
+            <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="60"/><br/>React</td>
+            <td align="center"><img src="https://vitejs.dev/logo.svg" alt="Vite" width="60"/><br/>Vite</td>
+            <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="60"/><br/>JavaScript</td>
+            <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="60"/><br/>HTML5</td>
+            <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" width="60"/><br/>CSS3</td>
+        </tr>
+        <tr>
+            <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="Sass" width="60"/><br/>Sass</td>
+            <td align="center"><img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap" width="60"/><br/>Bootstrap 5</td>
+            <td align="center"><img src="
+            https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" width="60"/><br/>Firebase</td>
+            <td align="center"><img src="public/img/readme/splide-js.png" alt="Splide" width="60"/><br/>Splide.js</td>
+            <td align="center"><img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-icon.svg" alt="npm" width="60"/><br/>npm</td>
+        </tr>
+        <tr>
+            <td align="center"><img src="./public/img/readme/git.png" alt="Git" width="60"/><br/>Git</td>
+            <td align="center"><img src="https://avatars.githubusercontent.com/u/27804?s=200&v=4" alt="React Router" width="60"/><br/>React Router</td>
+            <td align="center"><img src="./public/img/readme/github-icon-2.svg" alt="GitHub" width="60"/><br/>GitHub</td>
+            <td align="center"><img src="./public/img/readme/animate-css.svg" alt="Animate.css" width="60"/><br/>Animate.css</td>
+            <td align="center"><img src="./public/img/readme/toast.svg" alt="toastify" width="60"><br/>Toastify</td>
+        </tr>
+    </table>
 </div>
 
-<h2>Este proyecto fue creado como trabajo integrador del curso de desarrollo web FrontEnd con React.js del bootcamp CODERHOUSE</h2>
+## 🧩 Arquitectura y organización
+- **Componentes atómicos** en `src/components` para secciones clave como Home, Catálogo, Cart y CheckOut.
+- **Contexto global** en `src/context/CartContext.jsx` que centraliza catálogo, stock, carrito y totales.
+- **Hooks y utilidades personalizadas** en `src/hooks` y `src/js/functions.js` para encapsular lógica compartida.
+- **Estilos modulares** con `Sass` y `CSS` para mantener coherencia visual y facilitar el mantenimiento.
+- **Configuración de Firebase** en `src/main.jsx` para inicializar el SDK y habilitar la conexión con Firestore.
 
-
-### Temas desarrollados:
-- JSX
-- Componentes
-- Props
-- Use reff
-- Estados y ciclos de vida
-- Rendering condicional
-- Promises y async
-- Consumo API`s
-- Routing y navegación
-- Eventos
-- Context
-- Firebase
-
-### Librerías implementadas
-- React.js
-- Toastify.js
-- Animate.css
-- Splide.js
- 
-### Frameworks
-- Bootstrap
-
-
-## Installación
-Debes instalar las dependencias e iniciar el servidor
-
-```sh
-cd coderhouse-react-proyect
+## 🚀 Cómo ejecutarlo
+```bash
 npm install
 npm run dev
 ```
 
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm5ram5rZGt4bzlnaW1hMW5ibzQzdjhmaG5nMXhoMDB1ZjBsMDh1bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nWtGe0qZSldEFOvjwk/giphy.gif" width="100%"/>
+## 📸 Vistas destacadas
+- Hero principal con carrusel promocional y CTA.
+- Listados por categoría con Splide.js y filtros dedicados.
+- Checkout con resumen dinámico del pedido y formulario de contacto.
 
-<br/><br/>
-
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTQ4bXlpdWptdHAwbGR0ZDNoOTczM2pncmY1Znp2cGliM2dhMjMxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ueb8towaXhulw7PB33/giphy.gif" width="100%"/>
+## 📬 Contacto
+Si te interesa conocer más sobre este proyecto o mis próximas colaboraciones, podemos hablar en [LinkedIn](https://www.linkedin.com/).
